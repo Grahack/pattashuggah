@@ -25,6 +25,7 @@
            "Greed"
            "Choirs Of Devastation"
            "Cadaverous Mastication"]]
+
          ["Destroy Erase Improve"
           ["Future Breed Machine"
            "Beneath"
@@ -36,6 +37,7 @@
            "Terminal Illusions"
            "Suffer In Truth"
            "Sublevels"]]
+
          ["Chaosphere"
           ["Concatenation"
            "New Millennium Cyanide Christ"
@@ -45,6 +47,7 @@
            "Sane"
            "The Exquisite Machinery Of Torture"
            "Elastic"]]
+
          ["Nothing"
           ["Stengah"
            "Rational Gaze"
@@ -56,6 +59,7 @@
            "Spasm"
            "Nebulous"
            "Obsidian"]]
+
          ["Catch Thirtythree"
           ["Autonomy Lost"
            "Imprint Of The Un-Saved"
@@ -70,6 +74,7 @@
            "Personae Non Gratae"
            "Dehumanization"
            "Sum"]]
+
          ["obZen"
           ["Combustion"
            "Electric Red"
@@ -80,6 +85,7 @@
            "Pineal Gland Optics"
            "Pravus"
            "Dancers To A Discordant System"]]
+
          ["Koloss"
           ["I Am Colossus"
            "The Demon's Name Is Surveillance"
@@ -91,6 +97,7 @@
            "Swarm"
            "Demiurge"
            "The Last Vigil"]]
+
          ["The Violent Sleep Of Reason"
           ["Clockworks"
            "Born In Dissonance"

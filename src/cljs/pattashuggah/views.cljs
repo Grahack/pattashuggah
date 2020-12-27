@@ -10,7 +10,7 @@
   (let [album-title (first album-data)
         songs (second album-data)]
     [:div
-     [:h2 album-title]
+     [:h3 album-title]
      [:ol (map song-toc songs)]]))
 
 (defn main-panel []

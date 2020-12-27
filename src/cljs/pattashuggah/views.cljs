@@ -3,8 +3,15 @@
    [re-frame.core :as re-frame]
    ))
 
+(defn rm-wspace [txt]
+  (clojure.string/join (remove clojure.string/blank? txt)))
+
 (defn slug [title]
   (clojure.string/lower-case (clojure.string/replace title " " "-")))
+
+(defn pattern-counts [pattern]
+  (let [splitted (clojure.string/split pattern " ")]
+    (clojure.string/join "+" (map count splitted))))
 
 (defn song-toc [song-title]
   (if (string? song-title)  ; song with no pattern -> no link
@@ -19,11 +26,21 @@
      [:h3 album-title]
      [:ol (map song-toc songs)]]))
 
+(defn pattern [song-pattern]
+  (let [section (first song-pattern)
+        pattern (second song-pattern)]
+  [:div
+   [:h4 section]
+   [:pre pattern]
+   [:p "Size : " (count (rm-wspace pattern)) " "
+       "(" (pattern-counts pattern)  ")"]]))
+
 (defn song-with-patterns [song-and-patterns]
   (let [title (first song-and-patterns)
         patterns (second song-and-patterns)]
     [:div
      [:h3 {:id (slug title)} title]
+     (map pattern patterns)
      ]))
 
 (defn patterns [album-data]
@@ -57,7 +74,14 @@
            "Sublevels"]]
 
          ["Chaosphere"
-          ["Concatenation"
+          [["Concatenation"
+            (sorted-map
+              "intro"
+              (str "X--X-X-X-- X--X-X-X-- X--X-X-X-- X--X-X-X-- "
+                   "X--X-X-X-- X--X-X-X-- X-+-")
+              "verse 1"
+              (str "X--X-X-X-+ X--X-X-X-+ X--X-X-X-+ X--X-X-X-+ "
+                   "X--X-X-X-+ X--X-X-X-+ X-+-"))]
            "New Millennium Cyanide Christ"
            "Corridor Of Chameleons"
            "Neurotica"
@@ -71,7 +95,11 @@
            "Rational Gaze"
            "Perpetual Black Second"
            "Closed Eye Visuals"
-           "Glints Collide"
+           ["Glints Collide"
+            (sorted-map
+              "intro"
+              (str "X-+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O "
+                   "X--+-X-+-"))]
            "Organic Shadows"
            "Straws Pulled At Random"
            "Spasm"

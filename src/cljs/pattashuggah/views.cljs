@@ -69,7 +69,7 @@
            "Entrapment"
            "Mind's Mirrors"
            "In Death - Is Life"
-           "In Death - Is Death  1"
+           "In Death - Is Death"
            "Shed"
            "Personae Non Gratae"
            "Dehumanization"

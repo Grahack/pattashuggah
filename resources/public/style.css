@@ -1,0 +1,16 @@
+body {
+    background-color: black;
+    color: #af3;
+}
+
+a {
+    color: #3fd;
+}
+
+pre {
+    font-size: 1.3em;
+}
+
+p.size {
+    font-size: 0.7em;
+}

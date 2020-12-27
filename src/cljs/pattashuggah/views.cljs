@@ -32,7 +32,7 @@
   [:div
    [:h4 section]
    [:pre pattern]
-   [:p "Size : " (count (rm-wspace pattern)) " "
+   [:p {:class "size"} "Size : " (count (rm-wspace pattern)) " "
        "(" (pattern-counts pattern)  ")"]]))
 
 (defn song-with-patterns [song-and-patterns]

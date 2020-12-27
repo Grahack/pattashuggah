@@ -3,8 +3,14 @@
    [re-frame.core :as re-frame]
    ))
 
+(defn slug [title]
+  (clojure.string/lower-case (clojure.string/replace title " " "-")))
+
 (defn song-toc [song-title]
-  [:li song-title])
+  (if (string? song-title)  ; song with no pattern -> no link
+    [:li song-title]
+    (let [title (first song-title)]
+      [:li [:a {:href (str "#" (slug title))} title]])))
 
 (defn album-toc [album-data]
   (let [album-title (first album-data)
@@ -12,6 +18,18 @@
     [:div
      [:h3 album-title]
      [:ol (map song-toc songs)]]))
+
+(defn song-with-patterns [song-and-patterns]
+  (let [title (first song-and-patterns)
+        patterns (second song-and-patterns)]
+    [:div
+     [:h3 {:id (slug title)} title]
+     ]))
+
+(defn patterns [album-data]
+  (let [album-title (first album-data)
+        songs (second album-data)]
+     (map song-with-patterns (filter (complement string?) songs))))
 
 (defn main-panel []
   (let [disco
@@ -112,5 +130,8 @@
           ]]
     [:div
      [:h1 "Pattashuggah"]
+     [:h2 "Table of contents"]
      (map album-toc disco)
+     [:h2 "Patterns"]
+     (map patterns disco)
      ]))

@@ -9,6 +9,9 @@
 (defn slug [title]
   (clojure.string/lower-case (clojure.string/replace title " " "-")))
 
+(defn pattern-size [pattern]
+  (count (rm-wspace pattern)))
+
 (defn pattern-counts [pattern]
   (let [splitted (clojure.string/split pattern " ")]
     (clojure.string/join "+" (map count splitted))))
@@ -28,11 +31,12 @@
 
 (defn pattern [song-pattern]
   (let [section (first song-pattern)
-        pattern (second song-pattern)]
+        pattern (second song-pattern)
+        size (pattern-size pattern)]
   [:div
    [:h4 section]
    [:pre pattern]
-   [:p {:class "size"} "Size : " (count (rm-wspace pattern)) " "
+   [:p {:class "size"} "Size : " size " "
        "(" (pattern-counts pattern)  ")"]]))
 
 (defn song-with-patterns [song-and-patterns]

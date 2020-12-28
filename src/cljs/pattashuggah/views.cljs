@@ -29,13 +29,36 @@
      [:h3 album-title]
      [:ol (map song-toc songs)]]))
 
+(defn count-pattern-maker [n txt]
+  (clojure.string/join
+    (map str (flatten (map vector (range 1 (inc n)) (repeat txt))))))
+
+(defn positions [pred coll]
+  ; https://stackoverflow.com/questions/4830900/how-do-i-find-the-index-of-an-item-in-a-vector
+  (keep-indexed (fn [idx x]
+         (when (pred x) idx)) coll))
+
+(defn insert-spaces
+  [pos-list txt]
+  (if (empty? pos-list)
+    txt
+    (let [first-space (first pos-list)
+          before (clojure.string/join (take first-space txt))
+          after (clojure.string/join (drop first-space txt))]
+      (insert-spaces (rest pos-list) (str before " " after)))))
+
 (defn pattern [song-pattern]
   (let [section (first song-pattern)
         pattern (second song-pattern)
-        size (pattern-size pattern)]
+        size (pattern-size pattern)
+        spaces (positions clojure.string/blank? pattern)
+        count-patterns
+          {64 (count-pattern-maker 8 " ' ^ ' ")}
+        count-pattern-raw (get count-patterns size)]
   [:div
    [:h4 section]
    [:pre pattern]
+   [:pre (insert-spaces spaces count-pattern-raw)]
    [:p {:class "size"} "Size : " size " "
        "(" (pattern-counts pattern)  ")"]]))
 

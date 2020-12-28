@@ -3,11 +3,22 @@ body {
     color: #af3;
 }
 
+h3 {
+    border: solid 1px;
+}
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 a {
     color: #3fd;
 }
 
 pre {
+    margin-top: 0;
+    margin-bottom: 0;
     font-size: 1.3em;
 }
 

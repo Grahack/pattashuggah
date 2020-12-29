@@ -59,7 +59,9 @@
         count-pattern-raw (get count-patterns size)]
   [:div
    [:h4 section]
-   (if (not (clojure.string/starts-with? pattern "same"))
+   (if (and
+         (not (clojure.string/starts-with? pattern "same"))
+         (not (clojure.string/starts-with? pattern "TODO")))
      [:div
        [:pre pattern]
        [:pre (insert-spaces spaces count-pattern-raw)]

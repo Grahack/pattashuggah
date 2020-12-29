@@ -216,7 +216,9 @@
      [:h1 "Pattashuggah"]
      [:p "Rhythm patterns from some "
          [:a {:href "https://meshuggah.net"} "Meshuggah"]
-         " songs."]
+         " songs. Contribute to the "
+         [:a {:href "https://github.com/grahack/pattashuggah"} "Github project"]
+         "."]
      [:p "The following table gives you the meaning of the characters used "
       "in a pattern description. Space characters are only used to group "
       "by meaningful chunks."]

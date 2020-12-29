@@ -53,7 +53,8 @@
         size (pattern-size pattern)
         spaces (positions clojure.string/blank? pattern)
         count-patterns
-          {64 (count-pattern-maker 8 " ' ^ ' ")}
+          {24 (count-pattern-maker 3 " ' ^ ' ")
+           64 (count-pattern-maker 8 " ' ^ ' ")}
         count-pattern-raw (get count-patterns size)]
   [:div
    [:h4 section]

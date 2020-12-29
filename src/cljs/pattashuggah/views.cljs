@@ -185,6 +185,25 @@
           ]]
     [:div
      [:h1 "Pattashuggah"]
+     [:p "Rhythm patterns from some "
+         [:a {:href "https://meshuggah.net"} "Meshuggah"]
+         " songs."]
+     [:p "The following table gives you the meaning of the characters used "
+      "in a pattern description. Space characters are only used to group "
+      "by meaningful chunks."]
+     [:table
+       [:thead
+         [:tr [:th "Code"] [:th "Right lead"] [:th "Left lead"]]]
+       [:tbody
+         (list [:tr (list [:td "X"] [:td "R"] [:td "L"])]
+               [:tr (list [:td "O"] [:td "L"] [:td "R"])]
+               [:tr (list [:td "+"] [:td "r"] [:td "l"])]
+               [:tr (list [:td "-"] [:td "l"] [:td "r"])])]]
+     [:p "Right below each pattern is a « count ruler » like so :"]
+     [:pre "X--X-X-X-+ X--X-X-X-X-+ X--X-X-X-+ X--X-X-X-X-+   ..."]
+     [:pre "1 ' ^ ' 2  ' ^ ' 3 ' ^  ' 4 ' ^ '  5 ' ^ ' 6 '    ..."]
+     [:p "to help you navigate in the pattern."]
+
      [:h2 "Table of contents"]
      (map album-toc disco)
      [:h2 "Patterns"]

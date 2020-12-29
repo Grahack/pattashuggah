@@ -106,12 +106,37 @@
 
          ["Chaosphere (1998)"
           [["Concatenation"
-            ["intro"
+            ["intro (×4)"
              (str "X--X-X-X-- X--X-X-X-- X--X-X-X-- X--X-X-X-- "
                   "X--X-X-X-- X--X-X-X-- X-+-")
-             "verse 1"
+             "verse 1 (×4)"
              (str "X--X-X-X-+ X--X-X-X-+ X--X-X-X-+ X--X-X-X-+ "
                   "X--X-X-X-+ X--X-X-X-+ X-+-")
+             "chorus 1 (×2)"
+             "same as intro"
+             "intro 2 (×2)"
+             "same as intro"
+             "verse 2 (×4)"
+             (str "X--X-X-X-+ X--X-X-X-X-+ X--X-X-X-+ X--X-X-X-X-+ "
+                  "X--X-X-X-+ X--X-X-X-+")
+             "chorus 2 (×2)"
+             "same as intro"
+             "intro 3 (×2)"
+             "same as verse 1"
+             "guitar solo (×4)"
+             (str "XOXOX-XOXOX-- XOXOX-XOXOX-- XOXOX-XOXOX-- XOXOX-XOXOX-- "
+                  "XOXOX-XOXOX-")
+             "pre bridge (×4)"
+             (str "X--X--X--X-+- X--X--X--X-+- X--X--X--X-+- X--X--X--X-+- "
+                  "X--X--X--X-- ")
+             "bridge (×4)"
+             "same as guitar solo"
+             "pre chorus"
+             "X--X-X-X-- X--X-X-X-- +-+-"
+             "chorus 3 (×4)"
+             "same as intro"
+             "outro (×2)"
+             "same as verse (with a premature end though)"
             ]]
            "New Millennium Cyanide Christ"
            "Corridor Of Chameleons"

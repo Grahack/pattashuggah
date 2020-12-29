@@ -152,7 +152,37 @@
          ["Nothing (2002)"
           ["Stengah"
            "Rational Gaze"
-           "Perpetual Black Second"
+           ["Perpetual Black Second"
+            ["intro (×2)"
+             (str "X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- "
+                  "X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- "
+                  "X--X--X-XX-X-- X-")
+             "pre verse (×2)"
+             (str "X- X--X--X--X--X-X-X- X--X--X--X--X-X-X- X--X--X--X--X-X-X- "
+                     "X--X--X--X--X-X-X- X--X--X--X--X-X-X- X--X--X--X--X-X-X- "
+                     "X--X--X--X--X-X-X-")
+             "verse 1 (×2)"
+             (str "X- X--X--X-X-X--X--X- X--X--X-X-X--X--X- X--X--X-X-X--X--X- "
+                     "X--X--X-X-X--X--X- X--X--X-X-X--X--X- X--X--X-X-X--X--X- "
+                     "X--X--X-X-X--X--X-")
+             "intro 2 (×1)"
+             "same as intro"
+             "verse 2 (×2)"
+             "same as verse 1"
+             "post verse (×2)"
+             "same as pre verse"
+             "pre guitar solo"
+             "TODO"
+             "guitar solo (×4)"
+             (str "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- "
+                  "X-X-+-X--X--+- X-X-+-+-")
+             "last verse, same pattern but longer the wait (×2)"
+             (str "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- "
+                  "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- "
+                  "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- X-")
+             "end"
+             "TODO"
+            ]]
            "Closed Eye Visuals"
            ["Glints Collide"
             ["intro"

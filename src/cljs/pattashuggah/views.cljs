@@ -77,7 +77,7 @@
 
 (defn main-panel []
   (let [disco
-        [["Contradictions Collapse"
+        [["Contradictions Collapse (1991)"
           ["Paralyzing Ignorance"
            "Erroneous Manipulation"
            "Abnegating Cecity"
@@ -88,7 +88,7 @@
            "Choirs Of Devastation"
            "Cadaverous Mastication"]]
 
-         ["Destroy Erase Improve"
+         ["Destroy Erase Improve (1995)"
           ["Future Breed Machine"
            "Beneath"
            "Soul Burn"
@@ -100,7 +100,7 @@
            "Suffer In Truth"
            "Sublevels"]]
 
-         ["Chaosphere"
+         ["Chaosphere (1998)"
           [["Concatenation"
             ["intro"
              (str "X--X-X-X-- X--X-X-X-- X--X-X-X-- X--X-X-X-- "
@@ -117,7 +117,7 @@
            "The Exquisite Machinery Of Torture"
            "Elastic"]]
 
-         ["Nothing"
+         ["Nothing (2002)"
           ["Stengah"
            "Rational Gaze"
            "Perpetual Black Second"
@@ -133,7 +133,7 @@
            "Nebulous"
            "Obsidian"]]
 
-         ["Catch Thirtythree"
+         ["Catch Thirtythree (2005)"
           ["Autonomy Lost"
            "Imprint Of The Un-Saved"
            "Disenchantment"
@@ -148,7 +148,7 @@
            "Dehumanization"
            "Sum"]]
 
-         ["obZen"
+         ["obZen (2008)"
           ["Combustion"
            "Electric Red"
            "Bleed"
@@ -159,7 +159,7 @@
            "Pravus"
            "Dancers To A Discordant System"]]
 
-         ["Koloss"
+         ["Koloss (2012)"
           ["I Am Colossus"
            "The Demon's Name Is Surveillance"
            "Do Not Look Down"
@@ -171,7 +171,7 @@
            "Demiurge"
            "The Last Vigil"]]
 
-         ["The Violent Sleep Of Reason"
+         ["The Violent Sleep Of Reason (2016)"
           ["Clockworks"
            "Born In Dissonance"
            "MonstroCity"

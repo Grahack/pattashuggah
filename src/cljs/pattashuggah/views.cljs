@@ -226,7 +226,9 @@
          "These are not drums scores. By far."]
      [:p "Choices were made to make these patterns good hands exercises. "
          "Try to beat ostinatos with your feet though (16ths, 8ths, quarters "
-         "or even half notes). Better yet : count out loud (8ths, quarters…)."]
+         "or even half notes), or keep a steady beat with your weak foot and "
+         "play the kick in unison with your strong hand."]
+     [:p "Better yet : count the beats out loud (8ths, quarters…)."]
      [:p "The following table gives you the meaning of the characters used "
       "in a pattern description. Space characters are only used to group "
       "by meaningful chunks."]

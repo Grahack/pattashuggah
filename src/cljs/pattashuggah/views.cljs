@@ -30,8 +30,8 @@
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
-  (clojure.string/join
-    (map str (flatten (map vector (range 1 (inc n)) (repeat txt))))))
+  (let [characters (take n "123456789ABCDEFG")]
+    (clojure.string/join (flatten (map vector characters (repeat txt))))))
 
 (defn positions [pred coll]
   ; https://stackoverflow.com/questions/4830900/how-do-i-find-the-index-of-an-item-in-a-vector

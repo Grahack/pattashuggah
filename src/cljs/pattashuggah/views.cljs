@@ -220,6 +220,11 @@
          " songs. Contribute to the "
          [:a {:href "https://github.com/grahack/pattashuggah"} "Github project"]
          "."]
+     [:p [:strong "Important notice"] " : "
+         "These are not drums scores. By far."]
+     [:p "Choices were made to make these patterns good hands exercises. "
+         "Try to beat ostinatos with your feet though (16ths, 8ths, quarters "
+         "or even half notes). Better yet : count out loud (8ths, quarters…)."]
      [:p "The following table gives you the meaning of the characters used "
       "in a pattern description. Space characters are only used to group "
       "by meaningful chunks."]

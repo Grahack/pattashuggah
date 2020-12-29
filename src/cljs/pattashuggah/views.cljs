@@ -57,10 +57,13 @@
         count-pattern-raw (get count-patterns size)]
   [:div
    [:h4 section]
-   [:pre pattern]
-   [:pre (insert-spaces spaces count-pattern-raw)]
-   [:p {:class "size"} "Size : " size " "
-       "(" (pattern-counts pattern)  ")"]]))
+   (if (not (clojure.string/starts-with? pattern "same"))
+     [:div
+       [:pre pattern]
+       [:pre (insert-spaces spaces count-pattern-raw)]
+       [:p {:class "size"} "Size : " size " "
+           "(" (pattern-counts pattern)  ")"]]
+     [:p {:class "same"} pattern])]))
 
 (defn song-with-patterns [song-and-patterns]
   (let [title (first song-and-patterns)

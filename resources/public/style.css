@@ -26,6 +26,11 @@ p.size {
     font-size: 0.7em;
 }
 
+p.same {
+    margin-top: 0;
+    font-size: 0.7em;
+}
+
 table {
     border: solid 1px;
     text-align: center;

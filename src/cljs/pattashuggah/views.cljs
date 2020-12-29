@@ -236,10 +236,10 @@
                [:tr (list [:td "O"] [:td "L"] [:td "R"])]
                [:tr (list [:td "+"] [:td "r"] [:td "l"])]
                [:tr (list [:td "-"] [:td "l"] [:td "r"])])]]
-     [:p "Right below each pattern is a « count ruler » like so :"]
+     [:p "Right below each pattern is a « count ruler » "
+         "to help you navigate in the pattern :"]
      [:pre "X--X-X-X-+ X--X-X-X-X-+ X--X-X-X-+ X--X-X-X-X-+   ..."]
      [:pre "1 ' ^ ' 2  ' ^ ' 3 ' ^  ' 4 ' ^ '  5 ' ^ ' 6 '    ..."]
-     [:p "to help you navigate in the pattern."]
 
      [:h2 "Table of contents"]
      (map album-toc disco)

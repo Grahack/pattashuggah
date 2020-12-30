@@ -65,7 +65,7 @@
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
        (if (= size 128)  ; split in two lines
-         (let [nine-position (first (positions #(= "9" %) count-ruler))]
+         (let [nine-position (clojure.string/index-of count-ruler "9")]
            [:div
            [:pre (clojure.string/join (take nine-position pattern))]
            [:pre (clojure.string/join (take nine-position count-ruler))]

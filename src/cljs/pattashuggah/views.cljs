@@ -26,7 +26,7 @@
   (let [album-title (first album-data)
         songs (second album-data)]
     [:div
-     [:h3 album-title]
+     [:h3 [:span album-title]]
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
@@ -73,7 +73,7 @@
   (let [title (first song-and-patterns)
         patterns (partition 2 (second song-and-patterns))]
     [:div
-     [:h3 {:id (slug title)} title]
+     [:h3 {:id (slug title)} [:span title]]
      (map pattern patterns)
      ]))
 

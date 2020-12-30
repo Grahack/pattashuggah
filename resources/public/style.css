@@ -4,7 +4,12 @@ body {
 }
 
 h3 {
+    margin-top: 2em;
+}
+
+h3 span {
     border: solid 1px;
+    padding: 0.5em 0.7em 0.5em 0.7em;
 }
 
 h4 {

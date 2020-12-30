@@ -56,15 +56,25 @@
           {24 (count-pattern-maker  3 " ' ^ ' ")
            64 (count-pattern-maker  8 " ' ^ ' ")
           128 (count-pattern-maker 16 " ' ^ ' ")}
-        count-pattern-raw (get count-patterns size)]
+        count-pattern-raw (get count-patterns size)
+        count-ruler (insert-spaces spaces count-pattern-raw)]
   [:div
    [:h4 section]
    (if (and
          (not (clojure.string/starts-with? pattern "same"))
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
-       [:pre pattern]
-       [:pre (insert-spaces spaces count-pattern-raw)]
+       (if (= size 128)  ; split in two lines
+         (let [nine-position (first (positions #(= "9" %) count-ruler))]
+           [:div
+           [:pre (clojure.string/join (take nine-position pattern))]
+           [:pre (clojure.string/join (take nine-position count-ruler))]
+           [:pre (clojure.string/join (drop nine-position pattern))]
+           [:pre (clojure.string/join (drop nine-position count-ruler))]
+            ])
+         [:div
+           [:pre pattern]
+           [:pre count-ruler]])
        [:p {:class "size"} "Size : " size " "
            "(" (pattern-counts pattern)  ")"]]
      [:p {:class "same"} pattern])]))
@@ -274,6 +284,9 @@
          "to help you navigate in the pattern :"]
      [:pre "X--X-X-X-+ X--X-X-X-X-+ X--X-X-X-+ X--X-X-X-X-+   ..."]
      [:pre "1 ' ^ ' 2  ' ^ ' 3 ' ^  ' 4 ' ^ '  5 ' ^ ' 6 '    ..."]
+     [:p "Patterns of 128 notes are displayed on two lines. The split occurs "
+         "brutally at the ninth beat even if it splits a chunk. "
+         "Usually at this place in the pattern nothing unexpected happens."]
 
      [:h2 "Table of contents"]
      (map album-toc disco)

@@ -69,11 +69,10 @@
        (if (= size 128)  ; split in two lines
          (let [nine-position (clojure.string/index-of count-ruler "9")]
            [:div
-           [:pre (clojure.string/join (take nine-position pattern))]
-           [:pre (clojure.string/join (take nine-position count-ruler))]
-           [:pre (clojure.string/join (drop nine-position pattern))]
-           [:pre (clojure.string/join (drop nine-position count-ruler))]
-            ])
+             [:pre (subs pattern     0 nine-position)]
+             [:pre (subs count-ruler 0 nine-position)]
+             [:pre (subs pattern     nine-position)]
+             [:pre (subs count-ruler nine-position)]])
          [:div
            [:pre pattern]
            [:pre count-ruler]])

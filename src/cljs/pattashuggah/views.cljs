@@ -30,7 +30,7 @@
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
-  (let [characters (take n "123456789ABCDEFG")]
+  (let [characters (take n "123456789ABCDEFGHIJKLMNOPQRSTUVW")]
     (clojure.string/join (flatten (map vector characters (repeat txt))))))
 
 (defn positions [pred coll]
@@ -57,7 +57,8 @@
            24 (count-pattern-maker  3 " ' ^ ' ")
            32 (count-pattern-maker  4 " ' ^ ' ")
            64 (count-pattern-maker  8 " ' ^ ' ")
-          128 (count-pattern-maker 16 " ' ^ ' ")}
+          128 (count-pattern-maker 16 " ' ^ ' ")
+          256 (count-pattern-maker 32 " ' ^ ' ")}
         count-pattern-raw (get count-patterns size)
         count-ruler (insert-spaces spaces count-pattern-raw)]
   [:div
@@ -66,13 +67,28 @@
          (not (clojure.string/starts-with? pattern "same"))
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
-       (if (= size 128)  ; split in two lines
+       (cond ; split in several lines?
+         (= size 128)
          (let [nine-position (clojure.string/index-of count-ruler "9")]
            [:div
              [:pre (subs pattern     0 nine-position)]
              [:pre (subs count-ruler 0 nine-position)]
              [:pre (subs pattern     nine-position)]
              [:pre (subs count-ruler nine-position)]])
+         (= size 256)
+         (let [nine-position (clojure.string/index-of count-ruler "9")
+               H-position (clojure.string/index-of count-ruler "H")
+               P-position (clojure.string/index-of count-ruler "P")]
+           [:div
+             [:pre (subs pattern     0 nine-position)]
+             [:pre (subs count-ruler 0 nine-position)]
+             [:pre (subs pattern     nine-position H-position)]
+             [:pre (subs count-ruler nine-position H-position)]
+             [:pre (subs pattern     H-position P-position)]
+             [:pre (subs count-ruler H-position P-position)]
+             [:pre (subs pattern     P-position)]
+             [:pre (subs count-ruler P-position)]])
+         :else
          [:div
            [:pre pattern]
            [:pre count-ruler]])

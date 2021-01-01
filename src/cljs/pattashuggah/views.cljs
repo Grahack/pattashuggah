@@ -53,7 +53,8 @@
         size (pattern-size pattern)
         spaces (positions clojure.string/blank? pattern)
         count-patterns
-          {24 (count-pattern-maker  3 " ' ^ ' ")
+          {16 (count-pattern-maker  2 " ' ^ ' ")
+           24 (count-pattern-maker  3 " ' ^ ' ")
            32 (count-pattern-maker  4 " ' ^ ' ")
            64 (count-pattern-maker  8 " ' ^ ' ")
           128 (count-pattern-maker 16 " ' ^ ' ")}

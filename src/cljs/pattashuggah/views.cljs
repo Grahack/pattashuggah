@@ -463,8 +463,9 @@
          "to help you navigate in the pattern :"]
      [:pre "X--X-X-X-+ X--X-X-X-X-+ X--X-X-X-+ X--X-X-X-X-+   ..."]
      [:pre "1 ' ^ ' 2  ' ^ ' 3 ' ^  ' 4 ' ^ '  5 ' ^ ' 6 '    ..."]
-     [:p "Patterns of 128 notes are displayed on two lines. The split occurs "
-         "brutally at the ninth beat even if it splits a chunk. "
+     [:p "Patterns of 128 notes or more are displayed on several lines. "
+         "The split occurs brutally at the ninth beat (or similar beat) "
+         "even if it splits a chunk. "
          "Usually at this place in the pattern nothing unexpected happens."]
 
      [:h2 "Table of contents"]

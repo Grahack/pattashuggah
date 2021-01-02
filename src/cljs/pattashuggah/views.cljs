@@ -432,9 +432,10 @@
     [:div
      [:h1 "Pattashuggah"]
      [:p "Rhythm patterns from some "
-         [:a {:href "https://meshuggah.net"} "Meshuggah"]
+         [:a {:href "https://meshuggah.net" :target "_blank"} "Meshuggah"]
          " songs. Contribute to the "
-         [:a {:href "https://github.com/grahack/pattashuggah"} "Github project"]
+         [:a {:href "https://github.com/grahack/pattashuggah"
+              :target "_blank"} "Github project"]
          "."]
      [:p [:strong "Important notice"] " : "
          "These are not drums scores. By far."]

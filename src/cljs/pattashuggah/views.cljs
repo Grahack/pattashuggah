@@ -260,7 +260,57 @@
              "same as post guitar solo"
             ]]
            "Neurotica"
-           "The Mouth Licking What You've Bled"
+           ["The Mouth Licking What You've Bled"
+            ["intro (×4)"
+             "X-X-- X-X-- X-X-- X-X-X-- X-X-- X-X-- "
+             "transition (×1)"
+             "X-X-- X-X-- X-X-+-"
+             "verse 1 (throughout)"
+             (str (clojure.string/join (repeat 25 "X-X-- ")) "X--")
+             "inter verse"
+             "same as verse"
+             "verse 1 bis"
+             "same as verse"
+             "chorus (×4)"
+             "same as intro"
+             "transition (×1)"
+             "X-X-- X-X-- X-X-+-"
+             "guitar solo"
+             (str "X-X-- X-X-- X-X-X-X-- "
+                  "X-X-- X-X-- X-X-X-X-- "
+                  "X-X-- X-X-- X-X-X-X-- "
+                  "X-X-- X- ")
+             "post guitar solo, sang"
+             "same as verse"
+             "post guitar solo, instrumental (×1)"
+             "same as guitar solo"
+             "post guitar solo, sang"
+             "same as verse"
+             "bridge (×4, half instrumental, half sang)"
+             (str
+               "XOX-OXOX-OXOXO "
+               "XOX-OXOX-OXOX-OXOXO "
+               "XOX-OXOX-OXOX-OXOXO "
+               "XOX-OXOX-OXO ")
+             "pre end (×4)"
+             (str
+               "X-XOOX--X-- "
+               "X-+XOX--X-- "
+               "X-XOOX--X-- "
+               "X-+XOX--X-- "
+               "X-XOOX--X-- "
+               "X-+XOX-+- ")
+             "end riff (until fade out)"
+             (str
+               "X--X-XX-- "
+               "X--X-XX-- "
+               "X--X-XX-- "
+               "X--X-XX-- "
+               "X--X-XX-- "
+               "X--X-XX-- "
+               "X--X-XX-+- "
+               )
+            ]]
            "Sane"
            "The Exquisite Machinery Of Torture"
            "Elastic"]]
@@ -306,7 +356,12 @@
                    "X--+-X-+-")
             ]]
            "Organic Shadows"
-           "Straws Pulled At Random"
+           ["Straws Pulled At Random"
+            ["intro"
+             (str "X-X-+X-X-X--+- X-X-+X-X-X--+- "
+                  "X-X-+X-X-X--+- X-X-+X-X-X--+- "
+                  "X-X-+X--")
+            ]]
            "Spasm"
            "Nebulous"
            "Obsidian"]]
@@ -343,7 +398,10 @@
            "Obzen"
            "This Spiteful Snake"
            "Pineal Gland Optics"
-           "Pravus"
+           ["Pravus"
+            ["intro"
+             (str "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- ")
+            ]]
            "Dancers To A Discordant System"]]
 
          ["Koloss (2012)"

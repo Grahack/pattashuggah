@@ -30,13 +30,14 @@
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
-  (let [characters (take n "123456789ABCDEFGHIJKLMNOPQRSTUVW")]
+  (let [alphabet (clojure.string/join (repeat 4 "123456789ABCDEFG"))
+        characters (take n alphabet)]
     (clojure.string/join (flatten (map vector characters (repeat txt))))))
 
-(defn positions [pred coll]
+(defn positions [character coll]
   ; https://stackoverflow.com/questions/4830900/how-do-i-find-the-index-of-an-item-in-a-vector
   (keep-indexed (fn [idx x]
-         (when (pred x) idx)) coll))
+         (when (= character x) idx)) coll))
 
 (defn insert-spaces
   [pos-list txt]
@@ -51,7 +52,7 @@
   (let [section (first song-pattern)
         pattern (second song-pattern)
         size (pattern-size pattern)
-        spaces (positions clojure.string/blank? pattern)
+        spaces (positions " " pattern)
         count-patterns
           {16 (count-pattern-maker  2 " ' ^ ' ")
            24 (count-pattern-maker  3 " ' ^ ' ")
@@ -76,18 +77,20 @@
              [:pre (subs pattern     nine-position)]
              [:pre (subs count-ruler nine-position)]])
          (= size 256)
-         (let [nine-position (clojure.string/index-of count-ruler "9")
-               H-position (clojure.string/index-of count-ruler "H")
-               P-position (clojure.string/index-of count-ruler "P")]
+         (let [one-pos (positions "1" count-ruler)
+               split-2 (second one-pos)
+               nine-pos (positions "9" count-ruler)
+               split-1 (first nine-pos)
+               split-3 (second nine-pos)]
            [:div
-             [:pre (subs pattern     0 nine-position)]
-             [:pre (subs count-ruler 0 nine-position)]
-             [:pre (subs pattern     nine-position H-position)]
-             [:pre (subs count-ruler nine-position H-position)]
-             [:pre (subs pattern     H-position P-position)]
-             [:pre (subs count-ruler H-position P-position)]
-             [:pre (subs pattern     P-position)]
-             [:pre (subs count-ruler P-position)]])
+             [:pre (subs pattern     0       split-1)]
+             [:pre (subs count-ruler 0       split-1)]
+             [:pre (subs pattern     split-1 split-2)]
+             [:pre (subs count-ruler split-1 split-2)]
+             [:pre (subs pattern     split-2 split-3)]
+             [:pre (subs count-ruler split-2 split-3)]
+             [:pre (subs pattern     split-3)]
+             [:pre (subs count-ruler split-3)]])
          :else
          [:div
            [:pre pattern]

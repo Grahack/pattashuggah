@@ -59,7 +59,8 @@
            32 (count-pattern-maker  4 " ' ^ ' ")
            64 (count-pattern-maker  8 " ' ^ ' ")
           128 (count-pattern-maker 16 " ' ^ ' ")
-          256 (count-pattern-maker 32 " ' ^ ' ")}
+          256 (count-pattern-maker 32 " ' ^ ' ")
+          512 (count-pattern-maker 64 " ' ^ ' ")}
         count-pattern-raw (get count-patterns size)
         count-ruler (insert-spaces spaces count-pattern-raw)]
   [:div
@@ -91,6 +92,34 @@
              [:pre (subs count-ruler split-2 split-3)]
              [:pre (subs pattern     split-3)]
              [:pre (subs count-ruler split-3)]])
+         (= size 512)
+         (let [one-pos (positions "1" count-ruler)
+               split-2 (second one-pos)
+               split-4 (nth one-pos 2)
+               split-6 (nth one-pos 3)
+               nine-pos (positions "9" count-ruler)
+               split-1 (first nine-pos)
+               split-3 (second nine-pos)
+               split-5 (nth nine-pos 2)
+               split-7 (nth nine-pos 3)]
+           [:div
+             [:pre (subs pattern     0       split-1)]
+             [:pre (subs count-ruler 0       split-1)]
+             [:pre (subs pattern     split-1 split-2)]
+             [:pre (subs count-ruler split-1 split-2)]
+             [:pre (subs pattern     split-2 split-3)]
+             [:pre (subs count-ruler split-2 split-3)]
+             [:pre (subs pattern     split-3 split-4)]
+             [:pre (subs count-ruler split-3 split-4)]
+             [:pre (subs pattern     split-4 split-5)]
+             [:pre (subs count-ruler split-4 split-5)]
+             [:pre (subs pattern     split-5 split-6)]
+             [:pre (subs count-ruler split-5 split-6)]
+             [:pre (subs pattern     split-6 split-7)]
+             [:pre (subs count-ruler split-6 split-7)]
+             [:pre (subs pattern     split-7)]
+             [:pre (subs count-ruler split-7)]
+            ])
          :else
          [:div
            [:pre pattern]

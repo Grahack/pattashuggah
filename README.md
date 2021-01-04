@@ -7,6 +7,8 @@ See it live [here](https://grahack.github.io/pattashuggah/).
 # TODO
 
 * smart size viewer
+* for each song
+  * add BPM
 * for each pattern
   * add a comment area (expandable)
   * add a timecode

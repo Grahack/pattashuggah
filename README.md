@@ -7,8 +7,12 @@ See it live [here](https://grahack.github.io/pattashuggah/).
 # TODO
 
 * smart size viewer
+* for each pattern
+  * add a comment area (expandable)
+  * add a timecode
 * more content
 * for contributors: link to views.cljs or extra data file and CONTRIBUTE file
+* add Disqus
 
 ## Getting Started
 

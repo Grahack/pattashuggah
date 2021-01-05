@@ -9,9 +9,11 @@ See it live [here](https://grahack.github.io/pattashuggah/).
 * smart size viewer
 * for each song
   * add BPM
+  * add nb notes per beat
 * for each pattern
   * add a comment area (expandable)
   * add a timecode
+  * add nb notes per beat (defaults to the one of the song) if needed
 * more content
 * for contributors: link to views.cljs or extra data file and CONTRIBUTE file
 * add Disqus

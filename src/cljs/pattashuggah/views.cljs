@@ -292,7 +292,44 @@
              "post guitar solo (until fade out)"
              "same as post guitar solo"
             ]]
-           "Neurotica"
+           ["Neurotica"
+            ["intro (×4)"
+             (str "X-+-+-+- XX-XX-X "
+                  "X-+-+-+- XX-XX-X "
+                  "X-+-+-+- XX-XX-X "
+                  "X-+-+-+-- XX-XX-X "
+                  "X--")
+             "pre verse (×2)"
+             (str
+               "X--X--XX-XO "
+               "X--X--XO "
+               "X--X-+O "
+               "X--X--XX-XO "
+               "X--X--XO "
+               "X--X-+O "
+               "X--X--XX-XX- "
+               )
+             "transition (×1)"
+             (str (clojure.string/join (repeat 10 "X-- ")) "XO")
+             "verse 1 (×4)"
+             (str (clojure.string/join (repeat 20 "X-- ")) "X-XO")
+             "post verse 1 (×2)"
+             (str (clojure.string/join (repeat 6 "X-- ")) "XX-XOX- "
+                  (clojure.string/join (repeat 7 "X-- ")) "XX-XOX- "
+                  "X-- X-- X-- XO")
+             "nothing"
+             "+-+-+-+-"
+             "breakdown"
+             (str "XOX-+-+-+- X-XO+-+-+-+- "
+                  "XOX-+-+-+- X-XO+-+-+-+- "
+                  "XOX-+-+-+- X-XO+-XO+-")
+             "pre verse 2"
+             (str "X-XX-XOX-- X-XX-X-XOX-- "
+                  "X-XX-XOX-- X-XX-X-XOX-- "
+                  "X-XX-XOX-- X-XX-X-XOX ")
+             "verse 2"
+             "same as pre verse 2"
+            ]]
            ["The Mouth Licking What You've Bled"
             ["intro (×4)"
              "X-X-- X-X-- X-X-- X-X-X-- X-X-- X-X-- "

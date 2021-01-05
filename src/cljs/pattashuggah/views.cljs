@@ -132,7 +132,8 @@
 
 (defn song-with-patterns [song-and-patterns]
   (let [title (first song-and-patterns)
-        patterns (partition 2 (second song-and-patterns))]
+        data-map (second song-and-patterns)
+        patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id (slug title)} [:span title]]
      (map pattern patterns)

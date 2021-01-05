@@ -27,6 +27,7 @@
 
     ["Chaosphere (1998)"
      [["Concatenation"
+      {:patterns
        ["intro (×4)"
         (str "X--X-X-X-- X--X-X-X-- X--X-X-X-- X--X-X-X-- "
              "X--X-X-X-- X--X-X-X-- X-+-")
@@ -58,9 +59,10 @@
         "same as intro"
         "outro (×2)"
         "same as verse (with a premature end though)"
-       ]]
+       ]}]
 
       ["New Millennium Cyanide Christ"
+      {:patterns
        ["intro (×2)"
         (str "XOXO+-X-X- "
              "XOXO+-X-X- XOXOXOX--X-X- "
@@ -108,9 +110,10 @@
         (str "X--X--XOX-+- X--X--XOXOXOX-+- "
              "X--X--XOX-+- X--X--XOXOXOX-+- "
              "X--X--XO")
-       ]]
+       ]}]
 
       ["Corridor Of Chameleons"
+      {:patterns
        ["intro (×4)"
         (str "XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- "
              "XOXOXOX-+- XOXOXOX-+- XOXO")
@@ -151,9 +154,10 @@
         "same as bridge"
         "post guitar solo (until fade out)"
         "same as post guitar solo"
-       ]]
+       ]}]
 
       ["Neurotica"
+      {:patterns
        ["intro (×4)"
         (str "X-+-+-+- XX-XX-X "
              "X-+-+-+- XX-XX-X "
@@ -190,9 +194,10 @@
              "X-XX-XOX-- X-XX-X-XOX ")
         "verse 2"
         "same as pre verse 2"
-       ]]
+       ]}]
 
       ["The Mouth Licking What You've Bled"
+      {:patterns
        ["intro (×4)"
         "X-X-- X-X-- X-X-- X-X-X-- X-X-- X-X-- "
         "transition (×1)"
@@ -242,7 +247,7 @@
           "X--X-XX-- "
           "X--X-XX-+- "
           )
-       ]]
+       ]}]
       "Sane"
       "The Exquisite Machinery Of Torture"
       "Elastic"]]
@@ -251,6 +256,7 @@
      ["Stengah"
       "Rational Gaze"
       ["Perpetual Black Second"
+      {:patterns
        ["intro (×2)"
         (str "X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- "
              "X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- "
@@ -280,21 +286,23 @@
              "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- X-")
         "end"
         "TODO"
-       ]]
+       ]}]
 
       "Closed Eye Visuals"
       ["Glints Collide"
+      {:patterns
        ["intro"
         (str "X-+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O "
               "X--+-X-+-")
-       ]]
+       ]}]
       "Organic Shadows"
       ["Straws Pulled At Random"
+      {:patterns
        ["intro"
         (str "X-X-+X-X-X--+- X-X-+X-X-X--+- "
              "X-X-+X-X-X--+- X-X-+X-X-X--+- "
              "X-X-+X--")
-       ]]
+       ]}]
       "Spasm"
       "Nebulous"
       "Obsidian"]]
@@ -318,6 +326,7 @@
      ["Combustion"
       "Electric Red"
       ["Bleed"
+      {:patterns
        ["intro (throughout + in this song XX all have an O in between)"
         "XX-"
         "verse 1"
@@ -326,15 +335,16 @@
         "XX-X-XX-"
         "verse 2"
         "XX-X-"
-        ]]
+        ]}]
       "Lethargica"
       "Obzen"
       "This Spiteful Snake"
       "Pineal Gland Optics"
       ["Pravus"
+      {:patterns
        ["intro"
         (str "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- ")
-       ]]
+       ]}]
       "Dancers To A Discordant System"]]
 
     ["Koloss (2012)"
@@ -352,6 +362,7 @@
     ["The Violent Sleep Of Reason (2016)"
      ["Clockworks"
       ["Born In Dissonance"  ; xtO3VCu5wv4
+      {:patterns
        ["intro (×2)"
         (str "X--XX-X- X--XX-X-X- X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
              "X--XX- X--XX-X- X--XX-X-X- X--XX-X-X-X- X--XX-X-X-X- "
@@ -439,7 +450,7 @@
              "X--XX-X--XX- "
              "X--XX-X- "
              )
-       ]]
+       ]}]
 
       "MonstroCity"
       "By The Ton"

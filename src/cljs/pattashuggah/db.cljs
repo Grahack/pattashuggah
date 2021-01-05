@@ -59,6 +59,7 @@
         "outro (×2)"
         "same as verse (with a premature end though)"
        ]]
+
       ["New Millennium Cyanide Christ"
        ["intro (×2)"
         (str "XOXO+-X-X- "
@@ -108,6 +109,7 @@
              "X--X--XOX-+- X--X--XOXOXOX-+- "
              "X--X--XO")
        ]]
+
       ["Corridor Of Chameleons"
        ["intro (×4)"
         (str "XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- "
@@ -150,6 +152,7 @@
         "post guitar solo (until fade out)"
         "same as post guitar solo"
        ]]
+
       ["Neurotica"
        ["intro (×4)"
         (str "X-+-+-+- XX-XX-X "
@@ -188,6 +191,7 @@
         "verse 2"
         "same as pre verse 2"
        ]]
+
       ["The Mouth Licking What You've Bled"
        ["intro (×4)"
         "X-X-- X-X-- X-X-- X-X-X-- X-X-- X-X-- "
@@ -277,6 +281,7 @@
         "end"
         "TODO"
        ]]
+
       "Closed Eye Visuals"
       ["Glints Collide"
        ["intro"
@@ -435,6 +440,7 @@
              "X--XX-X- "
              )
        ]]
+
       "MonstroCity"
       "By The Ton"
       "Violent Sleep Of Reason"

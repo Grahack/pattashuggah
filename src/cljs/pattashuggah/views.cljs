@@ -183,7 +183,6 @@
          "The split occurs brutally at the ninth beat (or similar beat) "
          "even if it splits a chunk. "
          "Usually at this place in the pattern nothing unexpected happens."]
-
      [:h2 "Table of contents"]
      (map album-toc disco)
      [:h2 "Patterns"]

@@ -4,6 +4,9 @@ Rhythm patterns from some Meshuggah songs.
 
 See it live [here](https://grahack.github.io/pattashuggah/).
 
+Data is in [src/cljs/pattashuggah/db.cljs](https://github.com/Grahack/pattashuggah/blob/main/src/cljs/pattashuggah/db.cljs)
+and views are in [src/cljs/pattashuggah/views.cljs](https://github.com/Grahack/pattashuggah/blob/main/src/cljs/pattashuggah/views.cljs).
+
 # TODO
 
 * smart size viewer
@@ -15,7 +18,7 @@ See it live [here](https://grahack.github.io/pattashuggah/).
   * add a timecode
   * add nb notes per beat (defaults to the one of the song) if needed
 * more content
-* for contributors: link to views.cljs or extra data file and CONTRIBUTE file
+* CONTRIBUTE file
 * add Disqus
 
 ## Getting Started

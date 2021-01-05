@@ -54,7 +54,8 @@
         size (pattern-size pattern)
         spaces (positions " " pattern)
         count-patterns
-          {16 (count-pattern-maker  2 " ' ^ ' ")
+          { 8 (count-pattern-maker  1 " ' ^ ' ")
+           16 (count-pattern-maker  2 " ' ^ ' ")
            24 (count-pattern-maker  3 " ' ^ ' ")
            32 (count-pattern-maker  4 " ' ^ ' ")
            64 (count-pattern-maker  8 " ' ^ ' ")

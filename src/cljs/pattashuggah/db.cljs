@@ -189,9 +189,9 @@
              "XOX-+-+-+- X-XO+-+-+-+- "
              "XOX-+-+-+- X-XO+-XO+-")
         "pre verse 2"
-        (str "X-XX-XOX-- X-XX-X-XOX-- "
-             "X-XX-XOX-- X-XX-X-XOX-- "
-             "X-XX-XOX-- X-XX-X-XOX ")
+        (str "X-+X-XOX-- X-XX-X-XOX-- "
+             "X-+X-XOX-- X-XX-X-XOX-- "
+             "X-+X-XOX-- X-XX-X-XOO ")
         "verse 2"
         "same as pre verse 2"
        ]}]

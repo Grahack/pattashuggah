@@ -182,18 +182,36 @@
         (str (clojure.string/join (repeat 6 "X-- ")) "XX-XOX- "
              (clojure.string/join (repeat 7 "X-- ")) "XX-XOX- "
              "X-- X-- X-- XO")
-        "nothing"
+        "nothing (×1)"
         "+-+-+-+-"
-        "breakdown"
+        "breakdown (×1)"
         (str "XOX-+-+-+- X-XO+-+-+-+- "
              "XOX-+-+-+- X-XO+-+-+-+- "
              "XOX-+-+-+- X-XO+-XO+-")
-        "pre verse 2"
-        (str "X-+X-XOX-- X-XX-X-XOX-- "
-             "X-+X-XOX-- X-XX-X-XOX-- "
-             "X-+X-XOX-- X-XX-X-XOO ")
-        "verse 2"
+        "pre verse 2 (×2)"
+        (str "X-+X-XOX-- X-++-X-XOX-- "
+             "X-+X-XOX-- X-++-X-XOX-- "
+             "X-+X-XOX-- X-++-X-XOO ")
+        "verse 2 (×2)"
         "same as pre verse 2"
+        "guitar solo (×4)"
+        (str "X-+-OX-X-- "
+             "X-+-OX-X-++OX-X-- "
+             "X-+-OX-X-++OX-X-- "
+             "X-+-OX-X-++OX-X-- "
+             "X-- ")
+        "transition 2 (×1)"
+        "+-+-XO+-"
+        "intro 2"
+        "same as intro (×2)"
+        "verse 3 (×4)"
+        "same as verse 1"
+        "post verse 3 (×2)"
+        "same as post verse 1"
+        "pre outro (×2)"
+        "same as pre verse 2"
+        "outro (×56)"
+        "X--"
        ]}]
 
       ["The Mouth Licking What You've Bled"

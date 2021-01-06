@@ -309,7 +309,64 @@
          "end (×1)"
          "X--XX--X"
          ]}]
-      "Elastic"]]
+
+      ["Elastic"
+       {:patterns
+        ["intro (×4)"
+         (str "X--+- X-- XOX--X--X- "
+              "X-+- XOX--X--X- "
+              "X-+- XOX--X--X- "
+              "X-+- XOX--X--X- "
+              "X-XO")
+         "transition"
+         "XOOX- XOOX- XOXOX- XOOX- XOOX- XOOX- -"
+         "pre verse 1 (×2)"
+         (str "XOOX- XOOX- XOXOX- "
+              "XOOX- XOOX- XOOX- XOXOX- "
+              "XOOX- XOOX- XOOX- XOXOX- "
+              "XOOX-"
+              "XOOX- XOOX- XOXOX- "
+              "XOOX- XOOX- XOOX- XOXOX- "
+              "XOOX- XOOX- XOOX- XOXOX- "
+              "XOOX- X-")
+         "verse 1 (×4)"
+         "same as pre verse 1"
+         "post verse 1 (×2)"
+         "same as intro"
+         "breakdown (×1), based on the « post breakdown » below"
+         (str "X--+-- +-+-+- "
+              "X--X--+-- +-+-+-- "
+              "X--+-- +-+-+- "
+              "X--X--X--+-- +-+-+-+--X-- "
+              "X--+-- +-+-+- "
+              "X--X--+-- +-+-+-- "
+              "X--+-- +-+-+- "
+              "X--X--X--+-- +-+-+-X--XXO ")
+         "post breakdown (×4)"
+         (str "X--X-- X-X-X- "
+              "X--X--X-- X-X-X-- "
+              "X--X-- X-X-X- "
+              "X--X--X--X-- X-X-X-X--X-- ")
+         "pre guitar solo (×4)"
+         (str "XOOX--X--X-XX-X-X-- "
+              "XOOX--X--X-XX-X-X-- "
+              "XOOX--X--X-XX-X-X-- "
+              "XOOX-+O")
+         "guitar solo (×4)"
+         "same as pre guitar solo"
+         "transition"
+         "same as transition + one beat"
+         "verse 2 (×4)"
+         "same as pre verse 1"
+         "post verse 2 (×4, half instrumental, half sang)"
+         "same as intro"
+         "outro"
+         (str "X-+-+-+- X-+-+- X-+-+- X-+-+- "
+              "X-+-+-+- X-+-+- X-+-+- X-+-+- "
+              "X-+-+-+- X-+-+- X-+-+- X-+-+- "
+              "X-+-+-+- X-+-+- X-+-+- X-+-+- "
+              "X-+-+-+- X-+-+- X-+-+- X-+- ")
+         ]}]]]
 
     ["Nothing (2002)"
      ["Stengah"

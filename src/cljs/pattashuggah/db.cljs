@@ -268,7 +268,47 @@
           )
        ]}]
       "Sane"
-      "The Exquisite Machinery Of Torture"
+
+      ["The Exquisite Machinery Of Torture"
+       {:notes-per-beat 6
+        :patterns
+        ["intro (×4, the last without crash washing)"
+         (str "+--+-X-+-+-- "
+              "+-X-+-+-- "
+              "+-X-+-+-- "
+              "+-X-+-+-- "
+              "+-X-+-+-- ")
+         "verse 1 (×2)"
+         (str (clojure.string/join (repeat 13 "X--XX-- ")) "X--XO")
+         "chorus 1 (×1)"
+         (str (clojure.string/join (repeat 13 "+X-+-X- ")) "+X-XO")
+         "transition (×1)"
+         "X--XX--X-+--"
+         "verse 2 (×2)"
+         "same as verse 1"
+         "chorus 2 (×2)"
+         (str (clojure.string/join (repeat 6 "+X-+-X- ")) "+X-+X-")
+         "guitar solo (×3)"
+         (str "X--XOX-X-X-X-X-X-XX-X-X- "
+              "X--XOX-X-X-X-X-X-XX-X-XO ")
+         "post guitar solo (×4)"
+         (str "X--XOX--X-- "
+              "X--XOX--X-- "
+              "X--XOX--X-- "
+              "X--XOX--X-- "
+              "X-+- ")
+         "transition 2 (×1)"
+         (str "X--XX-- "
+              "X--XX-- "
+              "X--XX-- "
+              "+--")
+         "verse 3"
+         "same as verse 1"
+         "final chorus (×1)"
+         "same as chorus 2 + chorus 1"
+         "end (×1)"
+         "X--XX--X"
+         ]}]
       "Elastic"]]
 
     ["Nothing (2002)"

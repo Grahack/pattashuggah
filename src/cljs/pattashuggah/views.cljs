@@ -37,8 +37,8 @@
 
 (defn positions [character coll]
   ; https://stackoverflow.com/questions/4830900/how-do-i-find-the-index-of-an-item-in-a-vector
-  (keep-indexed (fn [idx x]
-         (when (= character x) idx)) coll))
+  (let [fun (fn [idx x] (when (= character x) idx))]
+    (keep-indexed fun coll)))
 
 (defn insert-spaces
   [pos-list txt]

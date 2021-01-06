@@ -157,7 +157,8 @@
        ]}]
 
       ["Neurotica"
-      {:patterns
+      {:notes-per-beat 4
+       :patterns
        ["intro (×4)"
         (str "X-+-+-+- XX-XX-X "
              "X-+-+-+- XX-XX-X "

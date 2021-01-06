@@ -49,21 +49,17 @@
           after (clojure.string/join (drop first-space txt))]
       (insert-spaces (rest pos-list) (str before " " after)))))
 
-(defn pattern [song-pattern]
+(defn pattern [song-pattern notes-per-beat]
   (let [section (first song-pattern)
         pattern (second song-pattern)
         size (pattern-size pattern)
         spaces (positions " " pattern)
-        count-patterns
-          { 8 (count-pattern-maker  1 " ' ^ ' ")
-           16 (count-pattern-maker  2 " ' ^ ' ")
-           24 (count-pattern-maker  3 " ' ^ ' ")
-           32 (count-pattern-maker  4 " ' ^ ' ")
-           64 (count-pattern-maker  8 " ' ^ ' ")
-          128 (count-pattern-maker 16 " ' ^ ' ")
-          256 (count-pattern-maker 32 " ' ^ ' ")
-          512 (count-pattern-maker 64 " ' ^ ' ")}
-        count-pattern-raw (get count-patterns size)
+        rulers {4 " ^ "
+                6 " '^ '"
+                8 " ' ^ ' "}
+        ruler (get rulers notes-per-beat)
+        beats (/ size notes-per-beat)
+        count-pattern-raw (count-pattern-maker beats ruler)
         count-ruler (insert-spaces spaces count-pattern-raw)]
   [:div
    [:h4 section]
@@ -72,7 +68,9 @@
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
        (cond ; split in several lines?
-         (= size 128)
+         (or (and (= notes-per-beat 4) (= size 64))
+             (= size 96)
+             (= size 128))
          (let [nine-position (clojure.string/index-of count-ruler "9")]
            [:div
              [:pre (subs pattern     0 nine-position)]
@@ -136,7 +134,7 @@
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id (slug title)} [:span title]]
-     (map pattern patterns)
+     (map pattern patterns (repeat (get data-map :notes-per-beat 8)))
      ]))
 
 (defn patterns [album-data]

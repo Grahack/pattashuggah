@@ -50,8 +50,11 @@
       (insert-spaces (rest pos-list) (str before " " after)))))
 
 (defn pattern [song-pattern notes-per-beat]
-  (let [section (first song-pattern)
-        pattern (second song-pattern)
+  (let [section-name (first song-pattern)
+        pattern-data (second song-pattern)
+        pattern (if (string? pattern-data)
+                     pattern-data
+                     (:pattern pattern-data))
         size (pattern-size pattern)
         spaces (positions " " pattern)
         rulers {4 " ^ "
@@ -62,7 +65,7 @@
         count-pattern-raw (count-pattern-maker beats ruler)
         count-ruler (insert-spaces spaces count-pattern-raw)]
   [:div
-   [:h4 section]
+   [:h4 section-name]
    (if (and
          (not (clojure.string/starts-with? pattern "same"))
          (not (clojure.string/starts-with? pattern "TODO")))

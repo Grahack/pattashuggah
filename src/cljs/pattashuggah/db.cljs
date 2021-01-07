@@ -15,7 +15,25 @@
 
     ["Destroy Erase Improve (1995)"
      ["Future Breed Machine"
-      "Beneath"
+      ["Beneath"
+       {:notes-per-beat 6
+        :patterns
+        ["intro, slow without drums (×1)"
+         (str "X--+-- X--+-- X--X-- X--X-- "
+              "X--+-- X--X-- X--X-- X--X-- "
+              "X--+-- X--+-- X--+-- X-X-X- "
+              "X--+-- X--X-- X--+-- X-X-X- ")
+         "intro (×4)"
+         (str "X-+-XX-XO "
+              "X-+-XX-XO "
+              "X-+-XX-XO "
+              "X--XOOXOO ")
+         "pre verse 1 (×4)"
+         {:notes-per-beat 3
+          :pattern (str (clojure.string/join (repeat 9 "X-X-- ")) "X--")}
+         "verse 1 (×4)"
+         "same as pre verse"
+         ]}]
       "Soul Burn"
       "Transfixion"
       "Vanished"

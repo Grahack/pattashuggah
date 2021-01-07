@@ -49,12 +49,15 @@
           after (clojure.string/join (drop first-space txt))]
       (insert-spaces (rest pos-list) (str before " " after)))))
 
-(defn pattern [song-pattern notes-per-beat]
+(defn pattern [song-pattern notes-per-beat-song-level]
   (let [section-name (first song-pattern)
         pattern-data (second song-pattern)
         pattern (if (string? pattern-data)
                      pattern-data
                      (:pattern pattern-data))
+        ; may have to redefine notes-per-beat inherited by the song data
+        notes-per-beat (get pattern-data :notes-per-beat
+                            notes-per-beat-song-level)
         size (pattern-size pattern)
         spaces (positions " " pattern)
         rulers {4 " ^ "
@@ -134,10 +137,11 @@
 (defn song-with-patterns [song-and-patterns]
   (let [title (first song-and-patterns)
         data-map (second song-and-patterns)
+        notes-per-beat (get data-map :notes-per-beat 8)
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id (slug title)} [:span title]]
-     (map pattern patterns (repeat (get data-map :notes-per-beat 8)))
+     (map pattern patterns (repeat notes-per-beat))
      ]))
 
 (defn patterns [album-data]

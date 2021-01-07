@@ -18,7 +18,7 @@
       ["Beneath"
        {:notes-per-beat 6
         :patterns
-        ["intro, slow without drums (×1)"
+        ["pre intro, slow without drums (×1)"
          (str "X--+-- X--+-- X--X-- X--X-- "
               "X--+-- X--X-- X--X-- X--X-- "
               "X--+-- X--+-- X--+-- X-X-X- "
@@ -28,11 +28,36 @@
               "X-+-XX-XO "
               "X-+-XX-XO "
               "X--XOOXOO ")
-         "pre verse 1 (×4)"
+         "pre verse 1 (×4, 2 without guitars, 2 with)"
          {:notes-per-beat 3
           :pattern (str (clojure.string/join (repeat 9 "X-X-- ")) "X--")}
          "verse 1 (×4)"
-         "same as pre verse"
+         "same as pre verse 1"
+         "post verse  1 (×2)"
+         {:notes-per-beat 3
+          :pattern "XXOXOX-- XXOXOX-- XXOXOXOO XXOX-- XXOXOX- XXOXOXOXOXO"}
+         "pre chorus 1 (×1)"
+         (str (clojure.string/join (repeat 10 "X--+--+-- ")) "X--+--")
+         "chorus 1 half-time (×4)"
+         "X--+-X-X-X--+-+X-X-X-+-- "
+         "chorus 1 double-time (×4)"
+         {:notes-per-beat 3
+          :pattern "X--+-X-X-X--+-+X-X-X-+-- "}
+         "pre verse 2 (×2, 1 without the ride, 1 with)"
+         "same as pre verse 1"
+         "verse 2 (×2)"
+         "same as verse 1"
+         "guitar solo (×4)"
+         {:notes-per-beat 3
+          :pattern (str (clojure.string/join (repeat 9 "XOX-+ ")) "X--")}
+         "post verse 2 (×2)"
+         "same as post verse 1"
+         "intro again (×2)"
+         "same as intro"
+         "intro again stronger (×1)"
+         (clojure.string/join (repeat 4 "X-X-XOX-- "))
+         "intro again stronger but ending (×1)"
+         "X-X-XOX-- X-X-XOX-- X-X-XOX-X -+-X-+-X- "
          ]}]
       "Soul Burn"
       "Transfixion"

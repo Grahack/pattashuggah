@@ -95,6 +95,20 @@
              [:pre (subs count-ruler 0 nine-position)]
              [:pre (subs pattern     nine-position)]
              [:pre (subs count-ruler nine-position)]])
+         (= size 104)  ; Soul Burn has a 8×13 riff
+         (let [e-position (clojure.string/index-of count-ruler "D")
+               to-be-tweaked (subs count-ruler e-position)
+               match #"[123456789A]"
+               str1 "123456789A"
+               str2 "HIJKLMNOPQ"
+               replace-map (into (sorted-map) (map vector str1 str2))
+               count-ruler-tweaked
+                (clojure.string/replace to-be-tweaked match replace-map)]
+           [:div
+             [:pre (subs pattern     0 e-position)]
+             [:pre (subs count-ruler 0 e-position)]
+             [:pre (subs pattern     e-position)]
+             [:pre count-ruler-tweaked]])
          (= size 256)
          (let [one-pos (positions "1" count-ruler)
                split-2 (second one-pos)

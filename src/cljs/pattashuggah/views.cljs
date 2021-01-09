@@ -76,6 +76,16 @@
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
        (cond ; split in several lines?
+         (or (= size 72))
+         (let [four-position (clojure.string/index-of count-ruler "4")
+               seven-position (clojure.string/index-of count-ruler "7")]
+           [:div
+             [:pre (subs pattern     0             four-position)]
+             [:pre (subs count-ruler 0             four-position)]
+             [:pre (subs pattern     four-position seven-position)]
+             [:pre (subs count-ruler four-position seven-position)]
+             [:pre (subs pattern     seven-position)]
+             [:pre (subs count-ruler seven-position)]])
          (or (and (= notes-per-beat 4) (= size 64))
              (= size 96)
              (= size 128))

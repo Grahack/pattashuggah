@@ -327,7 +327,45 @@
           "X--X-XX-+- "
           )
        ]}]
-      "Sane"
+
+      ["Sane"
+      {:patterns
+       ["intro (×8)"
+        "X-- X-- X-- X-- X-XO"
+        "verse 1 (×4)"
+        (str "X- " (clojure.string/join (repeat 9 "+XO ")) "+X-")
+        "post verse 1 (×2)"
+        "X--X--+X-X--X-+- X--X--X--X--X-+-"
+        "transition"
+        "X-+-+-+-"
+        "verse 2 (×4)"
+        "same as verse 1"
+        "post verse 2 (×4)"
+        "X-- X-- X-- X-- X-XO"
+        "pre guitar solo (×8)"
+        "XOOX- XOOX- XOOX- + "
+        "guitar solo (×4)"
+        "same as verse"
+        "pre chorus 1 (×8)"
+        "same as pre guitar solo"
+        "chorus 1 (×8)"
+        {:notes-per-beat 2
+         :pattern "X-+-XX-X-XX-+-"}
+        "post chorus 1 (×16)"
+        "same as chorus 1"
+        "chorus 2 (×8)"
+        "same as chorus 1"
+        "post chorus 2 (×8)"
+        "same as chorus 1"
+        "pre bridge (×1)"
+        (clojure.string/join (repeat 24 "X-- "))
+        "bridge (×2)"
+        (clojure.string/join (repeat 8 "X--+--X-- "))
+        "outro (ad lib)"
+        (str "+--+--X-- "
+             (clojure.string/join (repeat 5 "X--+--X-- "))
+             "X--+--XOXO")
+        ]}]
 
       ["The Exquisite Machinery Of Torture"
        {:notes-per-beat 6

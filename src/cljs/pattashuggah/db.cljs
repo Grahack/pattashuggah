@@ -58,7 +58,24 @@
          (clojure.string/join (repeat 4 "X-X-XOX-- "))
          "intro again stronger but ending (×1)"
          "X-X-XOX-- X-X-XOX-- X-X-XOX-X -+-X-+-X- "
+         "interlude (×4)"
+          "X--XX--XOX-- XX--XX--XOX-- XX--XX--XOX-- XX--XX--XO "
+         "post interlude transition (×4)"
+         {:notes-per-beat 3
+          :pattern "XX--XOX--"}
+         "verse 3 (×4)"
+         "same as verse 1"
+         "post verse 3 (×2)"
+         "same as post verse 1"
+         "chorus 2 half-time (×2)"
+         "same as chorus 1 half-time"
+         "chorus 1 double-time (×2)"
+         "same as chorus 1 double-time"
+         "outro"
+         (let [nine-times-five (clojure.string/join (repeat 5 "X--+--+-- "))]
+           (str nine-times-five "+-- " nine-times-five "X-X"))
          ]}]
+
       "Soul Burn"
       "Transfixion"
       "Vanished"

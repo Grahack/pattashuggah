@@ -76,7 +76,7 @@
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
        (cond ; split in several lines?
-         (= size 72)
+         (= size 72)  ; Sane has a 8×9 riff
          (let [four-position (clojure.string/index-of count-ruler "4")
                seven-position (clojure.string/index-of count-ruler "7")]
            [:div

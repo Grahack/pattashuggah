@@ -76,7 +76,7 @@
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
        (cond ; split in several lines?
-         (or (= size 72))
+         (= size 72)
          (let [four-position (clojure.string/index-of count-ruler "4")
                seven-position (clojure.string/index-of count-ruler "7")]
            [:div

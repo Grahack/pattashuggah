@@ -60,7 +60,8 @@
                             notes-per-beat-song-level)
         size (pattern-size pattern)
         spaces (positions " " pattern)
-        rulers {3 " '"
+        rulers {2 " "
+                3 " '"
                 4 " ^ "
                 6 " '^ '"
                 8 " ' ^ ' "}

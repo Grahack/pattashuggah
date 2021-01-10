@@ -76,7 +76,82 @@
            (str nine-times-five "+-- " nine-times-five "X-X"))
          ]}]
 
-      "Soul Burn"
+      ["Soul Burn"
+       {:notes-per-beat 4
+        :patterns
+        ["song intro 1 (×2)"
+         (str "X--X-- +-+-+- "
+              "X--X-- +-+-+- "
+              "X--X-- +-+-+- "
+              "X--X-- X--X-- ")
+         "small addition, the pulse skips an eighth note (×1)"
+         "X--X-- "
+         "song intro with backbeat (×2)"
+         (str "X-+-+- +--+-- "
+              "X-+-+- +--+-- "
+              "X-+-+- +--+-- "
+              "+--+-- +--+-- ")
+         "song intro with weird snare hits (×3)"
+         (str "X-+-+- +--+-O "
+              "X-+OX- +--+-- "
+              "X-+-+- +--+-- "
+              "+--+-- +--+-- ")
+         "song intro, last time, another eighth skipped (×1)"
+         (str "X-+-+- +--+-O "
+              "X-+OX- +--+-- "
+              "X-+-+- +--+-- ")
+         "verse intro (×1)"
+         (clojure.string/join (repeat 2 "X-X-+- X-X-+- X-X-+- X-X-X-+- "))
+         "verse 1 (×2)"
+         (clojure.string/join (repeat 4 "X-X-+- X-X-+- X-X-+- X-X-X-+- "))
+         "post verse 1 (×1)"
+         "same as verse 1"
+         "verse 2, first time (×1)"
+         "same as verse 1"
+         "verse 2, second time (×1)"
+         (str (clojure.string/join (repeat 3 "X-X-+- X-X-+- X-X-+- X-X-X-+- "))
+              "X-X-+- X-X-+- X-X-+- ")
+         "end of verse 2"
+         "X--X--X--X--+-+- "
+         "small addition, the pulse skips an eighth note (×1)"
+         "X--X-- "
+         "intro for verse 3"
+         (str "+-+-+- X--X-- +-XOXO X--X--")
+         "verse 3, but with the riff of the intro with backbeat (×2)"
+         "same as song intro with backbeat"
+         "post verse 3, first time (×1)"
+         "same as song intro with weird snare hits"
+         "post verse 3, second time (×1)"
+         (str "X-+-+- +--+-O "
+              "X-+OX- +--+-- "
+              "X-+-+- +--+-- "
+              "+--+-- +--+-- ")
+         "pre guitar solo (×8)"
+         "X-+X-X-X-+X-+X-+X-X-+X-X-X-+X-+-"
+         "guitar solo part 1 (×3)"
+         "same as pre guitar solo"
+         "guitar solo part 1, last (×1)"
+         "same as pre guitar solo"
+         "guitar solo part 2 (×6)"
+         "+X--X-+-X--X-+-X--+-+-X--X-+-X--X--XX-XX-+-X--X--X-+-XX-X--X--+-"
+         "verse 4"
+         "todo"
+         "post verse 4"
+         "todo"
+         "pre bridge (×4)"
+         "XX-XX-XOXOX-"
+         "bridge, instrumental (×8)"
+         "same as pre bridge"
+         "bridge, sang (×8)"
+         "same as pre bridge"
+         "post bridge 1 (×1)"
+         (str (clojure.string/join (repeat 16 "X-X-- ")) "X-+-X-+-X-+-")
+         "post bridge 2 (×1)"
+         (str (clojure.string/join (repeat 16 "X-X-- ")) "X-+-X-+-X-+-")
+         "pre outro"
+         "same as pre guitar solo"
+         ]}]
+
       "Transfixion"
       "Vanished"
       "Acrid Placidity"

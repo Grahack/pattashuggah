@@ -620,13 +620,25 @@
        :patterns
        ["intro (throughout)"
         "XX-"
-        "verse 1"
-        "XX-"
+        "verse 1 (throughout)"
+        "same as intro"
         "transition (×1)"
         "XX-X-XX-"
-        "verse 2"
+        "verse 2 (throughout, except some pieces of verse 1)"
         "XX-X-"
+        "pre chorus (throughout)"
+        "XXO"
+        "chorus 1, with a crash on nine and a half (×1)"
+        (str (clojure.string/join (repeat 5 "X-X-XXOX-X- XXOXXOX-XXO "))
+             "X-X-XXOX-X- XXOX-+-")
+        "chorus, instrumental (×1)"
+        "same as chorus"
+        "chorus 2 (×1)"
+        "same as chorus"
+        "pre verse 3 and verse 3 (throughout)"
+        "XX-X-X- XX-X-X- XX-X- XX- XX-X-"
         ]}]
+
       "Lethargica"
       "Obzen"
       "This Spiteful Snake"

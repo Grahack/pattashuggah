@@ -614,9 +614,11 @@
     ["obZen (2008)"
      ["Combustion"
       "Electric Red"
+
       ["Bleed"
-      {:patterns
-       ["intro (throughout + in this song XX all have an O in between)"
+      {:comments "In this song all XX have an O in between."
+       :patterns
+       ["intro (throughout)"
         "XX-"
         "verse 1"
         "XX-"

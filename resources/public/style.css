@@ -45,3 +45,7 @@ td, th {
     padding: 0.2em;
     border: solid 1px;
 }
+
+.comments {
+    text-indent: 2em;
+}

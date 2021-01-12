@@ -164,9 +164,11 @@
   (let [title (first song-and-patterns)
         data-map (second song-and-patterns)
         notes-per-beat (get data-map :notes-per-beat 8)
+        comments (:comments data-map)
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id (slug title)} [:span title]]
+     [:p {:class "comments"} comments]
      (map pattern patterns (repeat notes-per-beat))
      ]))
 

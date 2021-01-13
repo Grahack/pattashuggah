@@ -151,7 +151,7 @@
          "post bridge 1 (×1)"
          (str-join "" [16 "X-X-- "] "X-+-X-+-X-+-")
          "post bridge 2 (×1)"
-         (str-join "" [16 "X-X-- "] "X-+-X-+-X-+-")
+         "same as post bridge 1"
          "pre outro"
          "same as pre guitar solo"
          ]}]

@@ -614,7 +614,17 @@
       "Sum"]]
 
     ["obZen (2008)"
-     ["Combustion"
+     [["Combustion"
+      {:comments (str "There are double time and half time sections "
+                      "but we keep the half time notation for the whole song.")
+       :notes-per-beat 4
+       :patterns
+       ["guitar intro (×2)"
+        {:comments "This pattern starts between the two first notes of the guitar."
+         :pattern (str-join "-O " [13 "+O"] " +-OX")}
+        "intro"
+        "same as guitar intro"
+        ]}]
       "Electric Red"
 
       ["Bleed"

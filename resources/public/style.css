@@ -27,8 +27,16 @@ pre {
     font-size: 1.3em;
 }
 
-p.size {
+p.size, p.structure {
     font-size: 0.7em;
+}
+
+p.size {
+    margin-bottom: 0;
+}
+
+p.structure {
+    margin-top: 0;
 }
 
 p.same {

@@ -17,6 +17,23 @@
   (let [chunks (clojure.string/split pattern " ")]
     (clojure.string/join "+" (map count chunks))))
 
+(defn just-to-see [[k v]]
+  (let [times (cond (= v 1) "once"
+                    (= v 2) "twice"
+                    :else (str v " times"))]
+  [:span [:code k] " " times ", "]))
+
+(defn pattern-structure [pattern]
+  ; thanks to http://clj-me.cgrand.net/2009/04/27/counting-occurences/
+  ; and https://stackoverflow.com/questions/26327715/clojure-sort-map-over-value
+  (let [chunks (clojure.string/split pattern " ")
+        counts-map (reduce #(assoc %1 %2 (inc (%1 %2 0))) {} chunks)
+        sorted  (into (sorted-map-by (fn [key1 key2]
+                                         (compare [(get counts-map key2) key2]
+                                                  [(get counts-map key1) key1])))
+                      counts-map)]
+    (map just-to-see counts-map)))
+
 (defn song-toc [song-title]
   (if (string? song-title)  ; song with no pattern -> no link
     [:li song-title]
@@ -159,7 +176,8 @@
            [:pre pattern]
            [:pre count-ruler]])
        [:p {:class "size"} "Size : " size " "
-           "(" (pattern-counts pattern)  ")"]]
+           "(" (pattern-counts pattern)  ")"]
+       [:p {:class "structure"} "Structure : " (pattern-structure pattern)  ]]
      ; for «same» or «TODO» patterns
      [:p {:class "same"} pattern])]))
 

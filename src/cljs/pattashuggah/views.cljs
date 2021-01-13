@@ -160,6 +160,7 @@
            [:pre count-ruler]])
        [:p {:class "size"} "Size : " size " "
            "(" (pattern-counts pattern)  ")"]]
+     ; for «same» or «TODO» patterns
      [:p {:class "same"} pattern])]))
 
 (defn song-with-patterns [song-and-patterns]

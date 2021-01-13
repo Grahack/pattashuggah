@@ -33,14 +33,14 @@
               "X--XOOXOO ")
          "pre verse 1 (×4, 2 without guitars, 2 with)"
          {:notes-per-beat 3
-          :pattern (str (clojure.string/join (repeat 9 "X-X-- ")) "X--")}
+          :pattern (str-join "" [9 "X-X-- "] "X--")}
          "verse 1 (×4)"
          "same as pre verse 1"
          "post verse  1 (×2)"
          {:notes-per-beat 3
           :pattern "XXOXOX-- XXOXOX-- XXOXOXOO XXOX-- XXOXOX- XXOXOXOXOXO"}
          "pre chorus 1 (×1)"
-         (str (clojure.string/join (repeat 10 "X--+--+-- ")) "X--+--")
+         (str-join "" [10 "X--+--+-- "] "X--+--")
          "chorus 1 half-time (×4)"
          "X--+-X-X-X--+-+X-X-X-+-- "
          "chorus 1 double-time (×4)"
@@ -52,13 +52,13 @@
          "same as verse 1"
          "guitar solo (×4)"
          {:notes-per-beat 3
-          :pattern (str (clojure.string/join (repeat 9 "XOX-+ ")) "X--")}
+          :pattern (str-join "" [9 "XOX-+ "] "X--")}
          "post verse 2 (×2)"
          "same as post verse 1"
          "intro again (×2)"
          "same as intro"
          "intro again stronger (×1)"
-         (clojure.string/join (repeat 4 "X-X-XOX-- "))
+         (str-join "" [4 "X-X-XOX-- "] "")
          "intro again stronger but ending (×1)"
          "X-X-XOX-- X-X-XOX-- X-X-XOX-X -+-X-+-X- "
          "interlude (×4)"
@@ -75,7 +75,7 @@
          "chorus 1 double-time (×2)"
          "same as chorus 1 double-time"
          "outro"
-         (let [nine-times-five (clojure.string/join (repeat 5 "X--+--+-- "))]
+         (let [nine-times-five (str-join "" [5 "X--+--+-- "] "")]
            (str nine-times-five "+-- " nine-times-five "X-X"))
          ]}]
 
@@ -104,16 +104,17 @@
               "X-+OX- +--+-- "
               "X-+-+- +--+-- ")
          "verse intro (×1)"
-         (clojure.string/join (repeat 2 "X-X-+- X-X-+- X-X-+- X-X-X-+- "))
+         (str-join "" [2 "X-X-+- X-X-+- X-X-+- X-X-X-+- "] "")
          "verse 1 (×2)"
-         (clojure.string/join (repeat 4 "X-X-+- X-X-+- X-X-+- X-X-X-+- "))
+         (str-join "" [4 "X-X-+- X-X-+- X-X-+- X-X-X-+- "] "")
          "post verse 1 (×1)"
          "same as verse 1"
          "verse 2, first time (×1)"
          "same as verse 1"
          "verse 2, second time (×1)"
-         (str (clojure.string/join (repeat 3 "X-X-+- X-X-+- X-X-+- X-X-X-+- "))
-              "X-X-+- X-X-+- X-X-+- ")
+         (str-join ""
+                   [3 "X-X-+- X-X-+- X-X-+- X-X-X-+- "]
+                   "X-X-+- X-X-+- X-X-+- ")
          "end of verse 2"
          "X--X--X--X--+-+- "
          "small addition, the pulse skips an eighth note (×1)"
@@ -148,9 +149,9 @@
          "bridge, sang (×8)"
          "same as pre bridge"
          "post bridge 1 (×1)"
-         (str (clojure.string/join (repeat 16 "X-X-- ")) "X-+-X-+-X-+-")
+         (str-join "" [16 "X-X-- "] "X-+-X-+-X-+-")
          "post bridge 2 (×1)"
-         (str (clojure.string/join (repeat 16 "X-X-- ")) "X-+-X-+-X-+-")
+         (str-join "" [16 "X-X-- "] "X-+-X-+-X-+-")
          "pre outro"
          "same as pre guitar solo"
          ]}]
@@ -314,12 +315,12 @@
           "X--X--XX-XX- "
           )
         "transition (×1)"
-        (str (clojure.string/join (repeat 10 "X-- ")) "XO")
+        (str-join "" [10 "X-- "] "XO")
         "verse 1 (×4)"
-        (str (clojure.string/join (repeat 20 "X-- ")) "X-XO")
+        (str-join "" [20 "X-- "] "X-XO")
         "post verse 1 (×2)"
-        (str (clojure.string/join (repeat 6 "X-- ")) "XX-XOX- "
-             (clojure.string/join (repeat 7 "X-- ")) "XX-XOX- "
+        (str (str-join "" [6 "X-- "] "XX-XOX- ")
+             (str-join "" [7 "X-- "] "XX-XOX- ")
              "X-- X-- X-- XO")
         "nothing (×1)"
         "+-+-+-+-"
@@ -360,7 +361,7 @@
         "transition (×1)"
         "X-X-- X-X-- X-X-+-"
         "verse 1 (×1)"
-        (str (clojure.string/join (repeat 25 "X-X-- ")) "X--")
+        (str-join "" [25 "X-X-- "] "X--")
         "inter verse (×1)"
         "same as verse"
         "verse 1 bis (×1)"
@@ -411,7 +412,7 @@
        ["intro (×8)"
         "X-- X-- X-- X-- X-XO"
         "verse 1 (×4)"
-        (str "X- " (clojure.string/join (repeat 9 "+XO ")) "+X-")
+        (str-join "X- " [9 "+XO "] "+X-")
         "post verse 1 (×2)"
         "X--X--+X-X--X-+- X--X--X--X--X-+-"
         "transition"
@@ -436,13 +437,11 @@
         "post chorus 2 (×8)"
         "same as chorus 1"
         "pre bridge (×1)"
-        (clojure.string/join (repeat 24 "X-- "))
+        (str-join "" [24 "X-- "] "")
         "bridge (×2)"
-        (clojure.string/join (repeat 8 "X--+--X-- "))
+        (str-join "" [8 "X--+--X-- "] "")
         "outro (ad lib)"
-        (str "+--+--X-- "
-             (clojure.string/join (repeat 5 "X--+--X-- "))
-             "X--+--XOXO")
+        (str-join "+--+--X-- " [5 "X--+--X-- "] "X--+--XOXO")
         ]}]
 
       ["The Exquisite Machinery Of Torture"
@@ -455,15 +454,15 @@
               "+-X-+-+-- "
               "+-X-+-+-- ")
          "verse 1 (×2)"
-         (str (clojure.string/join (repeat 13 "X--XX-- ")) "X--XO")
+         (str-join "" [13 "X--XX-- "] "X--XO")
          "chorus 1 (×1)"
-         (str (clojure.string/join (repeat 13 "+X-+-X- ")) "+X-XO")
+         (str-join "" [13 "+X-+-X- "] "+X-XO")
          "transition (×1)"
          "X--XX--X-+--"
          "verse 2 (×2)"
          "same as verse 1"
          "chorus 2 (×2)"
-         (str (clojure.string/join (repeat 6 "+X-+-X- ")) "+X-+X-")
+         (str-join "" [6 "+X-+-X- "] "+X-+X-")
          "guitar solo (×3)"
          (str "X--XOX-X-X-X-X-X-XX-X-X- "
               "X--XOX-X-X-X-X-X-XX-X-XO ")
@@ -632,8 +631,7 @@
         "pre chorus (throughout)"
         "XXO"
         "chorus 1, with a crash on nine and a half (×1)"
-        (str (clojure.string/join (repeat 5 "X-X-XXOX-X- XXOXXOX-XXO "))
-             "X-X-XXOX-X- XXOX-+-")
+        (str-join "" [5 "X-X-XXOX-X- XXOXXOX-XXO "] "X-X-XXOX-X- XXOX-+-")
         "chorus, instrumental (×1)"
         "same as chorus"
         "chorus 2 (×1)"

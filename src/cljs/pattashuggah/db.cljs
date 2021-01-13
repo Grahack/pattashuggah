@@ -1,5 +1,8 @@
 (ns pattashuggah.db)
 
+(defn str-join [pre [times repeated] post]
+   (str pre (clojure.string/join (repeat times repeated)) post))
+
 (def default-db
   {:disco
    [["Contradictions Collapse (1991)"

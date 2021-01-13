@@ -14,8 +14,8 @@
   (count (rm-wspace pattern)))
 
 (defn pattern-counts [pattern]
-  (let [splitted (clojure.string/split pattern " ")]
-    (clojure.string/join "+" (map count splitted))))
+  (let [chunks (clojure.string/split pattern " ")]
+    (clojure.string/join "+" (map count chunks))))
 
 (defn song-toc [song-title]
   (if (string? song-title)  ; song with no pattern -> no link

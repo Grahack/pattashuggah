@@ -56,6 +56,7 @@
                      pattern-data
                      (:pattern pattern-data))
         ; may have to redefine notes-per-beat inherited by the song data
+        comments (get pattern-data :comments)
         notes-per-beat (get pattern-data :notes-per-beat
                             notes-per-beat-song-level)
         size (pattern-size pattern)
@@ -75,6 +76,7 @@
          (not (clojure.string/starts-with? pattern "same"))
          (not (clojure.string/starts-with? pattern "TODO")))
      [:div
+       [:p {:class "pattern-comments"} comments]
        (cond ; split in several lines?
          (= size 72)  ; Sane has a 8×9 riff
          (let [four-position (clojure.string/index-of count-ruler "4")
@@ -168,7 +170,7 @@
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id (slug title)} [:span title]]
-     [:p {:class "comments"} comments]
+     [:p {:class "song-comments"} comments]
      (map pattern patterns (repeat notes-per-beat))
      ]))
 

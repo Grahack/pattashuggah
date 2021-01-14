@@ -544,7 +544,87 @@
          ]}]]]
 
     ["Nothing (2002)"
-     ["Stengah"
+     [["Stengah"
+      {:comments "Some anacrusis make this song tedious to encode."
+       :patterns
+       ["intro with a single guitar (×1)"
+        (str-join ""
+                  [5 "X--X-+-X--X--X-+-X--+- "]
+                  "X--X-+-X--X--X--+- ")
+        "intro (×2)"
+        "same as intro"
+        "pre pre verse 1 (×1)"
+        (str-join "X-" [6 "+-"] "-X")
+        "pre pre verse 1 (×7)"
+        (str-join "--" [6 "+-"] "-X")
+        "pre verse 1, the first (×1)"
+        (str-join "--" [4 "X--"] "X-")
+        "pre verse 1 (×6)"
+        (str-join "+-" [4 "X--"] "X-")
+        "pre verse 1, the last (×1)"
+        (str-join "+-" [2 "X--"] "X-+-+--X")
+        "verse 1 (×2)"
+        (str-join "--X--X--X--X--X- "
+                  [2 "--X--X--X--X--X- "]
+                  "--X--X--X-XX-+-X")
+        "post verse 1 (×4)"
+        "same as preverse 1 but 4 repetitions instead of 8"
+        "verse 1 again (×1)"
+        (str-join "--X--X--X--X--X- "
+                  [2 "--X--X--X--X--X- "]
+                  "--X--X--X-+-+-+-")
+        "chorus 1 (×2)"
+        (str-join ""
+                  [2 "X--X-+-X--X--X-+-X--+- "]
+                  "X--X-+-X--X--X-+-X-- ")
+        "post chorus 1 (×1)"
+        (str "X--X-+-X--X--X-+-X--+- "
+             "X--X-+-X--X--X-+-+X-+- +--X")
+        "verse 2, post verse 2, verse 2 again, chorus 2 and post chorus 2"
+        "same as 1"
+        "pre guitar solo (×1)"
+        (str "X--X--X-X- "
+             "X--X--X-X- "
+             "X--X--X-X- "
+             "X--X--X-X- "
+             "X-X- "
+             "X--X--X-X- "
+             "X--X--X-X- "
+             ; second turn
+             "X--X--X-X- "
+             "X--X--X-X- "
+             "X--X--X-X- "
+             "X-X- "
+             "X--X--X-X- "
+             "X--X--X-X- "
+             "X--X--X-X- "
+             )
+        "guitar solo (×4)"
+        (str "X--X--X-X- "
+             "X--X--X-X- "
+             "X-X- "
+             "X--X--X-X- "
+             "X-X- "
+             "X--X-- "
+             "X--X-- "
+             "X-X- "
+             "X--X--X-X- "
+             )
+        "post guitar solo (×2)"
+        {:notes-per-beat 4
+         :pattern (str-join "" [6 "X--X--X-X- "] "X-+-")}
+        "pre bridge (×2)"
+        (str-join "" [8 "X--X-+- "] "X--X--+-")
+        "transition (×1)"
+        (str-join "" [8 "X--X-+- "] "X-+-+-+-")
+        "bridge (×2)"
+        (str-join "" [18 "X--X-+- "] "XO")
+        "outro (×4)"
+        "same as intro but with the backbeat"
+        "end (×1)"
+        "X--X"
+       ]}]
+
       "Rational Gaze"
       ["Perpetual Black Second"
       {:patterns

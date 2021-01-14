@@ -46,10 +46,12 @@
 (defn album-link [album-data]
   (let [album-title (first album-data)
         href (str "#" (slug-album album-title))]
-    [:span {:class "quick-link"} [:a {:href href} album-title] " - "]))
+    [:span {:class "quick-link"} [:a {:href href} album-title]]))
 
 (defn quick-links [disco]
-    (map album-link disco))
+    (drop-last
+      (apply concat
+             (map vector (map album-link disco) (repeat " - ")))))
 
 (defn album-toc [album-data]
   (let [album-title (first album-data)

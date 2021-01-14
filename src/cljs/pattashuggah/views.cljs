@@ -10,6 +10,9 @@
 (defn slug [title]
   (clojure.string/lower-case (clojure.string/replace title " " "-")))
 
+(defn slug-album [title]
+  (slug (str "album-" title)))
+
 (defn pattern-size [pattern]
   (count (rm-wspace pattern)))
 
@@ -40,11 +43,19 @@
     (let [title (first song-title)]
       [:li [:a {:href (str "#" (slug title))} title]])))
 
+(defn album-link [album-data]
+  (let [album-title (first album-data)
+        href (str "#" (slug-album album-title))]
+    [:span {:class "quick-link"} [:a {:href href} album-title] " - "]))
+
+(defn quick-links [disco]
+    (map album-link disco))
+
 (defn album-toc [album-data]
   (let [album-title (first album-data)
         songs (second album-data)]
     [:div
-     [:h3 [:span album-title]]
+     [:h3 {:id (slug-album album-title)} [:span album-title]]
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
@@ -208,6 +219,7 @@
          [:a {:href "https://github.com/grahack/pattashuggah"
               :target "_blank"} "Github project"]
          "."]
+     [:div {:id "quick-links"} (quick-links disco)]
      [:p [:strong "Important notice"] " : "
          "These are not drums scores. By far."]
      [:p "Choices were made to make these patterns good hands exercises. "

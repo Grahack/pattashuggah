@@ -53,9 +53,11 @@
 
 (defn album-toc [album-data]
   (let [album-title (first album-data)
-        songs (second album-data)]
+        date (second album-data)
+        songs (get album-data 2)]
     [:div
-     [:h3 {:id (slug-album album-title)} [:span album-title]]
+     [:h3 {:id (slug-album album-title)}
+       [:span album-title " (" date ")"]]
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
@@ -206,7 +208,7 @@
 
 (defn patterns [album-data]
   (let [album-title (first album-data)
-        songs (second album-data)]
+        songs (get album-data 2)]
      (map song-with-patterns (filter (complement string?) songs))))
 
 (defn main-panel []

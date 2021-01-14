@@ -5,7 +5,7 @@
 
 (def default-db
   {:disco
-   [["Contradictions Collapse (1991)"
+   [["Contradictions Collapse" "1991"
      ["Paralyzing Ignorance"
       "Erroneous Manipulation"
       "Abnegating Cecity"
@@ -16,7 +16,7 @@
       "Choirs Of Devastation"
       "Cadaverous Mastication"]]
 
-    ["Destroy Erase Improve (1995)"
+    ["Destroy Erase Improve" "1995"
      ["Future Breed Machine"
       ["Beneath"
        {:notes-per-beat 6
@@ -164,7 +164,7 @@
       "Suffer In Truth"
       "Sublevels"]]
 
-    ["Chaosphere (1998)"
+    ["Chaosphere" "1998"
      [["Concatenation"
       {:patterns
        ["intro (×4)"
@@ -543,7 +543,7 @@
               "X-+-+-+- X-+-+- X-+-+- X-+- ")
          ]}]]]
 
-    ["Nothing (2002)"
+    ["Nothing" "2002"
      [["Stengah"
       {:comments "Some anacrusis make this song tedious to encode."
        :patterns
@@ -678,7 +678,7 @@
       "Nebulous"
       "Obsidian"]]
 
-    ["Catch Thirtythree (2005)"
+    ["Catch Thirtythree" "2005"
      ["Autonomy Lost"
       "Imprint Of The Un-Saved"
       "Disenchantment"
@@ -693,7 +693,7 @@
       "Dehumanization"
       "Sum"]]
 
-    ["obZen (2008)"
+    ["obZen" "2008"
      [["Combustion"
       {:comments (str "There are double time and half time sections "
                       "but we keep the half time notation for the whole song.")
@@ -741,7 +741,7 @@
        ]}]
       "Dancers To A Discordant System"]]
 
-    ["Koloss (2012)"
+    ["Koloss" "2012"
      ["I Am Colossus"
       "The Demon's Name Is Surveillance"
       "Do Not Look Down"
@@ -753,7 +753,7 @@
       "Demiurge"
       "The Last Vigil"]]
 
-    ["The Violent Sleep Of Reason (2016)"
+    ["The Violent Sleep Of Reason" "2016"
      ["Clockworks"
       ["Born In Dissonance"  ; xtO3VCu5wv4
       {:patterns

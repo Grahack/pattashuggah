@@ -276,10 +276,11 @@
         "post guitar solo (×2)"
         "same as guitar solo"
         "bridge, with Jens (×2)"
-        (str "+-+-X-X-+-+-+-X-X-+-+-+-X-X-+-X-X-+- "
-             "+-+-X-X-+-+-+-X-X-+-+-+-X-X-+-X-X-+- "
-             "+-+-X-X-+-+-+-X-X-+-+-+-X-X-+-X-X-+- "
-             "+-+-X-X-+-+-+-X-X-+-")
+        (str "+-+- "
+             "X-X-+-+-+- " "X-X-+-+-+- " "X-X-+- "
+             "X-X-+-+-+- " "X-X-+-+-+- " "X-X-+-+-+- " "X-X-+- "
+             "X-X-+-+-+- " "X-X-+-+-+- " "X-X-+-+-+- " "X-X-+- "
+             "X-X-+-+-+- " "X-X-+-+-+- " "X-X-+-")
         "bridge, instrumental (×2)"
         "same as bridge"
         "end of bridge (×1)"

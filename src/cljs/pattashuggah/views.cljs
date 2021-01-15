@@ -20,11 +20,14 @@
   (let [chunks (clojure.string/split pattern " ")]
     (clojure.string/join "+" (map count chunks))))
 
+(defn interleave-but-last [the-seq the-elt]
+  (drop-last (interleave the-seq (repeat the-elt))))
+
 (defn just-to-see [[k v]]
   (let [times (cond (= v 1) "once"
                     (= v 2) "twice"
                     :else (str v " times"))]
-  [:span [:code k] " " times ", "]))
+  [:span [:code k] " " times]))
 
 (defn pattern-structure [pattern]
   ; thanks to http://clj-me.cgrand.net/2009/04/27/counting-occurences/
@@ -35,7 +38,7 @@
                                          (compare [(get counts-map key2) key2]
                                                   [(get counts-map key1) key1])))
                       counts-map)]
-    (map just-to-see sorted)))
+    (interleave-but-last (map just-to-see sorted) ", ")))
 
 (defn song-toc [song-title]
   (if (string? song-title)  ; song with no pattern -> no link
@@ -49,9 +52,7 @@
     [:span {:class "quick-link"} [:a {:href href} album-title]]))
 
 (defn quick-links [disco]
-    (drop-last
-      (apply concat
-             (map vector (map album-link disco) (repeat " - ")))))
+  (interleave-but-last (map album-link disco) " - "))
 
 (defn album-toc [album-data]
   (let [album-title (first album-data)

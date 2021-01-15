@@ -35,7 +35,7 @@
                                          (compare [(get counts-map key2) key2]
                                                   [(get counts-map key1) key1])))
                       counts-map)]
-    (map just-to-see counts-map)))
+    (map just-to-see sorted)))
 
 (defn song-toc [song-title]
   (if (string? song-title)  ; song with no pattern -> no link

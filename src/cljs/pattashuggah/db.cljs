@@ -720,8 +720,11 @@
         "XX-X-"
         "pre chorus (throughout)"
         "XXO"
-        "chorus 1, with a crash on nine and a half (×1)"
-        (str-join "" [5 "X-X-XXOX-X- XXOXXOX-XXO "] "X-X-XXOX-X- XXOX-+-")
+        "chorus 1"
+        {:comments "Play a crash on the 2nd 16th of the nine (×1)"
+         :pattern (str-join ""
+                            [5 "X-X-XXOX-X- XXOXXOX-XXO "]
+                            "X-X-XXOX-X- XXOX-+-")}
         "chorus, instrumental (×1)"
         "same as chorus"
         "chorus 2 (×1)"

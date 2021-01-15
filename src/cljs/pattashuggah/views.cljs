@@ -43,11 +43,11 @@
                                          (compare [(get counts-map key2) key2]
                                                   [(get counts-map key1) key1])))
                       counts-map)
-        chunks-sorted-with-letters
+        chunks-with-letters
           (into {} (map change-value pattern-letters chunks-sorted))]
     [:p {:class "structure"}
       "Structure : "
-      (map chunks-sorted-with-letters chunks)
+      (map chunks-with-letters chunks)
       [:br]
       (interleave-but-last (map chunk-count pattern-letters chunks-sorted) ", ")
      ]))

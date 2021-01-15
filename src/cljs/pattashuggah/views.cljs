@@ -4,6 +4,8 @@
    [pattashuggah.db :as db]
    ))
 
+(def pattern-letters "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
 (defn rm-wspace [txt]
   (clojure.string/join (remove clojure.string/blank? txt)))
 
@@ -23,22 +25,32 @@
 (defn interleave-but-last [the-seq the-elt]
   (drop-last (interleave the-seq (repeat the-elt))))
 
-(defn just-to-see [[k v]]
+(defn chunk-count [letter [k v]]
   (let [times (cond (= v 1) "once"
                     (= v 2) "twice"
                     :else (str v " times"))]
-  [:span [:code k] " " times]))
+  [:span letter ": " [:code k] " " times]))
+
+(defn change-value [letter [k v]]
+  [k letter])
 
 (defn pattern-structure [pattern]
   ; thanks to http://clj-me.cgrand.net/2009/04/27/counting-occurences/
   ; and https://stackoverflow.com/questions/26327715/clojure-sort-map-over-value
   (let [chunks (clojure.string/split pattern " ")
         counts-map (reduce #(assoc %1 %2 (inc (%1 %2 0))) {} chunks)
-        sorted  (into (sorted-map-by (fn [key1 key2]
+        chunks-sorted  (into (sorted-map-by (fn [key1 key2]
                                          (compare [(get counts-map key2) key2]
                                                   [(get counts-map key1) key1])))
-                      counts-map)]
-    (interleave-but-last (map just-to-see sorted) ", ")))
+                      counts-map)
+        chunks-sorted-with-letters
+          (into {} (map change-value pattern-letters chunks-sorted))]
+    [:p {:class "structure"}
+      "Structure : "
+      (map chunks-sorted-with-letters chunks)
+      [:br]
+      (interleave-but-last (map chunk-count pattern-letters chunks-sorted) ", ")
+     ]))
 
 (defn song-toc [song-title]
   (if (string? song-title)  ; song with no pattern -> no link
@@ -193,7 +205,7 @@
            [:pre count-ruler]])
        [:p {:class "size"} "Size : " size " "
            "(" (pattern-counts pattern)  ")"]
-       [:p {:class "structure"} "Structure : " (pattern-structure pattern)  ]]
+       (pattern-structure pattern)]
      ; for «same» or «TODO» patterns
      [:p {:class "same"} pattern])]))
 

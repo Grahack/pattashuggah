@@ -134,7 +134,7 @@
              [:pre (subs pattern     seven-position)]
              [:pre (subs count-ruler seven-position)]])
          (or (and (= notes-per-beat 4) (= size 64))
-             (= size 96)
+             (and (= notes-per-beat 6) (= size 96))
              (= size 128))
          (let [nine-position (clojure.string/index-of count-ruler "9")]
            [:div
@@ -142,6 +142,16 @@
              [:pre (subs count-ruler 0 nine-position)]
              [:pre (subs pattern     nine-position)]
              [:pre (subs count-ruler nine-position)]])
+         (or (and (= notes-per-beat 4) (= size 96)))
+         (let [nine-position (clojure.string/index-of count-ruler "9")
+               one-position (second (positions "1" count-ruler))]
+           [:div
+             [:pre (subs pattern     0 nine-position)]
+             [:pre (subs count-ruler 0 nine-position)]
+             [:pre (subs pattern     nine-position one-position)]
+             [:pre (subs count-ruler nine-position one-position)]
+             [:pre (subs pattern     one-position)]
+             [:pre (subs count-ruler one-position)]])
          (= size 104)  ; Soul Burn has a 8×13 riff
          (let [e-position (clojure.string/index-of count-ruler "D")
                to-be-tweaked (subs count-ruler e-position)

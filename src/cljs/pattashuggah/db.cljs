@@ -651,8 +651,10 @@
         {:comments "Based on the intro."
          :pattern (str-join "" [5 "X+--+-+X--+X-X--X+--+X-+- "] "XX-")}
         "breakdown (×2)"
-        {:comments "Second time with the drums."
-         :pattern (str-join "" [2 "XX--XOX-+-X-+-XX-+-X-+-X-+- "] "XX--XOX-+-")}
+        {:comments "Second time with the drums and without the second hit."
+         :pattern (str-join ""
+                            [2 "XX--XOX-+-X-+-XX--X-+-X-+- "]
+                            "XX--XOX-+-X- ")}
         "guitar solo"
         "TODO"
         "post guitar solo"

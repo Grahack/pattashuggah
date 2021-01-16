@@ -137,7 +137,9 @@
          "guitar solo part 1, last (×1)"
          "same as pre guitar solo"
          "guitar solo part 2 (×6)"
-         "+X--X-+-X--X-+-X--+-+-X--X-+-X--X--XX-XX-+-X--X--X-+-XX-X--X--+-"
+         (str "+ "       "X--X-+- X--X-+- X--+-+- X--X-+- "
+              "X--X--X " "X-XX-+- "
+              "X-- "     "X--X-+- XX-X--X--+-")
          "verse 4"
          "todo"
          "post verse 4"

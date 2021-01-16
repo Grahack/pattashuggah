@@ -141,9 +141,9 @@
               "X--X--X " "X-XX-+- "
               "X-- "     "X--X-+- XX-X--X--+-")
          "verse 4"
-         "todo"
+         "TODO"
          "post verse 4"
-         "todo"
+         "TODO"
          "pre bridge (×4)"
          "XX-XX-XOXOX-"
          "bridge, instrumental (×8)"

@@ -451,11 +451,7 @@
        {:notes-per-beat 6
         :patterns
         ["intro (×4, the last without crash washing)"
-         (str "+--+-X-+-+-- "
-              "+-X-+-+-- "
-              "+-X-+-+-- "
-              "+-X-+-+-- "
-              "+-X-+-+-- ")
+         (str-join "+-- " [5 "+-X-+-+-- "] "")
          "verse 1 (×2)"
          (str-join "" [13 "X--XX-- "] "X--XO")
          "chorus 1 (×1)"

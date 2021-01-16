@@ -116,7 +116,7 @@
                    [3 "X-X-+- X-X-+- X-X-+- X-X-X-+- "]
                    "X-X-+- X-X-+- X-X-+- ")
          "end of verse 2"
-         "X--X--X--X--+-+- "
+         "X-- X-- X-- X-- +-+-"
          "small addition, the pulse skips an eighth note (×1)"
          "X--X-- "
          "intro for verse 3"
@@ -131,7 +131,7 @@
               "X-+-+- +--+-- "
               "+--+-- +--+-- ")
          "pre guitar solo (×8)"
-         "X-+X-X-X-+X-+X-+X-X-+X-X-X-+X-+-"
+         "X-+X-X-X-+X-+ X-+X- X-+X-X-X-+X-+ -"
          "guitar solo part 1 (×3)"
          "same as pre guitar solo"
          "guitar solo part 1, last (×1)"
@@ -145,7 +145,7 @@
          "post verse 4"
          "TODO"
          "pre bridge (×4)"
-         "XX-XX-XOXOX-"
+         "XX-XX- XOXOX-"
          "bridge, instrumental (×8)"
          "same as pre bridge"
          "bridge, sang (×8)"
@@ -502,7 +502,7 @@
          (str "XOOX- XOOX- XOXOX- "
               "XOOX- XOOX- XOOX- XOXOX- "
               "XOOX- XOOX- XOOX- XOXOX- "
-              "XOOX-"
+              "XOOX- "
               "XOOX- XOOX- XOXOX- "
               "XOOX- XOOX- XOOX- XOXOX- "
               "XOOX- XOOX- XOOX- XOXOX- "
@@ -515,16 +515,17 @@
          (str "X--+-- +-+-+- "
               "X--X--+-- +-+-+-- "
               "X--+-- +-+-+- "
-              "X--X--X--+-- +-+-+-+--X-- "
+              "X--X--X--+-- +-+-+- +--X-- "
               "X--+-- +-+-+- "
               "X--X--+-- +-+-+-- "
               "X--+-- +-+-+- "
-              "X--X--X--+-- +-+-+-X--XXO ")
+              "X--X--X--+-- +-+-+- X--XXO ")
          "post breakdown (×4)"
          (str "X--X-- X-X-X- "
               "X--X--X-- X-X-X-- "
               "X--X-- X-X-X- "
-              "X--X--X--X-- X-X-X-X--X-- ")
+              "X--X--X--X-- X-X-X- "
+              "X--X-- ")
          "pre guitar solo (×4)"
          (str "XOOX--X--X-XX-X-X-- "
               "XOOX--X--X-XX-X-X-- "
@@ -556,16 +557,16 @@
                   "X--X-+-X--X--X--+- ")
         "intro (×2)"
         "same as intro"
-        "pre pre verse 1 (×1)"
-        (str-join "X-" [6 "+-"] "-X")
+        "pre pre verse 1, the first (×1)"
+        (str-join "X- " [6 "+- "] "-X")
         "pre pre verse 1 (×7)"
-        (str-join "--" [6 "+-"] "-X")
+        (str-join "-- " [6 "+- "] "-X")
         "pre verse 1, the first (×1)"
-        (str-join "--" [4 "X--"] "X-")
+        (str-join "-- " [4 "X-- "] "X-")
         "pre verse 1 (×6)"
-        (str-join "+-" [4 "X--"] "X-")
+        (str-join "+- " [4 "X-- "] "X-")
         "pre verse 1, the last (×1)"
-        (str-join "+-" [2 "X--"] "X-+-+--X")
+        (str-join "+- " [2 "X-- "] "X-+-+--X")
         "verse 1 (×2)"
         (str-join "--X--X--X--X--X- "
                   [2 "--X--X--X--X--X- "]

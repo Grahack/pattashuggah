@@ -658,7 +658,7 @@
         "post guitar solo"
         {:comments "Based on the breakdown."
          :pattern "TODO"}
-        "pre outro (ad lib)"
+        "pre outro"
         "TODO"
         "outro (ad lib)"
         (str-join "" [2 "X--XX-X--XX--XX-+-XX--+-X "] "X--XX-X--XX--X")

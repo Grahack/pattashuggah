@@ -654,7 +654,7 @@
         {:comments "Second time with the drums."
          :pattern (str-join "" [2 "XX--XOX-+-X-+-XX-+-X-+-X-+- "] "XX--XOX-+-")}
         "guitar solo"
-        ""
+        "TODO"
         "post guitar solo"
         {:comments "Based on the breakdown."
          :pattern "TODO"}

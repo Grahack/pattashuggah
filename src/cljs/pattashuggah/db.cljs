@@ -626,7 +626,43 @@
         "X--X"
        ]}]
 
-      "Rational Gaze"
+      ["Rational Gaze"
+      {:patterns
+       ["intro (×2)"
+        {:comments "The second one without the second and two last hits."
+         :pattern (str-join "" [5 "XX--+-XX--XX-X--XX--XX-+- "] "XX-")}
+        "pre verse 1 (×2)"
+        (str (str-join "" [3 "XX--+- "] "XX-XX-+- ")
+             (str-join "" [2 "XX--+- "] "XX-XX-+- ")
+             (str-join "" [3 "XX--+- "] "")
+             )
+        "verse 1, part 1 (×4)"
+        "same as pre verse 1"
+        "verse 1, part 2 (×2)"
+        (str (str-join "" [1 "XX--+- "] "XX-XX-+- ")
+             (str-join "" [2 "XX--+- "] "XX-XX-+- ")
+             (str-join "" [5 "XX--+- "] "")
+             )
+        "verse 1, part 3 (×4)"
+        "same as pre verse 1"
+        "chorus 1 (×2)"
+        "same as intro"
+        "instrumental interlude (×2)"
+        {:comments "Based on the intro."
+         :pattern (str-join "" [5 "X+--+-+X--+X-X--X+--+X-+- "] "XX-")}
+        "breakdown (×2)"
+        {:comments "Second time with the drums."
+         :pattern (str-join "" [2 "XX--XOX-+-X-+-XX-+-X-+-X-+- "] "XX--XOX-+-")}
+        "guitar solo"
+        ""
+        "post guitar solo"
+        {:comments "Based on the breakdown."
+         :pattern "TODO"}
+        "pre outro (ad lib)"
+        "TODO"
+        "outro (ad lib)"
+        (str-join "" [2 "X--XX-X--XX--XX-+-XX--+-X "] "X--XX-X--XX--X")
+        ]}]
       ["Perpetual Black Second"
       {:patterns
        ["intro (×2)"

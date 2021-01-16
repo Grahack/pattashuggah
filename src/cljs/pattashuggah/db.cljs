@@ -678,7 +678,12 @@
         "post verse (×2)"
         "same as pre verse"
         "pre guitar solo"
-        "TODO"
+        (str "X-X-X-X-+- X-X+-- X-X-X-X-X- "
+             "X-X-X-X-+- X-X+-- X-X-X-X-X-X- "
+             "X-X-X-X-+- X-X+-- X-X-X-X-X- "
+             "X-X-X-X-+- X-X+-- X-X-X-X-X-X- "
+             "X-X-X-X-+- X-X+-- X-X- "
+             )
         "guitar solo (×4)"
         (str-join "" [4 "X-X-+-X--X--+- "] "X-X-+-+-")
         "last verse, same pattern but longer the wait (×2)"

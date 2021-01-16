@@ -450,8 +450,9 @@
       ["The Exquisite Machinery Of Torture"
        {:notes-per-beat 6
         :patterns
-        ["intro (×4, the last without crash washing)"
-         (str-join "+-- " [5 "+-X-+-+-- "] "")
+        ["intro (×4)"
+         {:comments "The last without crash washing."
+          :pattern (str-join "+-- " [5 "+-X-+-+-- "] "")}
          "verse 1 (×2)"
          (str-join "" [13 "X--XX-- "] "X--XO")
          "chorus 1 (×1)"
@@ -721,7 +722,7 @@
         "pre chorus (throughout)"
         "XXO"
         "chorus 1"
-        {:comments "Play a crash on the 2nd 16th of the nine (×1)"
+        {:comments "Play a crash on the 2nd 16th of the nine (×1)."
          :pattern (str-join ""
                             [5 "X-X-XXOX-X- XXOXXOX-XXO "]
                             "X-X-XXOX-X- XXOX-+-")}

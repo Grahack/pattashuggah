@@ -666,17 +666,11 @@
       ["Perpetual Black Second"
       {:patterns
        ["intro (×2)"
-        (str "X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- "
-             "X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- X--X--X-XX-X-- "
-             "X--X--X-XX-X-- X-")
+        (str-join "" [9 "X--X--X-XX-X-- "] "X-")
         "pre verse (×2)"
-        (str "X- X--X--X--X--X-X-X- X--X--X--X--X-X-X- X--X--X--X--X-X-X- "
-                "X--X--X--X--X-X-X- X--X--X--X--X-X-X- X--X--X--X--X-X-X- "
-                "X--X--X--X--X-X-X-")
+        (str-join "X- " [7 "X--X--X--X--X-X-X- "] "")
         "verse 1 (×2)"
-        (str "X- X--X--X-X-X--X--X- X--X--X-X-X--X--X- X--X--X-X-X--X--X- "
-                "X--X--X-X-X--X--X- X--X--X-X-X--X--X- X--X--X-X-X--X--X- "
-                "X--X--X-X-X--X--X-")
+        (str-join "X- " [7 "X--X--X-X-X--X--X- "] "")
         "intro 2 (×1)"
         "same as intro"
         "verse 2 (×2)"
@@ -686,12 +680,9 @@
         "pre guitar solo"
         "TODO"
         "guitar solo (×4)"
-        (str "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- "
-             "X-X-+-X--X--+- X-X-+-+-")
+        (str-join "" [4 "X-X-+-X--X--+- "] "X-X-+-+-")
         "last verse, same pattern but longer the wait (×2)"
-        (str "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- "
-             "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- "
-             "X-X-+-X--X--+- X-X-+-X--X--+- X-X-+-X--X--+- X-")
+        (str-join "" [9 "X-X-+-X--X--+- "] "X-")
         "end"
         "TODO"
        ]}]

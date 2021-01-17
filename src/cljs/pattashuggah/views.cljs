@@ -25,24 +25,35 @@
 (defn interleave-but-last [the-seq the-elt]
   (drop-last (interleave the-seq (repeat the-elt))))
 
+(defn positions [pred coll]
+  ; https://stackoverflow.com/questions/4830900/how-do-i-find-the-index-of-an-item-in-a-vector
+  (let [fun (fn [idx x] (when (pred x) idx))]
+    (keep-indexed fun coll)))
+
 (defn chunk-count [letter [k v]]
   (let [times (cond (= v 1) "once"
                     (= v 2) "twice"
                     :else (str v " times"))]
   [:span letter ": " [:code k] " " times]))
 
+(defn insert-pos [[k v] chunks]
+  [k (first (positions #{k} chunks))])
+
 (defn change-value [letter [k v]]
   [k letter])
+
+(defn chunk-counts-comparator [pos-map counts-map]
+ (fn [key1 key2] (compare [(get counts-map key2) (get pos-map key1)]
+                          [(get counts-map key1) (get pos-map key2)])))
 
 (defn pattern-structure [pattern]
   ; thanks to http://clj-me.cgrand.net/2009/04/27/counting-occurences/
   ; and https://stackoverflow.com/questions/26327715/clojure-sort-map-over-value
   (let [chunks (clojure.string/split pattern " ")
         counts-map (reduce #(assoc %1 %2 (inc (%1 %2 0))) {} chunks)
-        chunks-sorted  (into (sorted-map-by (fn [key1 key2]
-                                         (compare [(get counts-map key2) key2]
-                                                  [(get counts-map key1) key1])))
-                      counts-map)
+        pos-map (into {} (map insert-pos counts-map (repeat chunks)))
+        chunks-comparator (chunk-counts-comparator pos-map counts-map)
+        chunks-sorted (into (sorted-map-by chunks-comparator) counts-map)
         chunks-with-letters
           (into {} (map change-value pattern-letters chunks-sorted))]
     [:p {:class "structure"}
@@ -80,7 +91,7 @@
         characters (take n alphabet)]
     (clojure.string/join (flatten (map vector characters (repeat txt))))))
 
-(defn positions [character coll]
+(defn positions-char [character coll]
   ; https://stackoverflow.com/questions/4830900/how-do-i-find-the-index-of-an-item-in-a-vector
   (let [fun (fn [idx x] (when (= character x) idx))]
     (keep-indexed fun coll)))
@@ -105,7 +116,7 @@
         notes-per-beat (get pattern-data :notes-per-beat
                             notes-per-beat-song-level)
         size (pattern-size pattern)
-        spaces (positions " " pattern)
+        spaces (positions-char " " pattern)
         rulers {2 " "
                 3 " '"
                 4 " ^ "
@@ -144,7 +155,7 @@
              [:pre (subs count-ruler nine-position)]])
          (or (and (= notes-per-beat 4) (= size 96)))
          (let [nine-position (clojure.string/index-of count-ruler "9")
-               one-position (second (positions "1" count-ruler))]
+               one-position (second (positions-char "1" count-ruler))]
            [:div
              [:pre (subs pattern     0 nine-position)]
              [:pre (subs count-ruler 0 nine-position)]
@@ -167,9 +178,9 @@
              [:pre (subs pattern     e-position)]
              [:pre count-ruler-tweaked]])
          (= size 256)
-         (let [one-pos (positions "1" count-ruler)
+         (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
-               nine-pos (positions "9" count-ruler)
+               nine-pos (positions-char "9" count-ruler)
                split-1 (first nine-pos)
                split-3 (second nine-pos)]
            [:div
@@ -182,11 +193,11 @@
              [:pre (subs pattern     split-3)]
              [:pre (subs count-ruler split-3)]])
          (= size 512)
-         (let [one-pos (positions "1" count-ruler)
+         (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
                split-4 (nth one-pos 2)
                split-6 (nth one-pos 3)
-               nine-pos (positions "9" count-ruler)
+               nine-pos (positions-char "9" count-ruler)
                split-1 (first nine-pos)
                split-3 (second nine-pos)
                split-5 (nth nine-pos 2)

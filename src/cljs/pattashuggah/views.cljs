@@ -385,7 +385,7 @@
           ["Combustion"
            "Electric Red"
            ["Bleed"
-            ["intro (in this song XX all have an O in between)"
+            ["intro (throughout + in this song XX all have an O in between)"
              "XX-"
              "verse 1"
              "XX-"

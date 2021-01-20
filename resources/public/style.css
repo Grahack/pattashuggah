@@ -31,19 +31,19 @@ pre {
     font-size: 0.7em;
 }
 
-p.size, p.structure {
+.size, .structure, .size-only {
     font-size: 0.7em;
 }
 
-p.size {
+.size {
     margin-bottom: 0;
 }
 
-p.structure {
+.structure {
     margin-top: 0;
 }
 
-p.same {
+.same {
     margin-top: 0;
     font-size: 0.7em;
 }

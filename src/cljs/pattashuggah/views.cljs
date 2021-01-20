@@ -46,11 +46,10 @@
  (fn [key1 key2] (compare [(get counts-map key2) (get pos-map key1)]
                           [(get counts-map key1) (get pos-map key2)])))
 
-(defn pattern-structure [pattern]
+(defn pattern-structure [chunks]
   ; thanks to http://clj-me.cgrand.net/2009/04/27/counting-occurences/
   ; and https://stackoverflow.com/questions/26327715/clojure-sort-map-over-value
-  (let [chunks (clojure.string/split pattern " ")
-        counts-map (reduce #(assoc %1 %2 (inc (%1 %2 0))) {} chunks)
+  (let [counts-map (reduce #(assoc %1 %2 (inc (%1 %2 0))) {} chunks)
         pos-map (into {} (map insert-pos counts-map (repeat chunks)))
         chunks-comparator (chunk-counts-comparator pos-map counts-map)
         chunks-sorted (into (sorted-map-by chunks-comparator) counts-map)
@@ -61,6 +60,7 @@
       (map chunks-with-letters chunks)
       [:br]
       (interleave-but-last (map chunk-count pattern-letters chunks-sorted) ", ")
+      "."
      ]))
 
 (defn song-toc [song-title]
@@ -224,9 +224,13 @@
          [:div
            [:pre pattern]
            [:pre count-ruler]])
-       [:p {:class "size"} "Size : " size " "
-           "(" (pattern-counts pattern)  ")"]
-       (pattern-structure pattern)]
+       (let [chunks (clojure.string/split pattern " ")]
+         (if (> (count chunks) 1)
+           [:p
+             [:div {:class "size"} "Size : " size " "
+               "(" (pattern-counts pattern)  ")"]
+             (pattern-structure chunks)]
+           [:p {:class "size-only"} "Size : " size " notes in one chunk."]))]
      ; for «same» or «TODO» patterns
      [:p {:class "same"} pattern])]))
 

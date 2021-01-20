@@ -17,7 +17,11 @@
       "Cadaverous Mastication"]]
 
     ["None" "1994"
-     ["Humiliative"
+     [["Humiliative"
+       {:patterns
+        ["intro"
+         (str-join "" [2 "XX--+-+-XX-XX-+-+-+-+- "] "XX--+-+-XX-XX-+-+-+- ")]}]
+
       "Sickening"
       "Ritual"
       "Gods Of Rapture"

@@ -4,7 +4,12 @@ body {
 }
 
 h3 {
+    margin-top: 2em;
+}
+
+h3 span {
     border: solid 1px;
+    padding: 0.5em 0.7em 0.5em 0.7em;
 }
 
 h4 {
@@ -22,11 +27,23 @@ pre {
     font-size: 1.3em;
 }
 
-p.size {
+#quick-links {
     font-size: 0.7em;
 }
 
-p.same {
+.size, .structure, .size-only {
+    font-size: 0.7em;
+}
+
+.size {
+    margin-bottom: 0;
+}
+
+.structure {
+    margin-top: 0;
+}
+
+.same {
     margin-top: 0;
     font-size: 0.7em;
 }
@@ -39,4 +56,8 @@ table {
 td, th {
     padding: 0.2em;
     border: solid 1px;
+}
+
+.song-comments {
+    text-indent: 2em;
 }

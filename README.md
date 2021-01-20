@@ -1,5 +1,14 @@
-# pattashuggah
+# Pattashuggah
 
+Rhythm patterns from some Meshuggah songs.
+
+See it live [here](https://grahack.github.io/pattashuggah/).
+
+# TODO
+
+* smart size viewer
+* more content
+* for contributors: link to views.cljs or extra data file and CONTRIBUTE file
 
 ## Getting Started
 

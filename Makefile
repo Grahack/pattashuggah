@@ -5,6 +5,6 @@ prod:
 	sed '1d'  -i index.html
 	sed '13d' -i index.html
 	cp resources/public/style.css .
-	git add -u
+	git add index.html style.css
 	git commit -m "Update prod"
 	git push origin main

@@ -694,7 +694,21 @@
         "TODO"
        ]}]
 
-      "Closed Eye Visuals"
+      ["Closed Eye Visuals"
+       {:patterns
+        ["intro (×4)"
+        (str "+-+-+-+- X-+-+-X-+- "
+             "+-+-+-+-+- X-+-+-X-+- "
+             "+-+-+-+-+- X-+-+-X-+- +-+-+-")
+         "pre verse 1 (×1)"
+         (str-join "" [3 "X-X-X-X-X-X-+-X-+-+- "] "+-+-")
+         "verse 1, first part (×4)"
+         (str (str-join "" [3 "X-X-X-X-X-X-+-X-+-+- "] "X-X-X-+- ")
+              "X-X-X-X-X-X-+-X-+-+- "
+              "X-X-X-X-+-+-X-+-+-X-+- "
+              "X-X-X-X-+-+-X- X-X- "
+              )
+        ]}]
       ["Glints Collide"
       {:patterns
        ["intro"

@@ -181,18 +181,16 @@
      [["Concatenation"
       {:patterns
        ["intro (×4)"
-        (str "X--X-X-X-- X--X-X-X-- X--X-X-X-- X--X-X-X-- "
-             "X--X-X-X-- X--X-X-X-- X-+-")
+        (str-join "" [6 "X--XOX-X-- "] "X-+-")
         "verse 1 (×4)"
-        (str "X--X-X-X-+ X--X-X-X-+ X--X-X-X-+ X--X-X-X-+ "
-             "X--X-X-X-+ X--X-X-X-+ X-+-")
+        (str-join "" [6 "X--XOX-X-+ "] "X-+-")
         "chorus 1 (×2)"
         "same as intro"
         "intro 2 (×2)"
         "same as intro"
         "verse 2 (×4)"
-        (str "X--X-X-X-+ X--X-X-X-X-+ X--X-X-X-+ X--X-X-X-X-+ "
-             "X--X-X-X-+ X--X-X-X-+")
+        (str "X--XOX-X-+ X--XOX-X-X-+ X--XOX-X-+ X--XOX-X-X-+ "
+             "X--XOX-X-+ X--XOX-X-+")
         "chorus 2 (×2)"
         "same as intro"
         "intro 3 (×2)"

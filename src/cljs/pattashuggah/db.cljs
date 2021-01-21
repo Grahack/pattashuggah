@@ -263,7 +263,11 @@
        ]}]
 
       ["Corridor Of Chameleons"
-      {:patterns
+      {:comments (str "Although quite fast these patterns are only singles. "
+                      "Drummers working on their hands could take this "
+                      "opportunity to work their singles leaded by their "
+                      "weak hand. Just sayin'.")
+       :patterns
        ["intro (×4)"
         (str "XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- "
              "XOXOXOX-+- XOXOXOX-+- XOXO")

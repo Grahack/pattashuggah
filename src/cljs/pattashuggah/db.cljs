@@ -377,7 +377,7 @@
         "transition (×1)"
         "X-X-- X-X-- X-X-+-"
         "verse 1 (×1)"
-        (str-join "" [25 "X-X-- "] "X--")
+        (str-join "" [25 "X-X-+ "] "X--")
         "inter verse (×1)"
         "same as verse"
         "verse 1 bis (×1)"

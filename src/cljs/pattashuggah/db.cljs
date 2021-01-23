@@ -465,7 +465,7 @@
         :patterns
         ["intro (×4)"
          {:comments "The last without crash washing."
-          :pattern (str-join "+-- " [5 "+-X-+-+-- "] "")}
+          :pattern (str-join "" [5 "+--+-X-+- "] "+--")}
          "verse 1 (×2)"
          (str-join "" [13 "X--XX-- "] "X--XO")
          "chorus 1 (×1)"

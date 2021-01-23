@@ -812,6 +812,7 @@
      ["I Am Colossus"
       "The Demon's Name Is Surveillance"
       "Do Not Look Down"
+      ; 223226 ? TODO
       "Behind The Sun"
       "The Hurt That Finds You First"
       "Marrow"
@@ -822,7 +823,7 @@
 
     ["The Violent Sleep Of Reason" "2016"
      ["Clockworks"
-      ["Born In Dissonance"  ; xtO3VCu5wv4
+      ["Born In Dissonance"  ; xtO3VCu5wv4 TODO
       {:patterns
        ["intro (×2)"
         (str "X--XX-X- X--XX-X-X- X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
@@ -916,6 +917,15 @@
       "MonstroCity"
       "By The Ton"
       "Violent Sleep Of Reason"
+      ; TODO Somewhere
+      ; 55 + 55 + 55 + 27 = 192 = 16 × 12
+      ; END
+      ; 5×(X-XX--) + 4×(XX--)
+      ; ---------- + 5
+      ; ---------- + 6
+      ; ---------- + 7        168
+      ; 4×(X-XX--)
+      ; 4×(X-XX--)             88 -> 256
       "Ivory Tower"
       "Stifled"
       "Nostrum"

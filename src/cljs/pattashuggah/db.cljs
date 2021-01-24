@@ -398,11 +398,10 @@
         "post guitar solo, sang"
         "same as verse"
         "bridge (×4, half instrumental, half sang)"
-        (str
-          "XOX-OXOX-OXOXO "
-          "XOX-OXOX-OXOX-OXOXO "
-          "XOX-OXOX-OXOX-OXOXO "
-          "XOX-OXOX-OXO ")
+        (str "XOX -OXOX -OXOXOXOX "
+           "-OXOX -OXOX -OXOXOXOX "
+           "-OXOX -OXOX -OXOXOXOX "
+           "-OXOX -OXO ")
         "pre end (×4)"
         (str
           "X-XOOX--X-- "

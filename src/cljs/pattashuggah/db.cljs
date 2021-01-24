@@ -411,15 +411,7 @@
           "X-XOOX--X-- "
           "X-+XOX-+- ")
         "end riff (until fade out)"
-        (str
-          "X--X-XX-- "
-          "X--X-XX-- "
-          "X--X-XX-- "
-          "X--X-XX-- "
-          "X--X-XX-- "
-          "X--X-XX-- "
-          "X--X-XX-+- "
-          )
+        (str-join "" [6 "X--X-XX-- "] "X--X-XX-+- ")
        ]}]
 
       ["Sane"

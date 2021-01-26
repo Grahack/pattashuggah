@@ -797,7 +797,12 @@
        ["intro"
         (str "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- ")
        ]}]
-      "Dancers To A Discordant System"]]
+      ["Dancers To A Discordant System"
+      {:notes-per-beat 6
+       :patterns
+       ["FB riff"
+        (str-join "" [13 "XOX-XOXOXOXOX- "] "XOX-XOXOXO")
+        ]}]]]
 
     ["Koloss" "2012"
      ["I Am Colossus"

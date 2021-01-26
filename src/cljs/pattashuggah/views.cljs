@@ -177,7 +177,8 @@
              [:pre (subs count-ruler 0 e-position)]
              [:pre (subs pattern     e-position)]
              [:pre count-ruler-tweaked]])
-         (= size 256)
+         (or (= size 256)
+             (and (= notes-per-beat 6) (= size 192)))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
                nine-pos (positions-char "9" count-ruler)

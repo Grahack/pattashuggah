@@ -922,7 +922,21 @@
       ; ---------- + 7        168
       ; 4×(X-XX--)
       ; 4×(X-XX--)             88 -> 256
-      "Ivory Tower"
+      ["Ivory Tower"
+      {:notes-per-beat 6
+       :patterns
+       ["intro"
+        "XXX+ XXXX+ XXXXX+ XXX+ X+ XX+"
+        "verse 1"
+        (str "XX+ XXX+X+ XX+ XX+ XXX+X+ "
+             "XX+ XXX+X+ XX+ XX+ XX+ XXX+X+ "
+             "XX+ XXX+X+ XX+ XX+ XXX+X+ "
+             "XX+ XXX+X+ XX+ XX+ XX+ XXX+X+ "
+             "XX+ X++")
+        "inter verse"
+        "same as intro"
+        "verse 2"
+        "same as verse 1"]}]
       "Stifled"
       "Nostrum"
       "Our Rage Won't Die"

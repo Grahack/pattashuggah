@@ -763,7 +763,7 @@
       ["Bleed"
       {:comments (str "In this song all XX have an O in between. "
                       "Please note thas this is a « quick and dirty » version. "
-                      "A more complete is in the works.")
+                      "A more complete one is in the works.")
        :patterns
        ["intro (throughout)"
         "XX-"

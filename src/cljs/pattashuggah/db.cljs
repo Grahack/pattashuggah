@@ -786,7 +786,46 @@
         "same as chorus"
         "pre verse 3 and verse 3 (throughout)"
         "XX-X-X- XX-X-X- XX-X- XX- XX-X-"
-        ]}]
+        "pre bridge (×1)"
+        (str-join "" [6 "XX-XXO+- XX-XX-XXO+-- "] "XX-XXO+-")
+        "instrumental bridge"
+        (str "XX-X-- XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-X-- XX-XX-XX-X-- "
+             "XX-XX-XX-X ")
+        "clean part (×1)"
+        {:comments (str "Beware: the odd beats have high notes and "
+                        "the low notes fall on the even beats "
+                        "(they play high E, low D♯, high C♯, low F♯, "
+                        "high D♯, low G, high F♯, low E) so you may be "
+                        "tricked thinking the low D♯ is on the «one».")
+         :pattern (str-join "" [32 "X-+-+-+- "] "")}
+        "guitar solo (×1)"
+        (str
+          (str-join "" [11 "XX-XX-XX-X-+- XX-XX-XX-XX-X-+- "] "")
+                           "XX-XX-XX-X-+- XX-XX-XX-XX-XX-XX-X-+- "
+          (str-join "" [ 3 "XX-XX-XX-X-+- XX-XX-XX-XX-X-+- "] "")
+                           "XX-XX-XX-X-+- XX-XX-XX-XX-XX-XX-X-+- "
+                           "XX-XX-XX-X-+- XX-XX-XX-XX-X-+- "
+                           "XX-XX-X")
+        "transition (×1, just one beat)"
+        "+-+-+-+-"
+        "verse 4"
+        "same as preverse 3 and verse 3"
+        "transition and outro (throughout)"
+        "XXO"]}]
 
       "Lethargica"
       "Obzen"

@@ -233,7 +233,9 @@
              (pattern-structure chunks)]
            [:p {:class "size-only"} "Size : " size " notes in one chunk."]))]
      ; for «same» or «TODO» patterns
-     [:p {:class "same"} pattern])]))
+     [:div
+       [:p {:class "pattern-comments"} comments]
+       [:p {:class "same"} pattern]])]))
 
 (defn song-with-patterns [song-and-patterns]
   (let [title (first song-and-patterns)

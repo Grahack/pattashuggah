@@ -857,7 +857,64 @@
       "The Last Vigil"]]
 
     ["The Violent Sleep Of Reason" "2016"
-     ["Clockworks"
+     [["Clockworks"
+      {:comments [:span
+                  "Special thanks to "
+                  [:a {:target "_blank"
+                       :href "https://www.youtube.com/watch?v=YwrSvpjdK-w"}
+                      "Yogev"] ". "
+                  "In this song " [:code "Tr"]
+                  " is meant to be played as a " [:code "XXO"]
+                  " but in a triplet to fit in the duration of two notes."]
+       :patterns
+       ["intro (×2)"
+        (str-join ""
+                  [3 "X--X--Tr X--X--X--X- X--X-- X--X--X-X-- "]
+                     "X--X--Tr X--X--X--X--")
+        "intro with lead guitar (×2)"
+        "same as intro"
+        "verse 1 (×1)"
+        (str-join ""
+                  [5 "X--X--Tr X--X--TrTr X--X--X--X--TrTrTr X--X--TrTr "]
+                     "X--X--Tr X--X--TrTr X--X--X-")
+        "post-verse 1 (×1)"
+        {:comments [:span "Same numbers than verse 1 but with a different "
+                          "orchestration (" [:code "Tr"] " are now "
+                          [:code "X-"] ") and Jens only sings on the last "
+                          "half of the pattern."]
+         :pattern
+        (str-join ""
+                  [5 "X--X--X- X--X--X-X- X--X--X--X--X-X-X- X--X--X-X- "]
+                     "X--X--X- X--X--X-X- X--X--X-")}
+        "transition (×1)"
+        "X-+- +-+- +-+- +-+-"
+        "verse 2 (×1)"
+        "same as verse 1"
+        "chorus 1 (×2)"
+        (str-join "" [3 "X--X--X--X--X--X-- TrTrTrTrTrTrTrTr "]
+                        "X--X--X--X--X--X-- TrTrTrTr")
+        "guitar solo (throughout the 16 bars)"
+        {:notes-per-beat 4
+         :pattern "X--"}
+        "end of guitar solo, first part (×1)"
+        "same as intro"
+        "end of guitar solo, second and last part (×1)"
+        {:comments [:span "The " [:code "XO"] "s at the end answer the guitar."]
+         :pattern
+        (str-join ""
+                  [2 "X--X--Tr X--X--X--X- X--X-- X--X--X-X-- "]
+           (str-join "X--X--Tr X--X--X--X- X--X- " [8 "+-XO "] ""))}
+        "pre-verse 3"
+        (str-join "" [20 "+-XO+- "] "+-+-+-+-")
+        "verse 3"
+        (let [threes (str-join "" [5 "XO+O+- "] "")
+              twos   (str-join "" [4 "XO+- "] "")]
+          (str threes twos
+               threes twos "XO+- "
+               threes twos "XO+- XO+- "
+               threes twos "XO+- XO+- XO+- "
+               threes (str-join "" [3 "XO+O+- "] "")))
+       ]}]
       ["Born In Dissonance"  ; xtO3VCu5wv4 TODO
       {:patterns
        ["intro (×2)"

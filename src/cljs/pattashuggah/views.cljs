@@ -153,7 +153,8 @@
              [:pre (subs count-ruler 0 nine-position)]
              [:pre (subs pattern     nine-position)]
              [:pre (subs count-ruler nine-position)]])
-         (or (and (= notes-per-beat 4) (= size 96)))
+         (or (and (= notes-per-beat 4) (= size 96))
+             (and (= notes-per-beat 4) (= size 92)))  ; Soul Burn has one
          (let [nine-position (clojure.string/index-of count-ruler "9")
                one-position (second (positions-char "1" count-ruler))]
            [:div

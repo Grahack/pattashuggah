@@ -915,8 +915,9 @@
                threes twos "XO+- XO+- XO+- "
                threes (str-join "" [3 "XO+O+- "] "")))
        ]}]
-      ["Born In Dissonance"  ; xtO3VCu5wv4 TODO
-      {:patterns
+      ["Born In Dissonance"
+      {:youtube "xtO3VCu5wv4"
+       :patterns
        ["intro (×2)"
         (str "X--XX-X- X--XX-X-X- X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
              "X--XX- X--XX-X- X--XX-X-X- X--XX-X-X-X- X--XX-X-X-X- "

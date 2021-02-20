@@ -244,10 +244,15 @@
         data-map (second song-and-patterns)
         notes-per-beat (get data-map :notes-per-beat 8)
         comments (:comments data-map)
+        youtube (:youtube data-map)
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id slug} [:a {:href (str "#" slug )} title]]
      (if comments [:p {:class "song-comments"} comments])
+     (if youtube
+       (let [url (str "https://www.youtube.com/watch?v=" youtube)]
+         [:p {:class "youtube"}
+             [:a {:target "_blank" :href url} "Official video on YT"]]))
      (map pattern patterns (repeat notes-per-beat))
      ]))
 

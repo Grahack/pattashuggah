@@ -247,7 +247,7 @@
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id slug} [:a {:href (str "#" slug )} title]]
-     [:p {:class "song-comments"} comments]
+     (if comments [:p {:class "song-comments"} comments])
      (map pattern patterns (repeat notes-per-beat))
      ]))
 

@@ -7,9 +7,10 @@ h3 {
     margin-top: 2em;
 }
 
-h3 span {
+h3 a {
     border: solid 1px;
     padding: 0.5em 0.7em 0.5em 0.7em;
+    color: #af3;
 }
 
 h4 {
@@ -19,6 +20,14 @@ h4 {
 
 a {
     color: #3fd;
+}
+
+a.youtube {
+    font-size: 0.8em;
+}
+
+a.top {
+    text-decoration: none;
 }
 
 pre {

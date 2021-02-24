@@ -248,11 +248,11 @@
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id slug} [:a {:href (str "#" slug )} title]]
-     (if comments [:p {:class "song-comments"} comments])
      (if youtube
        (let [url (str "https://www.youtube.com/watch?v=" youtube)]
          [:p {:class "youtube"}
              [:a {:target "_blank" :href url} "Official video on YT"]]))
+     (if comments [:p {:class "song-comments"} comments])
      (map pattern patterns (repeat notes-per-beat))
      ]))
 

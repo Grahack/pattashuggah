@@ -775,8 +775,8 @@
         "XX-X-"
         "pre chorus (throughout)"
         "XXO"
-        "chorus 1"
-        {:comments "Play a crash on the 2nd 16th of the nine (×1)."
+        "chorus 1 (×1)"
+        {:comments "Play a crash on the 2nd 16th of the nine."
          :pattern (str-join ""
                             [5 "X-X-XXOX-X- XXOXXOX-XXO "]
                             "X-X-XXOX-X- XXOX-+-")}

@@ -212,7 +212,8 @@
        ]}]
 
       ["New Millennium Cyanide Christ"
-      {:patterns
+      {:youtube "4A_tSyJBsRQ"
+       :patterns
        ["intro (×2)"
         (str "XOXO+-X-X- "
              "XOXO+-X-X- XOXOXOX--X-X- "
@@ -761,7 +762,8 @@
       "Electric Red"
 
       ["Bleed"
-      {:comments (str "In this song all XX have an O in between. "
+      {:youtube "qc98u-eGzlc"
+       :comments (str "In this song all XX have an O in between. "
                       "Please note thas this is a « quick and dirty » version. "
                       "A more complete one is in the works.")
        :patterns
@@ -844,21 +846,22 @@
         ]}]]]
 
     ["Koloss" "2012"
-     ["I Am Colossus"
+     ["I Am Colossus" ; "fTYXbFsWg-M"
       "The Demon's Name Is Surveillance"
       "Do Not Look Down"
       ; 223226 ? TODO
       "Behind The Sun"
       "The Hurt That Finds You First"
       "Marrow"
-      "Break Those Bones Whose Sinews Gave It Motion"
+      "Break Those Bones Whose Sinews Gave It Motion" ; "m9LpMZuBEMk"
       "Swarm"
-      "Demiurge"
+      "Demiurge" ; "zg2076b5Lqc"
       "The Last Vigil"]]
 
     ["The Violent Sleep Of Reason" "2016"
      [["Clockworks"
-      {:comments [:span
+      {:youtube "axGn6qeJHcM"
+       :comments [:span
                   "Special thanks to "
                   [:a {:target "_blank"
                        :href "https://www.youtube.com/watch?v=YwrSvpjdK-w"}

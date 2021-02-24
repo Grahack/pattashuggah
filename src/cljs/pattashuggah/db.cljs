@@ -782,6 +782,15 @@
          :pattern (str-join ""
                             [5 "X-X-XXOX-X- XXOXXOX-XXO "]
                             "X-X-XXOX-X- XXOX-+-")}
+        "this is the same chorus 1 but with another notation"
+        {:comments [:span "Some " [:code "X"] "s "
+                          "are replaced with 'a', 'b', 'c' or 'd' "
+                          "to show the note changes. What a nice mess: "
+                          "3 hits fit in the 22 notes pattern but they use "
+                          "a four notes cycle of notes."]
+         :pattern
+         (let [x "a-a-XXOb-b- XXOXXOc-XXO d-d-XXOa-a- XXOXXOb-XXO c-c-XXOd-d-"]
+           (str x " XXOXXOd-XXO " x " XXOX-+-"))}
         "chorus, instrumental (×1)"
         "same as chorus"
         "chorus 2 (×1)"

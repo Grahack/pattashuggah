@@ -26,6 +26,10 @@ a.youtube {
     font-size: 0.8em;
 }
 
+a.top {
+    text-decoration: none;
+}
+
 pre {
     margin-top: 0;
     margin-bottom: 0;

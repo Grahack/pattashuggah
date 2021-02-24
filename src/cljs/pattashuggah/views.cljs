@@ -255,6 +255,7 @@
                  "Official Youtube video"]]))
      (if comments [:p {:class "song-comments"} comments])
      (map pattern patterns (repeat notes-per-beat))
+     [:a {:href "#top" :class "top"} "^^^"]
      ]))
 
 (defn patterns [album-data]
@@ -265,7 +266,7 @@
 (defn main-panel []
   (let [disco (:disco db/default-db)]
     [:div
-     [:h1 "Pattashuggah"]
+     [:h1 {:id "top"} "Pattashuggah"]
      [:p "Rhythm patterns from some "
          [:a {:href "https://meshuggah.net" :target "_blank"} "Meshuggah"]
          " songs. Contribute to the "

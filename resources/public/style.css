@@ -13,6 +13,10 @@ h3 a {
     color: #af3;
 }
 
+a.youtube {
+    font-size: 0.8em;
+}
+
 h4 {
     margin-top: 0;
     margin-bottom: 0;

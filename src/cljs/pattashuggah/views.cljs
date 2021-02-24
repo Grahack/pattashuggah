@@ -251,7 +251,8 @@
      (if youtube
        (let [url (str "https://www.youtube.com/watch?v=" youtube)]
          [:p {:class "youtube"}
-             [:a {:target "_blank" :href url} "Official video on YT"]]))
+             [:a {:target "_blank" :href url :class "youtube"}
+                 "Official Youtube video"]]))
      (if comments [:p {:class "song-comments"} comments])
      (map pattern patterns (repeat notes-per-beat))
      ]))

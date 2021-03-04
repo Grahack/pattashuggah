@@ -10,7 +10,9 @@
   (clojure.string/join (remove clojure.string/blank? txt)))
 
 (defn slug [title]
-  (clojure.string/lower-case (clojure.string/replace title " " "-")))
+  (clojure.string/lower-case (-> title
+                                 (clojure.string/replace " " "-")
+                                 (clojure.string/replace "'" ""))))
 
 (defn slug-album [title]
   (slug (str "album-" title)))

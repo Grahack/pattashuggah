@@ -247,14 +247,24 @@
         notes-per-beat (get data-map :notes-per-beat 8)
         comments (:comments data-map)
         youtube (:youtube data-map)
+        genius (:genius data-map)
+        genius-slug (cond (nil? genius) slug   ; use the slug by default
+                          (= "" genius) false  ; no link if empty
+                          :else genius)        ; use what was provided
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id slug} [:a {:href (str "#" slug )} title]]
-     (if youtube
-       (let [url (str "https://www.youtube.com/watch?v=" youtube)]
-         [:p {:class "youtube"}
-             [:a {:target "_blank" :href url :class "youtube"}
-                 "Official Youtube video"]]))
+     (if (or youtube genius-slug)
+       [:p {:class "ext-links"}
+         (if youtube
+           (let [url (str "https://www.youtube.com/watch?v=" youtube)]
+                 [:a {:target "_blank" :href url :class "youtube"}
+                     "Official Youtube video"]))
+         (if (and youtube genius-slug) " - ")
+         (if genius-slug
+           (let [url (str "https://genius.com/Meshuggah-" genius-slug "-lyrics")]
+                 [:a {:target "_blank" :href url :class "genius"}
+                     "Lyrics @Genius"]))])
      (if comments [:p {:class "song-comments"} comments])
      (map pattern patterns (repeat notes-per-beat))
      [:a {:href "#top" :class "top"} "^^^"]

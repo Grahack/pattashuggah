@@ -22,7 +22,7 @@ a {
     color: #3fd;
 }
 
-a.youtube {
+a.youtube, a.genius {
     font-size: 0.8em;
 }
 

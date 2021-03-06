@@ -876,7 +876,8 @@
                        :href "https://www.youtube.com/watch?v=YwrSvpjdK-w"}
                       "Yogev"] ". "
                   "In this song " [:code "Tr"]
-                  " is meant to be played as a " [:code "XXO"]
+                  " is meant to be played as a " [:code "XXO"] " or a "
+                  [:code "XOO"]
                   " but in a triplet to fit in the duration of two notes."]
        :patterns
        ["intro (×2)"

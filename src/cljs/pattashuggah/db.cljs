@@ -759,7 +759,7 @@
         "intro"
         "same as guitar intro"
         ]}]
-      "Electric Red"
+      "Electric Red"  ; 3V2Ay0T9ZwU
 
       ["Bleed"
       {:youtube "qc98u-eGzlc"
@@ -838,12 +838,13 @@
         "transition and outro (throughout)"
         "XXO"]}]
 
-      "Lethargica"
-      "Obzen"
-      "This Spiteful Snake"
-      "Pineal Gland Optics"
+      "Lethargica"  ; Gce5SY-tB2g
+      "Obzen"  ; gKn2_x49NLU
+      "This Spiteful Snake"  ; hU2kD4OqPMU
+      "Pineal Gland Optics"  ; wCoUhSCqfes
       ["Pravus"
-      {:patterns
+      {:youtube "a-MI9TNyRjk"
+       :patterns
        ["intro"
         (str "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- ")
        ]}]

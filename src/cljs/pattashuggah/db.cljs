@@ -848,9 +848,38 @@
         (str "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- ")
        ]}]
       ["Dancers To A Discordant System"
-      {:notes-per-beat 6
+      {:youtube "R3OeZma5jTE"
+       :comments
+         [:p "Thanks to "
+             [:a {:href "https://www.youtube.com/watch?v=LGB-7viJrv0"} "Yogev"]
+             " on this one."]
+       :notes-per-beat 6
        :patterns
-       ["FB riff"
+       ["intro"
+        {:comments (str "This is (9+8+4) + (9+6) + (9+11+4) = "
+                        "21 + 15 + 24 = 7×3 + 5×3 + 8×3 "
+                        "(3 notes per eighth notes).")
+         :pattern
+         (str-join "" [3 (str "X-X-XOXOO X-X-XOXO X-X- "
+                              "X-X-XOXOO X-XOXO "
+                              "X-X-XOXOO X-X-XOXOXOO X-X- ")]
+                   "X-X- XOXOO X--")}
+        "post intro break"
+        "X-X- XOXOO X--"
+        "verse 1"
+        (str-join "" [6 "XOXOO X-X-X-X-O XOXOO X-X-X-X-X-O "] "XOXOO X-X-X--")
+        "verse 1, second part"
+        (str-join "" [13 "XOXOO X-X-X-X-O "] "XOXOO X-X-O")
+        "verse 1, last part"
+        (str-join "" [8 "XOXOOXO X-X- "] "XOXOXOX-")
+        "verse 1, ???"
+        (str-join "" [17 "XOXOOXO X-X- "] "XOXO-")
+        "chorus 1 ?"
+        (str-join "" [21 "X-XOO X-X- "] "X-O")
+        "pre guitar solo"
+        (str-join "" [13 "XOX- X-OX-O XOX- "] "XOX- X-OX-O")
+        ; https://youtu.be/LGB-7viJrv0?t=631
+        "FB riff"
         (str-join "" [13 "XOX-XOXOXOXOX- "] "XOX-XOXOXO")
         ]}]]]
 

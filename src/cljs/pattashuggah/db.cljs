@@ -851,9 +851,9 @@
       ["Dancers To A Discordant System"
       {:youtube "R3OeZma5jTE"
        :comments
-         [:p "Thanks to "
+         [:p "Deciphering made easy thanks to "
              [:a {:href "https://www.youtube.com/watch?v=LGB-7viJrv0"} "Yogev"]
-             " on this one."]
+             "."]
        :notes-per-beat 6
        :patterns
        ["intro"

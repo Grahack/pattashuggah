@@ -856,7 +856,7 @@
              "."]
        :notes-per-beat 6
        :patterns
-       ["intro"
+       ["intro riff with only one guitar"
         {:comments (str "This is (9+8+4) + (9+6) + (9+11+4) = "
                         "21 + 15 + 24 = 7×3 + 5×3 + 8×3 "
                         "(3 notes per eighth notes).")
@@ -865,21 +865,28 @@
                               "X-X-XOXOO X-XOXO "
                               "X-X-XOXOO X-X-XOXOXOO X-X- ")]
                    "X-X- XOXOO X--")}
+        "intro break"
+        "+--+--+--+--"
+        "intro riff with everyone but Jens"
+        "same as intro riff"
         "post intro break"
         "X-X- XOXOO X--"
         "verse 1"
-        (str-join "" [6 "XOXOO X-X-X-X-O XOXOO X-X-X-X-X-O "] "XOXOO X-X-X--")
+        (str-join "" [6 "XOOXO X-X-X-X-O XOOXO X-X-X-X-X-O "] "XOOXO X-X-X--")
         "verse 1, second part"
         (str-join "" [13 "XOXOO X-X-X-X-O "] "XOXOO X-X-O")
-        "verse 1, last part"
+        "verse 2"
+        "same as verse 1"
+        "verse 2, second part"
         (str-join "" [8 "XOXOOXO X-X- "] "XOXOXOX-")
-        "verse 1, ???"
+        "verse 2, last part, half sung half instrumental"
         (str-join "" [17 "XOXOOXO X-X- "] "XOXO-")
-        "chorus 1 ?"
+        "chorus 1"
         (str-join "" [21 "X-XOO X-X- "] "X-O")
-        "pre guitar solo"
+        "interlude"
         (str-join "" [13 "XOX- X-OX-O XOX- "] "XOX- X-OX-O")
-        ; https://youtu.be/LGB-7viJrv0?t=631
+        "??"
+        (str-join "" [4 "XOX- XOXOOX- "] "----")
         "FB riff"
         (str-join "" [13 "XOX-XOXOXOXOX- "] "XOX-XOXOXO")
         ]}]]]

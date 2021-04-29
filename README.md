@@ -10,6 +10,8 @@ and views are in [src/cljs/pattashuggah/views.cljs](https://github.com/Grahack/p
 # TODO
 
 * smart size viewer
+* patterns with same freq: use chronological order
+  (see intro for verse 3, or post verse 1 (×2), elastic)
 * for each song
   * add BPM
   * add nb notes per beat

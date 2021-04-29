@@ -23,6 +23,16 @@ and views are in [src/cljs/pattashuggah/views.cljs](https://github.com/Grahack/p
 
 ## Getting Started
 
+### Start a similar project
+
+    $ lein upgrade
+    $ lein new re-frame pattashuggah
+    $ lein deps
+    $ lein watch
+
+Follow the instructions, you should be given a URL like
+<http://localhost:8280/>.
+
 ### Project Overview
 
 * Architecture:

@@ -27,6 +27,8 @@ and views are in [src/cljs/pattashuggah/views.cljs](https://github.com/Grahack/p
 
 ### Start a similar project
 
+Install lein and npm.
+
     $ lein upgrade
     $ lein new re-frame pattashuggah
     $ lein deps

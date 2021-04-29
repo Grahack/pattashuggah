@@ -214,6 +214,12 @@ Use `debug?` for logging or other tasks that should run only on `dev` builds:
 
 ## Production
 
+### My hack
+
+There is a Make target.
+
+### With a real re-frame app
+
 Build the app with the `prod` profile:
 
 ```sh

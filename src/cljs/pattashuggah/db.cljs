@@ -759,7 +759,46 @@
         "intro"
         "same as guitar intro"
         ]}]
-      "Electric Red"  ; 3V2Ay0T9ZwU
+      ["Electric Red"
+      {:youtube "3V2Ay0T9ZwU"
+       :comments
+         [:p "Deciphering made easy thanks to "
+             [:a {:href "https://www.youtube.com/watch?v=_oWIhUsJ4ik"} "Yogev"]
+             "."]
+       :patterns
+       ["intro part 1 (×2)"
+        (str-join "" [4 "X--X--+--+--+- "] "X--X--X-")
+        "intro part 2"
+        (str-join "" [8 "X-+-+-- "] "X-+-+-+-")
+        "verse 1"
+        "same as intro part 2 (×2)"
+        "intro part 1 (×1)"
+        "same as intro part 1, but once"
+        "verse 1, part 2"
+        "same as verse 1"
+        "post-verse (×2)"
+        {:comments "Second time with eights heard."
+         :pattern (str "X-- X-+-X-+- X--X--X-- X-+-+-+- X--X--"  ; no space
+                       "X-- X-+-X-+- X--X--X-- X-+-+-+-+-+ "
+                       "X-- X-+-X-+- X--X--X-- X-+-+-+- X--X--"  ; no space
+                       "X-- X-+-X-+- X--X--X-- X-+-+-+-+ "
+                       )}
+        "fury"
+        (str-join "" [8 "X--X-- XOOX-X-XOX-X-XOOX-X-XOOX- "] "X--X-+XO")
+        "fury (instrumental)"
+        "same as fury"
+        "calm (×2)"
+        (str-join "" [3 (str "XOOX+X- XOX-X- XOX-X- "
+                             "XOOX+X- XO+X- XOX-X- ")] "XOOX+X- XOX-X- XOX- ")
+        "less calm + singing (×2)"
+        "same as calm"
+        "calm (×2)"
+        "same as calm"
+        "intro part 1 (×2)"
+        "same as intro part 1"
+        "outro (faded a bit befor the end of the cycle)"
+        {:comments [:p "Use a " [:code "-"] " at the beginning to loop it."]
+         :pattern (str-join "+X-+- " [27 "X-X--X-+- "] "X-X--X-+ ")}]}]
 
       ["Bleed"
       {:youtube "qc98u-eGzlc"

@@ -36,7 +36,7 @@
   (let [times (cond (= v 1) "once"
                     (= v 2) "twice"
                     :else (str v " times"))]
-  [:span letter ": " [:code k] " " times]))
+  [:span letter ": " [:code k] " " times]))
 
 (defn insert-pos [[k v] chunks]
   [k (first (positions #{k} chunks))])

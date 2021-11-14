@@ -1004,6 +1004,7 @@
                threes twos "XO+- XO+- XO+- "
                threes (str-join "" [3 "XO+O+- "] "")))
        ]}]
+
       ["Born In Dissonance"
       {:youtube "xtO3VCu5wv4"
        :patterns

@@ -1034,26 +1034,35 @@
         "verse 2 (×2)"
         "same as verse 1"
         "post verse 2 (×1)"
-        "TODO"
-        ; this falls right into a 128 notes pattern:
-        ;(str "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X-")  ; and Jens arrives right after,
-        ; but the pattern continues over the change of section.
-        ; this fits but there are some weird notes near the end:
-        ;(str "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     ;         ^ here?
-        ;     "XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- "
-        ;     "XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X--XX- X--XX- XO X--XX- XO X--XX- "
-        ;     "X--XX- X--XX- X-+-")
+      {:comments [:div
+                   [:p "Jens arrives after the 4th measure (3rd line) but "
+                       "the pattern sequences continues unchanged. "
+                       "Then we have 8 measures before the bridge. "
+                       "That's why we have 12 measures (of 32 32nd notes, "
+                       "hence the 384 total count)."]
+                   [:p "Beware! The pattern sequence changes at beat 5 "
+                       "in the 3th line where you play a triple B-pattern, "
+                       "maybe to land on beat 9 of the 4th line with XOX as "
+                       "we did on beat 9 of the 2nd line."]
+                   [:p "Then it changes again on beat F of this 4th line "
+                       "for a nice mess."]]
+       :pattern
+        (str "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
+             "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
+             "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
+             "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
+             ; starts on beat 5 in the 3rd line
+             "XOX--XX- "
+             "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
+             "X--XX- X--XX- X--XX- X--XX- XOX--XX- "
+             ; starts on beat F in the 4th line
+             "X--XX- XOX--XX- "
+             "X--XX- XOX--XX- "
+             "X--XX- X--XX- XOX--XX- "
+             "X--XX- XOX--XX- "
+             "X--XX- X--XX- XOX--XX- "
+             "X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
+             "X--XX- X--XX- X--XX- X--XX- X-+-")}
         "bridge"
         (str
              "X-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- "

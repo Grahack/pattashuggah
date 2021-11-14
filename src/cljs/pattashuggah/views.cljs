@@ -196,6 +196,28 @@
              [:pre (subs count-ruler split-2 split-3)]
              [:pre (subs pattern     split-3)]
              [:pre (subs count-ruler split-3)]])
+         (= size 384)
+         (let [one-pos (positions-char "1" count-ruler)
+               split-2 (second one-pos)
+               split-4 (nth one-pos 2)
+               nine-pos (positions-char "9" count-ruler)
+               split-1 (first nine-pos)
+               split-3 (second nine-pos)
+               split-5 (nth nine-pos 2)]
+           [:div
+             [:pre (subs pattern     0       split-1)]
+             [:pre (subs count-ruler 0       split-1)]
+             [:pre (subs pattern     split-1 split-2)]
+             [:pre (subs count-ruler split-1 split-2)]
+             [:pre (subs pattern     split-2 split-3)]
+             [:pre (subs count-ruler split-2 split-3)]
+             [:pre (subs pattern     split-3 split-4)]
+             [:pre (subs count-ruler split-3 split-4)]
+             [:pre (subs pattern     split-4 split-5)]
+             [:pre (subs count-ruler split-4 split-5)]
+             [:pre (subs pattern     split-5)]
+             [:pre (subs count-ruler split-5)]
+            ])
          (= size 512)
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)

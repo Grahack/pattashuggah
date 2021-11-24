@@ -1009,21 +1009,12 @@
       {:youtube "xtO3VCu5wv4"
        :patterns
        ["intro (×1)"
-        ; at first I wrote this, which could be a shorter version
-        ;(str "X--XX-X- X--XX-X-X- "
-        ;     "X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
-        ;     "X--XX- X--XX-X- X--XX-X-X- "
-        ;     "X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
-        ;     "X--XX- X--XX-X- ")
-        (str "X--XX-X- X--XX-X-X- "
-             "X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
-             "X--XX- X--XX-X- X--XX-X-X- "
-             "X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
-             "X--XX- X--XX-X- X--XX-X-X- "
-             "X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
-             "X--XX- X--XX-X- X--XX-X-X- "
-             "X--XX-X-X-X- X--XX-X-X-X- X--XX-X-X-X- "
-             "X--XX- X--XX-X- X--XX-X- ")
+        {:comments [:p "When this section loops (here with verse 1) "
+                       "you get three " [:code "X-X--XX-"] " in a row."]
+         :pattern (str-join ""
+             [4 (str "X--XX- X-X--XX- X-X-X--XX- "
+                     "X-X-X-X--XX- X-X-X-X--XX- X-X-X-X--XX- ")]
+             "X--XX- X-X--XX- X-")}
         "verse 1 (×2)"
         "same as intro with different notes"
         "post verse 1 (×1)"

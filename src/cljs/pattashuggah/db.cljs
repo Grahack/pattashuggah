@@ -1023,7 +1023,13 @@
              "X--XX- X--XX- X--XX- X--XX- X--XX- X--XX- XOXO "
              "X--XX- X-")
         "verse 2 (×2)"
-        "same as verse 1"
+        ; at first I wrote this, which could be a shorter version
+        {:comments [:p "Half of verse 1. "
+                       "Now you get two " [:code "X-X--XX-"] " in a row."]
+         :pattern (str-join ""
+             [2 (str "X--XX- X-X--XX- X-X-X--XX- "
+                     "X-X-X-X--XX- X-X-X-X--XX- X-X-X-X--XX- ")]
+             "X--XX- X-")}
         "post verse 2 (×1)"
       {:comments [:div
                    [:p "Jens arrives after the 4th measure (3rd line) but "

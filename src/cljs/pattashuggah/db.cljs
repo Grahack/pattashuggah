@@ -1031,7 +1031,7 @@
                      "X-X-X-X--XX- X-X-X-X--XX- X-X-X-X--XX- ")]
              "X--XX- X-")}
         "post verse 2 (×1)"
-      {:comments [:div
+        {:comments [:div
                    [:p "Jens arrives after the 4th measure (3rd line) but "
                        "the pattern sequences continues unchanged. "
                        "Then we have 8 measures before the bridge. "
@@ -1043,7 +1043,7 @@
                        "we did on beat 9 of the 2nd line."]
                    [:p "Then it changes again on beat F of this 4th line "
                        "for a nice mess."]]
-       :pattern
+         :pattern
         (str "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
              "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "
              "X--XX- X--XX- X--XX- X--XX- XOX--XX- XOX--XX- "

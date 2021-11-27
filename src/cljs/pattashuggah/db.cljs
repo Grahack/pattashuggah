@@ -1023,7 +1023,6 @@
              "X--XX- X--XX- X--XX- X--XX- X--XX- X--XX- XOXO "
              "X--XX- X-")
         "verse 2 (×2)"
-        ; at first I wrote this, which could be a shorter version
         {:comments [:p "Half of verse 1. "
                        "Now you get two " [:code "X-X--XX-"] " in a row."]
          :pattern (str-join ""

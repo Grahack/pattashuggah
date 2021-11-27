@@ -1015,7 +1015,7 @@
              [4 (str "X--XX- X-X--XX- X-X-X--XX- "
                      "X-X-X-X--XX- X-X-X-X--XX- X-X-X-X--XX- ")]
              "X--XX- X-X--XX- X-")}
-        "verse 1 (×2)"
+        "verse 1 (×1)"
         "same as intro with different notes"
         "post verse 1 (×1)"
         (str "X--XX- X--XX- X--XX- X--XX- X--XX- X--XX- XOXO "

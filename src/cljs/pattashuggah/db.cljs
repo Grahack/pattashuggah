@@ -1037,7 +1037,7 @@
                        "That's why we have 12 measures (of 32 32nd notes, "
                        "hence the 384 total count)."]
                    [:p "Beware! The pattern sequence changes at beat 5 "
-                       "in the 3th line where you play a triple B-pattern, "
+                       "in the 3rd line where you play a triple B-pattern, "
                        "maybe to land on beat 9 of the 4th line with XOX as "
                        "we did on beat 9 of the 2nd line."]
                    [:p "Then it changes again on beat F of this 4th line "

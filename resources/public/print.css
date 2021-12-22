@@ -1,0 +1,12 @@
+body {
+    color: black;
+}
+
+a, h3 a {
+    color: blue;
+}
+
+.top, .ext-links {
+    display: none;
+    border: 0px;
+}

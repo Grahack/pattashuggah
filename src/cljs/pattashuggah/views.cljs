@@ -98,8 +98,7 @@
   (let [fun (fn [idx x] (when (= character x) idx))]
     (keep-indexed fun coll)))
 
-(defn insert-spaces
-  [pos-list txt]
+(defn insert-spaces [pos-list txt]
   (if (empty? pos-list)
     txt
     (let [first-space (first pos-list)

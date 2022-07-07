@@ -70,3 +70,19 @@ td, th {
 .song-comments {
     text-indent: 2em;
 }
+
+.bpm-toc {
+    color: #663;
+}
+
+.bpm-toc a {
+    color: #6a3;
+}
+
+.bpm-value {
+    font-size: 150%;
+}
+
+.bpm {
+    margin-bottom: 1em;
+}

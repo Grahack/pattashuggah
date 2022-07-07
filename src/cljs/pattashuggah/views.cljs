@@ -17,6 +17,9 @@
 (defn slug-album [title]
   (slug (str "album-" title)))
 
+(defn slug-bpm [title]
+  (slug (str title "-bpm")))
+
 (defn pattern-size [pattern]
   (count (rm-wspace pattern)))
 
@@ -65,11 +68,29 @@
       "."
      ]))
 
-(defn song-toc [song-title]
-  (if (string? song-title)  ; song with no pattern -> no link
-    [:li song-title]
-    (let [title (first song-title)]
-      [:li [:a {:href (str "#" (slug title))} title]])))
+(defn song-toc [song-data]
+  (if (string? song-data)
+    [:li song-data]  ; song with no data -> no link
+    (let [title (first song-data)
+          data (second song-data)
+          patterns (:patterns data)
+          BPM-data (:BPM data)]
+      [:li
+        (if patterns
+          [:a {:href (str "#" (slug title))} title]
+          title)
+        (if BPM-data
+          [:span {:class "bpm-toc"}
+            (if (number? BPM-data)
+              (str " BPM: " BPM-data)
+              (let [BPMs (take-nth 2 BPM-data)]
+                [:span
+                 " BPMs: "
+                 (interleave-but-last BPMs ", ")
+                 " ("
+                 [:a {:href (str "#" (slug-bpm title))} "list"]
+                 ")"]))])
+       ])))
 
 (defn album-link [album-data]
   (let [album-title (first album-data)
@@ -105,6 +126,9 @@
           before (clojure.string/join (take first-space txt))
           after (clojure.string/join (drop first-space txt))]
       (insert-spaces (rest pos-list) (str before " " after)))))
+
+(defn bpm-li [[bpm txt]]
+  [:li [:code {:class "bpm-value"} (if (> 100 bpm) " ") bpm] " @" txt])
 
 (defn pattern [song-pattern notes-per-beat-song-level]
   (let [section-name (first song-pattern)
@@ -272,6 +296,7 @@
         genius-slug (cond (nil? genius) slug   ; use the slug by default
                           (= "" genius) false  ; no link if empty
                           :else genius)        ; use what was provided
+        BPM-data (:BPM data-map)
         patterns (partition 2 (:patterns data-map))]
     [:div
      [:h3 {:id slug} [:a {:href (str "#" slug )} title]]
@@ -287,6 +312,16 @@
                  [:a {:target "_blank" :href url :class "genius"}
                      "Lyrics @Genius"]))])
      (if comments [:p {:class "song-comments"} comments])
+     (if BPM-data
+       (let [attrs {:id (slug-bpm slug) :class "bpm"}]
+         (if (number? BPM-data)
+           [:div attrs
+             "BPM: " BPM-data]
+           [:div attrs
+             "Initial BPM: " (first BPM-data)
+             ", but there are some changes:"
+             [:ul (map bpm-li (partition 2 BPM-data))
+           ]])))
      (map pattern patterns (repeat notes-per-beat))
      [:a {:href "#top" :class "top"} "^^^"]
      ]))
@@ -337,6 +372,14 @@
          "The split occurs brutally at the ninth beat (or similar beat) "
          "even if it splits a chunk. "
          "Usually at this place in the pattern nothing unexpected happens."]
+     [:p {:id "bpm-changes"}
+         "BPM information may also be provided for some songs. Some people "
+         "will simply use the terms «double-time» or «half-time» instead of "
+         "changing the BPM by a factor of 2. I respect this but that's not "
+         "what I usually do! Basically the snare for me will always be on "
+         "beats 2 and 4. Nevertheless, some song (especially from Chaosphere: "
+         "like MLWYB and Sane) don't have such regular snare hits so it's not "
+         "clear if it really is a tempo change."]
      [:h2 "Table of contents"]
      (map album-toc disco)
      [:h2 "Patterns"]

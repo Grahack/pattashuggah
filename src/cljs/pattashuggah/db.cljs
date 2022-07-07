@@ -179,7 +179,8 @@
 
     ["Chaosphere" "1998"
      [["Concatenation"
-      {:patterns
+      {:BPM 146
+       :patterns
        ["intro (×4)"
         (str-join "" [6 "X--XOX-X-- "] "X-+-")
         "verse 1 (×4)"
@@ -213,6 +214,7 @@
 
       ["New Millennium Cyanide Christ"
       {:youtube "4A_tSyJBsRQ"
+       :BPM 77
        :patterns
        ["intro (×2)"
         (str "XOXO+-X-X- "
@@ -268,6 +270,9 @@
                       "Drummers working on their hands could take this "
                       "opportunity to work their singles leaded by their "
                       "weak hand. Just sayin'.")
+       :BPM
+        [172 "intro"
+          86 "pre guitar solo (1'17\")"]
        :patterns
        ["intro (×4)"
         (str "XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- XOXOXOX-+- "
@@ -314,6 +319,8 @@
 
       ["Neurotica"
       {:notes-per-beat 4
+       :comments "BPM varies quite often but never more than 2 ou 3 units."
+       :BPM 103
        :patterns
        ["intro (×4)"
         (str "X-+-+-+- XX-XX-X "
@@ -372,7 +379,10 @@
        ]}]
 
       ["The Mouth Licking What You've Bled"
-      {:patterns
+      {:BPM
+        [ 76 "intro"
+         152 "verses maybe if you want"]
+       :patterns
        ["intro (×4)"
         "X-X-- X-X-- X-X-- X-X-X-- X-X-- X-X-- "
         "transition (×1)"
@@ -416,7 +426,10 @@
        ]}]
 
       ["Sane"
-      {:patterns
+       {:BPM
+        [ 68 "intro"
+         136 "verses maybe if you want"]
+       :patterns
        ["intro (×8)"
         "X-- X-- X-- X-- X-XO"
         "verse 1 (×4)"
@@ -454,6 +467,9 @@
 
       ["The Exquisite Machinery Of Torture"
        {:notes-per-beat 6
+        :BPM
+        [ 64 "intro"
+         136 "choruses maybe if you want"]
         :patterns
         ["intro (×4)"
          {:comments "The last without crash washing."
@@ -491,7 +507,8 @@
          ]}]
 
       ["Elastic"
-       {:patterns
+       {:BPM 64
+        :patterns
         ["intro (×4)"
          (str "X--+- X-- XOX--X--X- "
               "X-+- XOX--X--X- "
@@ -552,6 +569,10 @@
     ["Nothing" "2002"
      [["Stengah"
       {:comments "Some anacrusis make this song tedious to encode."
+       :BPM
+        [ 60 "intro"
+         120 "guitar solo"
+          60 "bridge"]
        :patterns
        ["intro with a single guitar (×1)"
         (str-join ""
@@ -627,7 +648,8 @@
        ]}]
 
       ["Rational Gaze"
-      {:patterns
+       {:BPM 66
+       :patterns
        ["intro (×2)"
         {:comments "The second one without the second and two last hits."
          :pattern (str-join "" [5 "XX--+-XX--XX-X--XX--XX-+- "] "XX-")}
@@ -665,8 +687,10 @@
         "outro (ad lib)"
         (str-join "" [2 "X--XX-X--XX--XX-+-XX--+-X "] "X--XX-X--XX--X")
         ]}]
+
       ["Perpetual Black Second"
-      {:patterns
+       {:BPM 74
+        :patterns
        ["intro (×2)"
         (str-join "" [9 "X--X--X-XX-X-- "] "X-")
         "pre verse (×2)"
@@ -1140,4 +1164,45 @@
       "Nostrum"
       "Our Rage Won't Die"
       "Into Decay"]]
+
+    ["Immutable" "2022"
+     [["Broken Cog"
+       {:BPM 58}]
+     ["The Abysmal Eye"
+       {:BPM
+        [88 "intro"
+         44 "final riff (4'07\")"]}]
+     ["Light The Shortening Fuse"
+       {:BPM
+        [100 "intro"
+          50 "chorus (1'16\")"]}]
+     ["Phantoms"
+       {:BPM
+        [ 54 "intro"
+         108 "outro riff (2'52\")"]}]
+     ["Ligature Marks"
+       {:BPM 74}]
+     ["God He Sees In Mirrors"
+       {:BPM
+        [74 "intro"
+         37 "guitar solo (2'58\")"
+         74 "guitar solo (second part 3'24\")"]
+     ["They Move Below"
+       {:BPM
+        [79 "drums in"
+         40 "longer riff (5'45\")"]}]
+     ["Kaleidoscope"
+       {:BPM
+        [74 "intro"
+         37 "bridge towards the end (3'08\")"
+         74 "final riff (3'36\")"]}]
+     "Black Cathedral"
+     ["I Am That Thirst"
+       {:BPM 70}]
+     ["The Faultless"
+       {:BPM 66}]
+     ["Armies Of The Preposterous"
+       {:BPM 66}]
+     "Past Tense"
+     ]]
      ]})

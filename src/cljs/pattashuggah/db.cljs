@@ -1169,40 +1169,40 @@
      [["Broken Cog"
        {:BPM 58}]
      ["The Abysmal Eye"
-       {:BPM
-        [88 "intro"
-         44 "final riff (4'07\")"]}]
+      {:BPM
+       [88 "intro"
+        44 "final riff (4'07\")"]}]
      ["Light The Shortening Fuse"
-       {:BPM
-        [100 "intro"
-          50 "chorus (1'16\")"]}]
+      {:BPM
+       [100 "intro"
+         50 "chorus (1'16\")"]}]
      ["Phantoms"
-       {:BPM
-        [ 54 "intro"
-         108 "outro riff (2'52\")"]}]
+      {:BPM
+       [ 54 "intro"
+        108 "outro riff (2'52\")"]}]
      ["Ligature Marks"
-       {:BPM 74}]
+      {:BPM 74}]
      ["God He Sees In Mirrors"
        {:BPM
         [74 "intro"
          37 "guitar solo (2'58\")"
          74 "guitar solo (second part 3'24\")"]
      ["They Move Below"
-       {:BPM
-        [79 "drums in"
-         40 "longer riff (5'45\")"]}]
+      {:BPM
+       [79 "drums in"
+        40 "longer riff (5'45\")"]}]
      ["Kaleidoscope"
-       {:BPM
-        [74 "intro"
-         37 "bridge towards the end (3'08\")"
-         74 "final riff (3'36\")"]}]
+      {:BPM
+       [74 "intro"
+        37 "bridge towards the end (3'08\")"
+        74 "final riff (3'36\")"]}]
      "Black Cathedral"
      ["I Am That Thirst"
-       {:BPM 70}]
+      {:BPM 70}]
      ["The Faultless"
-       {:BPM 66}]
+      {:BPM 66}]
      ["Armies Of The Preposterous"
-       {:BPM 66}]
+      {:BPM 66}]
      "Past Tense"
      ]]
      ]})

@@ -392,6 +392,7 @@
          "beats 2 and 4. Nevertheless, some song (especially from Chaosphere: "
          "like MLWYB and Sane) don't have such regular snare hits so it's not "
          "clear if it really is a tempo change."]
+     [:p "Number of tempo changes by album: TODO!"]
      [:h2 "Table of contents"]
      (map album-toc disco)
      [:h2 "Patterns"]

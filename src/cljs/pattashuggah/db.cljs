@@ -1245,8 +1245,23 @@
         "verse 3"
         (GHSIM 16 5 10)
         "guitar solo (quarter time)"
-        "sorry I take a break"
-     ]}]
+        (GHSIM 36 4 36)
+        "guitar solo, part 2 (half time)"
+        (GHSIM 10 5 16)
+        "pre verse 4 (one bar)"
+        (GHSIM 30 0 2)
+        "verse 4 (starts like verse 2, part 2)"
+        (GHSIM 44 3 10)
+        "mid verse 4 (six beats in a bar)"
+        (GHSIM 36 0 12)
+        "verse 4, part 2 (same as verse 1)"
+        (GHSIM 34 2 2)
+        "2nd mid verse 4 (one bar, same as mid verse 1)"
+        (join-middle 2 32 GHSIM_)
+        "verse 4, part 3 (same as verse 1, part 2)"
+        (GHSIM 12 2 24)
+        "chorus 2 (same as chorus 1)"
+        (GHSIM 22 2 14)]}]
 
      ["They Move Below"
       {:BPM

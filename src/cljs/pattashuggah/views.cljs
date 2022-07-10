@@ -219,6 +219,18 @@
              [:pre (subs count-ruler split-2 split-3)]
              [:pre (subs pattern     split-3)]
              [:pre (subs count-ruler split-3)]])
+         (and (= notes-per-beat 8) (= size 192))
+         (let [one-pos (positions-char "1" count-ruler)
+               split-2 (second one-pos)
+               nine-pos (positions-char "9" count-ruler)
+               split-1 (first nine-pos)]
+           [:div
+             [:pre (subs pattern     0       split-1)]
+             [:pre (subs count-ruler 0       split-1)]
+             [:pre (subs pattern     split-1 split-2)]
+             [:pre (subs count-ruler split-1 split-2)]
+             [:pre (subs pattern     split-2)]
+             [:pre (subs count-ruler split-2)]])
          (= size 384)
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)

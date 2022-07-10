@@ -12,6 +12,17 @@
 (defn join-middle [start n txt]
    (clojure.string/join (join-first n (join-last (- (count txt) start) txt))))
 
+(def GHSIM_pattern "X-+-X-X-+O+-X-+O+-X-+O+-X-+-X-X-+-X-X-+O+-X-X-")
+
+(def GHSIM_ (str GHSIM_pattern " "))
+
+(defn GHSIM [pre reps post]
+  (str-join (if (= 0 pre)
+              ""
+              (join-last (+ pre 1) GHSIM_))
+            [reps GHSIM_]
+            (join-first post GHSIM_)))
+
 (def default-db
   {:disco
    [["Contradictions Collapse" "1991"
@@ -1191,67 +1202,52 @@
         108 "outro riff (2'52\")"]}]
      ["Ligature Marks"
       {:BPM 74}]
+
      ["God He Sees In Mirrors"
-      (let [GHSIM "X-+-X-X-+O+-X-+O+-X-+O+-X-+-X-X-+-X-X-+O+-X-X- "]  ; 46 notes
-        {:comments
-          [:div
-            [:p "We have the same 46 notes pattern throughout the song "
-                "(the A pattern of the intro). I personaly would have started "
-                "it on the third X but let's make it simple."]
-            [:p "We decided to encode it as singles for clarity "
-                "but you could play it like this: "
-                [:code "X-+-X-X--X--X--X--X--X--X-+-X-X--X--X-+-X-X-X-"]
-                "."]]
-         :BPM
-         [74 "intro"
-          37 "guitar solo (2'58\")"
-          74 "guitar solo (second part 3'24\")"]
-         :patterns
-         ["intro"
-          (str-join "" [5 GHSIM] (join-first 26 GHSIM))
-          "pre verse 1 (one silent bar but the pattern still goes on)"
-          (str (join-last (+ 20 1) GHSIM) (join-first 12 GHSIM))
-          "verse 1"
-          (str-join (join-last (+ 34 1) GHSIM)
-                    [2 GHSIM]
-                    (join-first 2 GHSIM))
-          "mid verse 1 (one silent bar but the pattern still goes on)"
-          (join-middle 2 32 GHSIM)
-          "verse 1, part 2"
-          (str-join (join-last (+ 12 1) GHSIM)
-                    [2 GHSIM]
-                    (join-first 24 GHSIM))
-          "chorus 1"
-          (str-join (join-last (+ 22 1) GHSIM)
-                    [2 GHSIM]
-                    (join-first 14 GHSIM))
-          "post chorus 1"
-          (str (join-last (+ 32 1) GHSIM) (join-first 32 GHSIM))
-          "post chorus 1, part 2"
-          (str-join (join-last (+ 14 1) GHSIM)
-                    [2 GHSIM]
-                    (join-first 22 GHSIM))
-          "verse 2"
-          (str-join (join-last (+ 24 1) GHSIM)
-                    [5 GHSIM]
-                    (join-first 2 GHSIM))
-          "verse 2, part 2"
-          (str-join (join-last (+ 44 1) GHSIM)
-                    [1 GHSIM]
-                    (join-first 38 GHSIM))
-          "post verse 2"
-          (str-join (join-last (+ 8 1) GHSIM)
-                    [2 GHSIM]
-                    (join-first 28 GHSIM))
-          "pre verse 3 (six beats in a bar)"
-          (str (join-last (+ 18 1) GHSIM) (join-first 30 GHSIM))
-          "verse 3"
-          (str-join (join-last (+ 16 1) GHSIM)
-                    [5 GHSIM]
-                    (join-first 10 GHSIM))
-          "guitar solo (quarter time)"
-          "sorry I take a break"
-     ]})]
+      {:comments
+        [:div
+          [:p "We have the same 46 32nds pattern throughout the song "
+              "(the A pattern of the intro). I personaly would have started "
+              "it on the third X but let's make it simple."]
+          [:p "I decided to encode it as singles for clarity "
+              "but you could play it like this: "
+              [:code (clojure.string/replace GHSIM_pattern "+O+" "-X-")]
+              "."]]
+       :BPM
+       [74 "intro"
+        37 "guitar solo (2'58\")"
+        74 "guitar solo (second part 3'24\")"]
+       :patterns
+       ["intro"
+        (GHSIM 0 5 26)
+        "pre verse 1 (one silent bar but the pattern still goes on)"
+        (GHSIM 20 0 12)
+        "verse 1"
+        (GHSIM 34 2 2)
+        "mid verse 1 (one silent bar but the pattern still goes on)"
+        (join-middle 2 32 GHSIM_)
+        "verse 1, part 2"
+        (GHSIM 12 2 24)
+        "chorus 1"
+        (GHSIM 22 2 14)
+        "post chorus 1"
+        (GHSIM 32 0 32)
+        "post chorus 1, part 2"
+        (GHSIM 14 2 22)
+        "verse 2"
+        (GHSIM 24 5 2)
+        "verse 2, part 2"
+        (GHSIM 44 1 38)
+        "post verse 2"
+        (GHSIM 8 2 28)
+        "pre verse 3 (six beats in a bar)"
+        (GHSIM 18 0 30)
+        "verse 3"
+        (GHSIM 16 5 10)
+        "guitar solo (quarter time)"
+        "sorry I take a break"
+     ]}]
+
      ["They Move Below"
       {:BPM
        [79 "drums in"

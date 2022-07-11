@@ -739,7 +739,8 @@
        ]}]
 
       ["Closed Eye Visuals"
-       {:patterns
+       {:BPM 66.5
+        :patterns
         ["intro (×4)"
         (str "+-+-+-+- X-+-+-X-+- "
              "+-+-+-+-+- X-+-+-X-+- "

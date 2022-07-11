@@ -391,7 +391,9 @@
          "what I usually do! Basically the snare for me will always be on "
          "beats 2 and 4. Nevertheless, some song (especially from Chaosphere: "
          "like MLWYB and Sane) don't have such regular snare hits so it's not "
-         "clear if it really is a tempo change."]
+         "clear if there really is a tempo change. I sometimes had to watch "
+         "live footage to clear things up (like decide between 140 and 70 "
+         " for Glints Collide)."]
      [:p "Number of tempo changes by album: TODO!"]
      [:h2 "Table of contents"]
      (map album-toc disco)

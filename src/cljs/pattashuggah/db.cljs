@@ -761,7 +761,49 @@
         (str "X-+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O "
              "X--+-X-+-")
        ]}]
-      "Organic Shadows"
+
+      ["Organic Shadows"
+      {:BPM 65
+       :patterns
+       ["intro (×2)"
+        (str "X--X--+-+-X-X--X--+-+-X-X- X--X-- ")
+        "intro with drums (×2)"
+        "same as intro"
+        "verse 1 (×4)"
+        (str-join "" [2 "X--X--+-+-X-X--X--+-+-X-X- "] "X--X--+-+-X-")
+        "mid verse 1 (×2)"
+        "same as verse 1"
+        "verse 1, part 2 (×4)"
+        "same as verse 1"
+        "post verse 1 (×2)"
+        (str "X--X--X-+-X- X--X--X-+-X-X- "
+             "X--X--X-+-X- X--X--X-+-X-X- "
+             "X--X--X-+-X- ")
+        "pre verse 2"
+        (str-join ""
+                  [3 "X--X--+-+-X-+-X-X- X--X--+-+-X-+-X-X-+- "]
+                  "X--X--+-+-X-+-")
+        "verse 2"
+        "same as verse 2"
+        "pre guitar solo (2 beats intro)"
+        "X-+--X-X--+-+-+- "
+        "pre guitar solo, instrumental (×2)"
+        (str-join "" [4 "X-+--X-X--+-+- "] "X-+--X--")
+        "pre guitar solo (×2)"
+        "same as instrumental"
+        "guitar solo (×2)"
+        (str-join "" [6 "X-+--X-X--+-+-X--X-+- "] "X-")
+        "post guitar solo (×2)"
+        "same as pre verse 2"
+        "verse 3 (×1)"
+        "same as pre verse 2"
+        "pre outro (2 beats)"
+        "X-+-+OX-+- X-+-+- "
+        "outro (fade)"
+        (str-join ""
+                  [3 "X-+-+-+- X-X-+- X-+-X-X--X--+-+-+- X-X-+- "]
+                  "X-+-+-+-+- X-+- ")]}]
+
       ["Straws Pulled At Random"
       {:patterns
        ["intro"

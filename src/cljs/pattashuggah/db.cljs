@@ -759,7 +759,7 @@
        :patterns
        ["intro"
         (str "X-+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O X--+-X--X--X-O "
-              "X--+-X-+-")
+             "X--+-X-+-")
        ]}]
       "Organic Shadows"
       ["Straws Pulled At Random"

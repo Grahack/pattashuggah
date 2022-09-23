@@ -807,8 +807,12 @@
       ["Straws Pulled At Random"
       {:BPM 70
        :patterns
-       ["intro"
+       ["intro (×4)"
         (str "X-X-+X-X-X--+- X-X-+X-X-X--+- "
+             "X-X-+X-X-X--+- X-X-+X-X-X--+- "
+             "X-X-+X--")
+        "pre verse 1"
+        (str "X-+-+-+-+- X-X-X--+- X-X-+X-X-X--+- "
              "X-X-+X-X-X--+- X-X-+X-X-X--+- "
              "X-X-+X--")
        ]}]

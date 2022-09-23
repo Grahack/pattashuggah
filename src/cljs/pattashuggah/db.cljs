@@ -1309,7 +1309,17 @@
      ["Phantoms"
       {:BPM
        [ 54 "intro"
-        108 "outro riff (2'52\")"]}]
+        108 "outro riff (2'52\")"]
+       :notes-per-beat 4
+       :patterns
+       ["pre-outro"
+        {:comments "These are lines 3 and 4 of the outro (see next pattern)."
+         :pattern (str "X-+O+-+-+O+-+O+-+-+O+-+O+- "
+                       "X-+-X-+O+-+-+O+-+O+-+-+O+-+O+- "
+                       "X.......")}
+        "outro (three times)"
+        (str-join "" [8 "X-+-X-+O+-+-+O+-+O+-+-+O+-+O+- "] "X-+-X-+O+-+-+O+-")
+       ]}]
      ["Ligature Marks"
       {:BPM 74}]
 

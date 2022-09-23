@@ -805,14 +805,17 @@
                   "X-+-+-+-+- X-+- ")]}]
 
       ["Straws Pulled At Random"
-      {:patterns
+      {:BPM 70
+       :patterns
        ["intro"
         (str "X-X-+X-X-X--+- X-X-+X-X-X--+- "
              "X-X-+X-X-X--+- X-X-+X-X-X--+- "
              "X-X-+X--")
        ]}]
-      "Spasm"
-      "Nebulous"
+      ["Spasm"
+       {:BPM 70}]
+      ["Nebulous"
+       {:BPM 49.5}]
       "Obsidian"]]
 
     ["Catch Thirtythree" "2005"
@@ -832,7 +835,12 @@
 
     ["obZen" "2008"
      [["Combustion"
-      {:comments (str "There are double time and half time sections "
+      {:BPM
+        [220 "intro"
+         110 "post intro riff"
+         220 "second intro before first verse"
+         110 "outro riff (same as post intro)"]
+       :comments (str "There are double time and half time sections "
                       "but we keep the half time notation for the whole song.")
        :notes-per-beat 4
        :patterns
@@ -842,12 +850,17 @@
         "intro"
         "same as guitar intro"
         ]}]
+
       ["Electric Red"
       {:youtube "3V2Ay0T9ZwU"
+       :BPM 55
        :comments
          [:p "Deciphering made easy thanks to "
              [:a {:href "https://www.youtube.com/watch?v=_oWIhUsJ4ik"} "Yogev"]
-             "."]
+             ". During live shows you would occasionaly see some of "
+             "them headbanging at 110 (like during "
+             [:a {:href "https://www.youtube.com/watch?v=c1cwyNwjLxU"}
+                 "this one"] "), but I keep it at 55."]
        :patterns
        ["intro part 1 (×2)"
         (str-join "" [4 "X--X--+--+--+- "] "X--X--X-")
@@ -879,12 +892,13 @@
         "same as calm"
         "intro part 1 (×2)"
         "same as intro part 1"
-        "outro (faded a bit befor the end of the cycle)"
+        "outro (faded a bit before the end of the cycle)"
         {:comments [:p "Use a " [:code "-"] " at the beginning to loop it."]
          :pattern (str-join "+X-+- " [27 "X-X--X-+- "] "X-X--X-+ ")}]}]
 
       ["Bleed"
       {:youtube "qc98u-eGzlc"
+       :BPM 57.5
        :comments (str "In this song all XX have an O in between. "
                       "Please note thas this is a « quick and dirty » version. "
                       "A more complete one is in the works.")
@@ -960,18 +974,34 @@
         "transition and outro (throughout)"
         "XXO"]}]
 
-      "Lethargica"  ; Gce5SY-tB2g
-      "Obzen"  ; gKn2_x49NLU
-      "This Spiteful Snake"  ; hU2kD4OqPMU
-      "Pineal Gland Optics"  ; wCoUhSCqfes
+      ["Lethargica"
+       {:youtube "FnGApmk1a1o"
+        :BPM 52.5}]
+      ["Obzen"
+       {:youtube "MW9WeSpwWjE"
+        :BPM 85}]
+      ["This Spiteful Snake"
+       {:youtube "xb8SfmX4MDI"
+        :BPM
+          [ 65 "intro"
+           130 "second part of the song (2'45\")"
+            65 "last verse (3'44\")"]}]
+      ["Pineal Gland Optics"
+       {:youtube "rCBuNEfADuo"
+        :BPM
+          [190 "intro"
+            95 "interlude (1'42\") but maybe before if you want"]}]
       ["Pravus"
-      {:youtube "a-MI9TNyRjk"
+      {:BPM 66.5
+       :comments [:p "The last riff could be quarter time but during their live"
+                     "shows they stay at around 66."]
        :patterns
        ["intro"
         (str "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- ")
        ]}]
       ["Dancers To A Discordant System"
-      {:youtube "R3OeZma5jTE"
+      {:youtube "a1zFJKPOnXg"
+       :BPM 62.5
        :comments
          [:p "Deciphering made easy thanks to "
              [:a {:href "https://www.youtube.com/watch?v=LGB-7viJrv0"} "Yogev"]
@@ -1014,16 +1044,48 @@
         ]}]]]
 
     ["Koloss" "2012"
-     ["I Am Colossus" ; "fTYXbFsWg-M"
-      "The Demon's Name Is Surveillance"
-      "Do Not Look Down"
-      ; 223226 ? TODO
-      "Behind The Sun"
-      "The Hurt That Finds You First"
-      "Marrow"
-      "Break Those Bones Whose Sinews Gave It Motion" ; "m9LpMZuBEMk"
-      "Swarm"
-      "Demiurge" ; "zg2076b5Lqc"
+     [["I Am Colossus"
+       {:youtube "fTYXbFsWg-M"
+        :BPM 60}]
+      ["The Demon's Name Is Surveillance"
+       {:youtube "YupejUfzRSg"
+        :notes-per-beat 9
+        :BPM 72}]
+      ["Do Not Look Down"
+       {:youtube "CUuXiAsV7BQ"
+        ; 223226 ? TODO
+        :BPM 80}]
+      ["Behind The Sun"
+       {:youtube "f3JNm48a6u0"
+        :BPM
+          [47.5 "intro"
+           95   "2'48\""
+           47.5 "3'29\")"
+           95   "4'15\""
+           47.5 "4'34\")"
+           95   "5'28\" or before if you want"
+           47.5 "5'49\")"]}]
+      ["The Hurt That Finds You First"
+       {:youtube "edw4qyZg9-E"
+        :BPM
+          [250 "intro"
+            63 "2'24\""]}]
+      ["Marrow"
+       {:youtube "7CH-AjajRCg"
+        :BPM 150}]
+      ["Break Those Bones Whose Sinews Gave It Motion"
+       {:youtube "m9LpMZuBEMk"
+        :BPM 68.5}]
+      ["Swarm"
+       {:youtube "QWh0796XQWE"
+        :BPM 67.5}]
+      ["Demiurge"
+       {:youtube "zg2076b5Lqc"
+        :BPM
+          [85 "intro"
+           42.5 "2'26\""
+           85 "4'00\""
+           42.5 "pre outro (4'18\")"]}]
       "The Last Vigil"]]
 
     ["The Violent Sleep Of Reason" "2016"

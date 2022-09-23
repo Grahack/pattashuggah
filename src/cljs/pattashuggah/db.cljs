@@ -817,7 +817,8 @@
              "X-X-+X--")
        ]}]
       ["Spasm"
-       {:BPM 70}]
+       {:youtube "vnoufA9ZaGY"
+        :BPM 70}]
       ["Nebulous"
        {:BPM 49.5}]
       "Obsidian"]]

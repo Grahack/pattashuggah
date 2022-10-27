@@ -1314,12 +1314,13 @@
        :notes-per-beat 4
        :patterns
        ["pre-outro"
-        {:comments "These are lines 3 and 4 of the outro (see next pattern)."
-         :pattern (str "X-+O+-+-+O+-+O+-+-+O+-+O+- "
-                       "X-+-X-+O+-+-+O+-+O+-+-+O+-+O+- "
-                       "X.......")}
+        (str-join "" [2 "X-+O+-+-+O+-+O+-+-+O+-+O+-X-+- "] "+-+-")
         "outro (three times)"
-        (str-join "" [8 "X-+-X-+O+-+-+O+-+O+-+-+O+-+O+- "] "X-+-X-+O+-+-+O+-")
+        {:comments
+         "The pre-outro pattern starts on the second beat! And also line 3."
+         :pattern (str-join "X-+- "
+                            [8 "X-+O+-+-+O+-+O+-+-+O+-+O+-X-+- "]
+                               "X-+O+-+-+O+-")}
        ]}]
      ["Ligature Marks"
       {:BPM 74}]

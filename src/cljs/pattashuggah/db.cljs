@@ -1298,7 +1298,11 @@
 
     ["Immutable" "2022"
      [["Broken Cog"
-       {:BPM 58}]
+       {:BPM 58
+        :notes-per-beat 6
+        :patterns
+        ["intro"
+         (str-join "" [8 "XooXo+- XooXoXooXooXo+-"] "XooXo+- XooXooXoo")]}]
      ["The Abysmal Eye"
       {:BPM
        [88 "intro"

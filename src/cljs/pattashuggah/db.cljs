@@ -12,6 +12,15 @@
 (defn join-middle [start n txt]
    (clojure.string/join (join-first n (join-last (- (count txt) start) txt))))
 
+(defn next-power-of-2
+    ([n start] (if (>= start n) start (next-power-of-2 n (* 2 start)))))
+
+(defn pad-with-dots [txt start]
+  (let [l (count (clojure.string/join (remove clojure.string/blank? txt)))
+        n (- (next-power-of-2 l start) l)
+        pad (clojure.string/join "" (repeat n "."))]
+    (str txt " " pad)))
+
 (def GHSIM_pattern "X-+-X-X-+O+-X-+O+-X-+O+-X-+-X-X-+-X-X-+O+-X-X-")
 
 (def GHSIM_ (str GHSIM_pattern " "))

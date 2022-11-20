@@ -1275,7 +1275,63 @@
 
       "MonstroCity"
       "By The Ton"
-      "Violent Sleep Of Reason"
+      ["Violent Sleep Of Reason"
+       {:notes-per-beat 3
+        :patterns
+       ["intro"
+        "?"
+        "intro part 2"
+        ""
+        "verse 1"
+        (pad-with-dots (str
+                 "X- " "XOX-XOX-X-- XOX-XOX-X-X- XX-XX-X- XX-XX-X- X-X-X-- "
+          "XX-XX-X-- " "XOX-XOX-X-- XOX-XOX-X-X- XX-XX-X- XX-XX-X- X-X-X-- "
+          "XX-XX-X-- " "XOX-XOX-X-- XOX-XOX-X-X- XX-XX-X- XX-XX-X- X-X-X-- "
+          "XX-XX-X-- " "XOX-XOX-X-- XOX-XOX-X-X- XO") 3)
+        "post-verse 1"
+        "same as verse 1"
+        "verse 2"
+        "same as verse 1"
+        "guitar solo"
+        (str-join "" [3 (str "XXOX- "
+                             "X-X-XX- "
+                             "XXOX- "
+                             "XXOX- "
+                             "XXOX- "
+                             "XXOX- "
+                             "XXOX- "
+                             "X-X-X-XX- "
+                             "X-X-XX- ")]
+                        (str "XXOX- "
+                             "X-X-XX- "
+                             "XXOX- "
+                             "XXOX- "
+                             "XXOX- "
+                             "XXOXXO "))
+        "post guitar solo"
+        "same as guitar solo"
+        "bridge"
+        {:notes-per-beat 6
+         :pattern (str-join "X-+-XX-X-XX-X- "
+                            [5 "X--+-XX-X-XX-X- "]
+                            "X--+-+- ")}
+        "bridge with vocals (×2)"
+        "same as bridge"
+        "pre verse 3"
+        {:notes-per-beat 6
+         :comments "Same as verse but half time."
+         :pattern (pad-with-dots (str
+                 "X- " "XOX-XOX-X-- XOX-XOX-X-X- XX-XX-X- XX-XX-X- X-X-X-- "
+          "XX-XX-X-- " "XOX-XOX-X-- XOX-XOX-X-X- XX-XX-X- XX-XX-X- X-X-X-- "
+          "XX-XX-X-- " "XOX-XOX-X-- XOX-XOX-X-X- XX-XX-X- XX-XX-X- X-X-X-- "
+          "XX-XX-X-- " "XOX-XOX-X-- XOX-XOX-X-X- XO") 3)}
+        "verse 3"
+        "same as verse but half time"
+        "post verse 3"
+        "same as verse but half time"
+        "outro"
+        "?"
+        ]}]
       ; TODO Somewhere
       ; 55 + 55 + 55 + 27 = 192 = 16 × 12
       ; END

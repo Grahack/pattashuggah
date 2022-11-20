@@ -254,7 +254,8 @@
              [:pre (subs count-ruler split-5)]
             ])
          (or (= size 512)
-             (and (= notes-per-beat 4) (= size 256)))
+             (and (= notes-per-beat 4) (= size 256))
+             (and (= notes-per-beat 3) (= size 192)))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
                split-4 (nth one-pos 2)

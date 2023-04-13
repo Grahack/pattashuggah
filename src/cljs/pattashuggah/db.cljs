@@ -991,9 +991,23 @@
       ["Lethargica"
        {:youtube "FnGApmk1a1o"
         :BPM 52.5}]
+
       ["Obzen"
        {:youtube "MW9WeSpwWjE"
-        :BPM 85}]
+        :BPM 85
+        :notes-per-beat 4
+        :patterns
+        ["intro"
+         {:comments
+          "Each and every X is doubled."
+          :pattern
+          (str
+            "XO+O+OXOXOXO+O+O " "XO+O+OXOXOXO+O+O+O "
+            "XO+O+OXOXOXO+O+O " "XO+O+OXOXOXO+O+O+O "
+            "XO+O+OXOXOXO+O+O " "XO+O+OXOXOXO+O+O+O "
+            "XO+O+OXOXOXO+O+O " "XO+O+OXOXO "
+            )}]}]
+
       ["This Spiteful Snake"
        {:youtube "xb8SfmX4MDI"
         :BPM

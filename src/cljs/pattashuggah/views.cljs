@@ -151,6 +151,7 @@
         beats (/ size notes-per-beat)
         count-pattern-raw (count-pattern-maker beats ruler)
         count-ruler (insert-spaces spaces count-pattern-raw)]
+
   [:div
    [:h4 section-name]
    (if (and
@@ -159,6 +160,7 @@
      [:div
        [:p {:class "pattern-comments"} comments]
        (cond ; split in several lines?
+         ; 3 lines of 3
          (= size 72)  ; Sane has a 8×9 riff
          (let [four-position (clojure.string/index-of count-ruler "4")
                seven-position (clojure.string/index-of count-ruler "7")]
@@ -169,6 +171,8 @@
              [:pre (subs count-ruler four-position seven-position)]
              [:pre (subs pattern     seven-position)]
              [:pre (subs count-ruler seven-position)]])
+
+         ; 2 lines of 8
          (or (and (= notes-per-beat 4) (= size 64))
              (and (= notes-per-beat 6) (= size 96))
              (= size 128))
@@ -178,6 +182,8 @@
              [:pre (subs count-ruler 0 nine-position)]
              [:pre (subs pattern     nine-position)]
              [:pre (subs count-ruler nine-position)]])
+
+         ; 3 lines of 8
          (or (and (= notes-per-beat 4) (= size 96))
              (and (= notes-per-beat 4) (= size 92)))  ; Soul Burn has one
          (let [nine-position (clojure.string/index-of count-ruler "9")
@@ -189,6 +195,8 @@
              [:pre (subs count-ruler nine-position one-position)]
              [:pre (subs pattern     one-position)]
              [:pre (subs count-ruler one-position)]])
+
+         ; 2 lines
          (= size 104)  ; Soul Burn has a 8×13 riff
          (let [e-position (clojure.string/index-of count-ruler "D")
                to-be-tweaked (subs count-ruler e-position)
@@ -203,6 +211,8 @@
              [:pre (subs count-ruler 0 e-position)]
              [:pre (subs pattern     e-position)]
              [:pre count-ruler-tweaked]])
+
+         ; 4 lines of 8
          (or (and (not (= notes-per-beat 4)) (= size 256))
              (and (= notes-per-beat 6) (= size 192)))
          (let [one-pos (positions-char "1" count-ruler)
@@ -219,6 +229,8 @@
              [:pre (subs count-ruler split-2 split-3)]
              [:pre (subs pattern     split-3)]
              [:pre (subs count-ruler split-3)]])
+
+         ; 3 lines of 8
          (and (= notes-per-beat 8) (= size 192))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
@@ -231,6 +243,8 @@
              [:pre (subs count-ruler split-1 split-2)]
              [:pre (subs pattern     split-2)]
              [:pre (subs count-ruler split-2)]])
+
+         ; 6 lines of 8
          (= size 384)
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
@@ -253,6 +267,8 @@
              [:pre (subs pattern     split-5)]
              [:pre (subs count-ruler split-5)]
             ])
+
+         ; 8 lines
          (or (= size 512)
              (and (= notes-per-beat 4) (= size 256))
              (and (= notes-per-beat 3) (= size 192)))
@@ -284,6 +300,8 @@
              [:pre (subs count-ruler split-7)]
             ])
          :else
+
+         ; defaults to 1 line
          [:div
            [:pre pattern]
            [:pre count-ruler]])

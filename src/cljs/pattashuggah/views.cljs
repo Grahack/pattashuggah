@@ -175,7 +175,7 @@
          ; 2 lines of 8
          (or (and (= notes-per-beat 4) (= size 64))
              (and (= notes-per-beat 6) (= size 96))
-             (= size 128))
+             (and (not (= notes-per-beat 4)) (= size 128)))
          (let [nine-position (clojure.string/index-of count-ruler "9")]
            [:div
              [:pre (subs pattern     0 nine-position)]
@@ -214,6 +214,7 @@
 
          ; 4 lines of 8
          (or (and (not (= notes-per-beat 4)) (= size 256))
+             (and (= notes-per-beat 4) (= size 128))
              (and (= notes-per-beat 6) (= size 192)))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)

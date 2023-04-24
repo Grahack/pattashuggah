@@ -1020,12 +1020,47 @@
           [190 "intro"
             95 "interlude (1'42\") but maybe before if you want"]}]
       ["Pravus"
-      {:BPM 66.5
-       :comments [:p "The last riff could be quarter time but during their live"
-                     "shows they stay at around 66."]
+      {:youtube "bsvbtqGn7z8"
+       :BPM 66.5
+       :comments
+         [:div
+           [:p "The last riff could be quarter time but during their live"
+               "shows they stay at around 66."]
+           [:p "Not many diddles here. Maybe it's time to work on your weak "
+               "hand lead."]]
        :patterns
        ["intro"
-        (str "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- ")
+        (str-join "" [5 "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- "]
+                  "X-+-X-X-+- X-+-X-X-X-+- X-+-")
+        "intro, one clean guitar"
+        (str-join "" [2 "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X-+- X-+-X-X-X-X-+- "]
+                  "X-+-X-X-+- X-+-X-X-X-+- X-+-X-X- X-+-X-")
+        "intro again"
+        "same as intro"
+        "verse 1"
+        "same as intro"
+        "pre verse"
+        (str-join "+-X- " [6 "+-+-+-X-+-+-X-+-X- "] "+-+-+-X-+-+-X-+- ")
+        "1 bar to fill"
+        "X--X--X- X-XX-X-- X--X--X--X--X-+-"
+        "verse 2"
+        (str-join "" [11 "X-+-+-X-+-X-+-+-X-X-+- "] "X-+-+-X-+-X-+-")
+        "1 bar to fill"
+        "same as previously"
+        "post verses"
+        (let [main-pattern "X-X-X-X-X-+- X-X-X-X-X-+-+-+- "]
+          (str
+            (str-join "X-X-X-+-+-+- " [4 main-pattern] "")
+            (str-join "X-X-X-X-X-+-+-+- " [4 main-pattern] "X-X-")))
+        "bridge"
+        {:comments
+          [:p "Thanks to "
+              [:a {:href "https://www.youtube.com/watch?v=euSki63c-SQ"}
+                  "this video"]
+              " for the hint."]
+         :pattern (let [p23 "XOXO+-+- XOXOXOXO+-+- "
+              p2323235 (str-join "" [3 p23] "XOXOXOXOXOXOXOXOXOXO ")]
+          (str-join "XOXO+-+- " [4 p2323235] (str p23 "XOXO")))}
        ]}]
       ["Dancers To A Discordant System"
       {:youtube "a1zFJKPOnXg"

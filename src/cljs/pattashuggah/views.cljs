@@ -172,6 +172,24 @@
              [:pre (subs pattern     seven-position)]
              [:pre (subs count-ruler seven-position)]])
 
+         ; 8 lines of 2
+         (or
+             (and (= notes-per-beat 2) (= size 128)))
+         (let [one-pos (positions-char "1" count-ruler)
+               split-1 (second one-pos)
+               split-2 (nth one-pos 2)
+               split-3 (nth one-pos 3)]
+           [:div
+             [:pre (subs pattern     0       split-1)]
+             [:pre (subs count-ruler 0       split-1)]
+             [:pre (subs pattern     split-1 split-2)]
+             [:pre (subs count-ruler split-1 split-2)]
+             [:pre (subs pattern     split-2 split-3)]
+             [:pre (subs count-ruler split-2 split-3)]
+             [:pre (subs pattern     split-3)]
+             [:pre (subs count-ruler split-3)]
+            ])
+
          ; 2 lines of 8
          (or (and (= notes-per-beat 4) (= size 64))
              (and (= notes-per-beat 6) (= size 96))

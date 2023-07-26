@@ -1047,11 +1047,16 @@
         (str-join "" [11 "X-+-+-X-+-X-+-+-X-X-+- "] "X-+-+-X-+-X-+-")
         "1 bar to fill"
         "same as previously"
-        "post verses"
-        (let [main-pattern "X-X-X-X-X-+- X-X-X-X-X-+-+-+- "]
-          (str
-            (str-join "X-X-X-+-+-+- " [4 main-pattern] "")
-            (str-join "X-X-X-X-X-+-+-+- " [4 main-pattern] "X-X-")))
+        "post verses (×2)"
+        {:comments
+           [:p "The two last " [:code "X"] "s of the first time make five with "
+               "the three firsts of the second. It makes the two times contain "
+               "two " [:code "A"] "s in a row, like this: "
+               [:code "CBABABABAABABABABAD"] "."]
+         :pattern
+           (str-join "X-X-X-+-+-+- "
+                     [4 "X-X-X-X-X-+- X-X-X-X-X-+-+-+- "]
+                     "X-X-")}
         "bridge"
         {:comments
           [:p "Thanks to "

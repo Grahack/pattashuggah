@@ -1437,7 +1437,31 @@
      ["The Abysmal Eye"
       {:BPM
        [88 "intro"
-        44 "final riff (4'07\")"]}]
+        44 "final riff (4'07\")"]
+       :comments
+        [:div
+        "This one is difficult to encode neatly because the pattern is very "
+        "long. Again, thanks to Yogev for his work ("
+        [:a {:href "https://www.youtube.com/watch?v=VGHMFuNAHZQ"}
+            "video with the full song"]
+        " - "
+        [:a {:href "https://www.youtube.com/watch?v=a1RwXRzcv_4"}
+            "detailed explanation"]
+        "). I'm gonna use a variation of his notation:"
+        [:ul
+         [:li [:code "T"] " means " [:code "XoXo"]]
+         [:li [:code "D"] " means " [:code "X-+-"]]
+         [:li [:code "v"] " means " [:code "+-+-"]]]]
+       :patterns
+       ["intro"
+        {:notes-per-beat 2
+         :comments
+         [:div
+           [:p "Some additional guitars on second half."]
+           [:p "The repeating pattern (×4 + 1 maimed) is "
+               [:code "TTTD TDv TTDv TD TTDv TTD TD TTTD"] "."]]
+          :pattern (str-join "" [4 "TTTD TDv TTDv TD TTDv TTD TD TTTD "]
+                                   "TTTD TDv TTDv TD TTDv TTD TD TT")}]}]
      ["Light The Shortening Fuse"
       {:BPM
        [100 "intro"

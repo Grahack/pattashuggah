@@ -1057,6 +1057,10 @@
            (str-join "X-X-X-+-+-+- "
                      [4 "X-X-X-X-X-+- X-X-X-X-X-+-+-+- "]
                      "X-X-")}
+        "pre-bridge"
+        (str-join "XOXOXOXO+-+- "
+                  [4 (str-join "" [6 "XOXO+-+- "] "XOXOXOXO+-+- ")]
+                  "XOXO")
         "bridge"
         {:comments
           [:p "Thanks to "
@@ -1066,6 +1070,14 @@
          :pattern (let [p23 "XOXO+-+- XOXOXOXO+-+- "
               p2323235 (str-join "" [3 p23] "XOXOXOXOXOXOXOXOXOXO ")]
           (str-join "XOXO+-+- " [4 p2323235] (str p23 "XOXO")))}
+        "pre-outro"
+        {:comments [:p "Let ring on second half."]
+         :pattern
+          (str-join "" [8 "X-X-X-+-+-+- X-X-X-+-+-+- X-+- "]
+                    "X-X-X-+-+-+- X-X- X-+-+-+-X-X-+-+-")}
+        "outro"
+        (str-join "X-X-+-+-+-+- " [8 "X-X-+-+-+-+- X-+-X-X-+-+-+-+- "]
+                    "X-X-+-+-+-+- X-+-X-X .")
        ]}]
       ["Dancers To A Discordant System"
       {:youtube "a1zFJKPOnXg"

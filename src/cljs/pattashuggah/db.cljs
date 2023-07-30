@@ -1013,12 +1013,37 @@
         :BPM
           [ 65 "intro"
            130 "second part of the song (2'45\")"
-            65 "last verse (3'44\")"]}]
+            65 "last verse (3'44\")"]
+        :patterns
+        ["intro (×4)"
+         {:comments
+          "Additional guitars appear at the third repetition."
+          :pattern
+          (str-join "" [2 "X-X-XOX-+-+- X-X-X-XOX-+-+- "] "X-X-XOX-+-+- ")}]}]
       ["Pineal Gland Optics"
        {:youtube "rCBuNEfADuo"
         :BPM
           [190 "intro"
-            95 "interlude (1'42\") but maybe before if you want"]}]
+            95 "interlude (1'42\") but maybe before if you want"]
+        :notes-per-beat 4
+        :comments [:p "During the double time moments (like in the intro) "
+                      "it's not really 4 notes per beat but 2. It may be "
+                      "easier to follow with 4 notes per beat though."]
+        :patterns
+        ["intro (with singles)"
+         (str-join "" [10 "XO+O+O+OX- XO+O+OX- X-+OX- "] "XO+O+O+OX- XO+O+O")
+         "intro (alternate version with doubles)"
+         (str-join "" [10 "XX-X-X-XX- XX-X-XX- X--XX- "] "XX-X-X-XX- XX-X-X")
+         "outro"
+         {:comments [:p [:code "D"] " is a double with your strong hand and "
+                        [:code "^"] " is a brutal hit on the snare. " [:br]
+                        "The song fades before any hint about the length of "
+                        "the cycle. Interestingly though, there a hit on a "
+                        "crash at the beginning of the sixth line."]
+          :pattern
+          (str-join "X- DO^OX- DO^O^OX- "
+                    [6 "DO^OX- DO^O^O^OX- DO^OX- DO^OX- DO^O^OX- "]
+                       "DO^OX- DO^O^O^OX- DO^OX- ..")}]}]
       ["Pravus"
       {:youtube "bsvbtqGn7z8"
        :BPM 66.5

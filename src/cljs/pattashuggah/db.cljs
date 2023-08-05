@@ -24,16 +24,20 @@
         pad (clojure.string/join "" (repeat n "."))]
     (str txt " " pad)))
 
-(def GHSIM_pattern "X-+-X-X-+O+-X-+O+-X-+O+-X-+-X-X-+-X-X-+O+-X-X-")
-
-(def GHSIM_ (str GHSIM_pattern " "))
-
-(defn GHSIM [pre reps post]
-  (str-join (if (= 0 pre)
+(defn siempre-factory [pattern]
+  (fn [pre reps post]  ; pre:  how many chars from the end to begin with
+                       ; reps: how many repetitions
+                       ; post: how many chars from the beginning to end with
+    (str-join (if (= 0 pre)
               ""
-              (join-last (+ pre 1) GHSIM_))
-            [reps GHSIM_]
-            (join-first post GHSIM_)))
+              (join-last (+ pre 1) pattern))
+            [reps pattern]
+            (join-first post pattern))))
+
+
+(def GHSIM_pattern "X-+-X-X-+O+-X-+O+-X-+O+-X-+-X-X-+-X-X-+O+-X-X-")
+(def GHSIM_ (str GHSIM_pattern " "))
+(def GHSIM (siempre-factory GHSIM_))
 
 (def default-db
   {:disco

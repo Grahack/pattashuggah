@@ -1222,7 +1222,39 @@
       ["The Demon's Name Is Surveillance"
        {:youtube "YupejUfzRSg"
         :notes-per-beat 9
-        :BPM 72}]
+        :BPM 72
+        :comments [:p "Every " [:code "X--++-"]
+                      " could be a " [:code "X-+-+-"] "."]
+        :patterns
+        ["intro"
+         {:comments
+          "Last four strong hits are the melodic transition between lines."
+          :pattern
+          (let [p1 "X--++-"
+                p2 (str "X--" p1)
+                p3 (str "X--X--" p1)
+                p123 (str p1 p2 p3 " ")
+                p231 (str p2 p3 p1 " ")
+                p312 (str p3 p1 p2 " ")
+                transition "X-+O+-X-+O+- "]
+            (str
+              (str-join "" [2 p123] (str p1 " "    transition))
+              (str-join "" [2 p231] (str "X--X-- " transition))
+              (str-join "" [2 p312] (str "X--X-- " transition))
+              (str-join "" [2 p123] (str p1 " "    transition))))}
+         "verse 1"
+         (let [short-p1 "X--++-+-- "
+               p1 "X--++-+--++- "
+               p2 (str "X--++-" p1)
+               p3 (str "X--++-X--++-" p1)
+               p123 (str p1 p2 p3)]
+           (str-join (str short-p1 p2 p3)
+                     [4 p123]
+                     (str p1 "X--++-X--")))
+         "the rest"
+         "TODO"
+         ]}]
+
       ["Do Not Look Down"
        {:youtube "CUuXiAsV7BQ"
         ; 223226 ? TODO

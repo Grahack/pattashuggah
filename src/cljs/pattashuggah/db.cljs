@@ -1,7 +1,10 @@
 (ns pattashuggah.db)
 
+(defn str-repeat [times repeated]
+   (clojure.string/join (repeat times repeated)))
+
 (defn str-join [pre [times repeated] post]
-   (str pre (clojure.string/join (repeat times repeated)) post))
+   (str pre (str-repeat times repeated) post))
 
 (defn join-first [n txt]
    (clojure.string/join (take n txt)))

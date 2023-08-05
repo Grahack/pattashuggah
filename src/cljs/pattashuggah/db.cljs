@@ -34,6 +34,12 @@
             [reps pattern]
             (join-first post pattern))))
 
+(def DNLD1_pattern "X-X-X--X-X-X--++-")
+(def DNLD1_ (str DNLD1_pattern " "))
+(def DNLD1 (siempre-factory DNLD1_))
+(def DNLD2_pattern "X-X--X-X-X--++-")
+(def DNLD2_ (str DNLD2_pattern " "))
+(def DNLD2 (siempre-factory DNLD2_))
 
 (def GHSIM_pattern "X-+-X-X-+O+-X-+O+-X-+O+-X-+-X-X-+-X-X-+O+-X-X-")
 (def GHSIM_ (str GHSIM_pattern " "))
@@ -1261,8 +1267,39 @@
 
       ["Do Not Look Down"
        {:youtube "CUuXiAsV7BQ"
-        ; 223226 ? TODO
-        :BPM 80}]
+        :BPM 80
+        :notes-per-beat 4
+        :comments [:p "They play the same pattern of 17 notes with no "
+                      "resolution until the guitar solo where they use a "
+                      "15 notes pattern (with 3 16ths in the middle). "
+                      "Then it's section by section."]
+        :patterns
+        ["intro, guitar only"
+         (DNLD1 0 7 9)
+         "intro, now with drums"
+         (DNLD1 8 3 5)
+         "verse 1"
+         (DNLD1 12 6 14)
+         "post verse 1"
+         (DNLD1 3 3 10)
+         "verse 2"
+         (DNLD1 7 7 2)
+         "post verse 2"
+         (DNLD1 15 2 15)
+         "guitar solo"
+         (str
+           (DNLD2 2 4 0) "+-"
+           ; half of the guitar solo
+           "- " (DNLD2 0 4 0) "+-X"
+           )
+         "post guitar solo"
+         "TODO"
+         ;(str "--+-+-+-- X-+-X-X-X-X --+-+-+-- X-+-X-X-X-X-X-X -+-X "
+         ;     "-+-- "
+         ;     (str-repeat 76 ".")
+         ;     )
+         ]}]
+
       ["Behind The Sun"
        {:youtube "f3JNm48a6u0"
         :BPM

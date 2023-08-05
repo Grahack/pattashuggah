@@ -146,7 +146,8 @@
                 3 " '"
                 4 " ^ "
                 6 " '^ '"
-                8 " ' ^ ' "}
+                8 " ' ^ ' "
+                9 " '^ '^ '"}
         ruler (get rulers notes-per-beat)
         beats (/ size notes-per-beat)
         count-pattern-raw (count-pattern-maker beats ruler)
@@ -233,7 +234,8 @@
          ; 4 lines of 8
          (or (and (not (= notes-per-beat 4)) (= size 256))
              (and (= notes-per-beat 4) (= size 128))
-             (and (= notes-per-beat 6) (= size 192)))
+             (and (= notes-per-beat 6) (= size 192))
+             (and (= notes-per-beat 9) (= size 288)))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
                nine-pos (positions-char "9" count-ruler)

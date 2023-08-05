@@ -1151,7 +1151,71 @@
     ["Koloss" "2012"
      [["I Am Colossus"
        {:youtube "fTYXbFsWg-M"
-        :BPM 60}]
+        :BPM 60
+        :notes-per-beat 6
+        :patterns
+        ["intro (a measure of two beats)"
+         "X--X-- XO+-+-"
+         "verse 1 (×2)"
+         (str-join "X--+- X-+-X-+-X-+-X-+-X- "
+                   [3 "X-+-X-+-X-+-X-+-X-+-X- "]
+                   "X-+-X--")
+         "post verse 1"
+         "same as verse 1, but only once and with notes"
+         "verse 2 (×2)"
+         (str "same as verse 1 but with a limbo thing at the beginning "
+              "(second strong hit is concealed) and surimposed "
+              "with patterns when going from a line to the next (two notes)")
+         "post verse 2"
+         (str
+           (str-join "X--+- X-+-X-+-X- "
+                     [5 "X-+-X-+-X-+-X- "]
+                     "X-+-X-+-X-+")
+           (str-join "-X-+-X-+-X-+-X- "
+                     [5 "X-+-X-+-X-+-X- "]
+                     "X-+-X-+-X-+"))
+         "transition (two beats)"
+         "same as intro"
+         "pre bridge"
+         (str-join "" [6 "X--XO+-- "] "")
+         "bridge"
+         (str "X--+- "
+              "+-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X- "
+              "X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X- "
+              "X-+-X-- "
+              "X-+-+-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-+- "
+              "X-+-+-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-X-+-+- "
+              "X-+-")
+         "post bridge"
+         ;"same as post verse 2 but with notes"
+         (str-join "X--+- "
+                     [5 "X-+- X-X-+- X--+- "]
+                     "X-+- X-X-+- X-+-X-")
+         "transition 2 (two beats)"
+         {:comments "Guitars play this but the drums play a fill."
+          :pattern "X-+-X-+-X-+O "}
+         "guitar solo"
+         (str "same as post verse 2, surimposed with dozens of notes at line "
+              "changes, and with a pre-transition on the last beat")
+         "transition 3 (same as intro + two silent beats)"
+         "X--X-- XO+-+- +--+--+--+--"
+         "verse 3 (×1)"
+         (str "same as verse 2: limbo + superimposing, but surimposing "
+              "patterns have about 6, 2, 6 and 2 notes")
+         "post verse 3"
+         {:comments (str
+            "First half uses patterns from the verses "
+            "and second half uses patterns from the post verses. "
+            "Is it fair?")
+          :pattern
+            (str
+              (str-join "X--+- X-+-X-+-X-+-X-+-X- "
+                        [3 "X-+-X-+-X-+-X-+-X-+-X- "]
+                        "X-+-X-+")
+              (str-join "-X-+-X-+-X-+-X- "
+                        [4 "X-+-X-+-X-+-X- "]
+                        "X-+-X-+-X-+-X-+-X-+-X-+-X"))}]}]
+
       ["The Demon's Name Is Surveillance"
        {:youtube "YupejUfzRSg"
         :notes-per-beat 9

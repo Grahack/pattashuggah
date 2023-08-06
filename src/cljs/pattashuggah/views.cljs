@@ -216,7 +216,7 @@
              [:pre (subs count-ruler one-position)]])
 
          ; 2 lines
-         (= size 104)  ; Soul Burn has a 8×13 riff
+         (= size 104)  ; Soul Burn has a 8×13 riff (first verse)
          (let [e-position (clojure.string/index-of count-ruler "D")
                to-be-tweaked (subs count-ruler e-position)
                match #"[123456789A]"

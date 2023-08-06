@@ -110,7 +110,7 @@
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
-  (let [pool (clojure.string/join (repeat 4 "123456789ABCDEFG"))
+  (let [pool (clojure.string/join (repeat 4 "12345678ABCDEFGH"))
         characters (take n pool)]
     (clojure.string/join (flatten (map vector characters (repeat txt))))))
 
@@ -195,33 +195,33 @@
          (or (and (= notes-per-beat 4) (= size 64))
              (and (= notes-per-beat 6) (= size 96))
              (and (not (= notes-per-beat 4)) (= size 128)))
-         (let [nine-position (clojure.string/index-of count-ruler "9")]
+         (let [A-pos (clojure.string/index-of count-ruler "A")]
            [:div
-             [:pre (subs pattern     0 nine-position)]
-             [:pre (subs count-ruler 0 nine-position)]
-             [:pre (subs pattern     nine-position)]
-             [:pre (subs count-ruler nine-position)]])
+             [:pre (subs pattern     0 A-pos)]
+             [:pre (subs count-ruler 0 A-pos)]
+             [:pre (subs pattern     A-pos)]
+             [:pre (subs count-ruler A-pos)]])
 
          ; 3 lines of 8
          (or (and (= notes-per-beat 4) (= size 96))
              (and (= notes-per-beat 4) (= size 92)))  ; Soul Burn has one
-         (let [nine-position (clojure.string/index-of count-ruler "9")
-               one-position (second (positions-char "1" count-ruler))]
+         (let [A-pos (clojure.string/index-of count-ruler "A")
+               one-pos (second (positions-char "1" count-ruler))]
            [:div
-             [:pre (subs pattern     0 nine-position)]
-             [:pre (subs count-ruler 0 nine-position)]
-             [:pre (subs pattern     nine-position one-position)]
-             [:pre (subs count-ruler nine-position one-position)]
-             [:pre (subs pattern     one-position)]
-             [:pre (subs count-ruler one-position)]])
+             [:pre (subs pattern     0 A-pos)]
+             [:pre (subs count-ruler 0 A-pos)]
+             [:pre (subs pattern     A-pos one-pos)]
+             [:pre (subs count-ruler A-pos one-pos)]
+             [:pre (subs pattern     one-pos)]
+             [:pre (subs count-ruler one-pos)]])
 
          ; 2 lines
          (= size 104)  ; Soul Burn has a 8×13 riff (first verse)
-         (let [e-position (clojure.string/index-of count-ruler "D")
+         (let [e-position (clojure.string/index-of count-ruler "E")
                to-be-tweaked (subs count-ruler e-position)
-               match #"[123456789A]"
-               str1 "123456789A"
-               str2 "HIJKLMNOPQ"
+               match #"[12345678AB]"
+               str1 "12345678AB"
+               str2 "IJKLMNOPQR"
                replace-map (into (sorted-map) (map vector str1 str2))
                count-ruler-tweaked
                 (clojure.string/replace to-be-tweaked match replace-map)]
@@ -238,9 +238,9 @@
              (and (= notes-per-beat 9) (= size 288)))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
-               nine-pos (positions-char "9" count-ruler)
-               split-1 (first nine-pos)
-               split-3 (second nine-pos)]
+               A-pos (positions-char "A" count-ruler)
+               split-1 (first A-pos)
+               split-3 (second A-pos)]
            [:div
              [:pre (subs pattern     0       split-1)]
              [:pre (subs count-ruler 0       split-1)]
@@ -255,8 +255,8 @@
          (and (= notes-per-beat 8) (= size 192))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
-               nine-pos (positions-char "9" count-ruler)
-               split-1 (first nine-pos)]
+               A-pos (positions-char "A" count-ruler)
+               split-1 (first A-pos)]
            [:div
              [:pre (subs pattern     0       split-1)]
              [:pre (subs count-ruler 0       split-1)]
@@ -270,10 +270,10 @@
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
                split-4 (nth one-pos 2)
-               nine-pos (positions-char "9" count-ruler)
-               split-1 (first nine-pos)
-               split-3 (second nine-pos)
-               split-5 (nth nine-pos 2)]
+               A-pos (positions-char "A" count-ruler)
+               split-1 (first A-pos)
+               split-3 (second A-pos)
+               split-5 (nth A-pos 2)]
            [:div
              [:pre (subs pattern     0       split-1)]
              [:pre (subs count-ruler 0       split-1)]
@@ -294,10 +294,10 @@
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
                split-4 (nth one-pos 2)
-               nine-pos (positions-char "9" count-ruler)
-               split-1 (first nine-pos)
-               split-3 (second nine-pos)
-               split-5 (nth nine-pos 2)]
+               A-pos (positions-char "A" count-ruler)
+               split-1 (first A-pos)
+               split-3 (second A-pos)
+               split-5 (nth A-pos 2)]
            [:div
              [:pre (subs pattern     0       split-1)]
              [:pre (subs count-ruler 0       split-1)]
@@ -321,11 +321,11 @@
                split-2 (second one-pos)
                split-4 (nth one-pos 2)
                split-6 (nth one-pos 3)
-               nine-pos (positions-char "9" count-ruler)
-               split-1 (first nine-pos)
-               split-3 (second nine-pos)
-               split-5 (nth nine-pos 2)
-               split-7 (nth nine-pos 3)]
+               A-pos (positions-char "A" count-ruler)
+               split-1 (first A-pos)
+               split-3 (second A-pos)
+               split-5 (nth A-pos 2)
+               split-7 (nth A-pos 3)]
            [:div
              [:pre (subs pattern     0       split-1)]
              [:pre (subs count-ruler 0       split-1)]

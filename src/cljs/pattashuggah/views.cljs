@@ -4,7 +4,7 @@
    [pattashuggah.db :as db]
    ))
 
-(def pattern-letters "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+(def alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 (defn rm-wspace [txt]
   (clojure.string/join (remove clojure.string/blank? txt)))
@@ -59,12 +59,12 @@
         chunks-comparator (chunk-counts-comparator pos-map counts-map)
         chunks-sorted (into (sorted-map-by chunks-comparator) counts-map)
         chunks-with-letters
-          (into {} (map change-value pattern-letters chunks-sorted))]
+          (into {} (map change-value alphabet chunks-sorted))]
     [:p {:class "structure"}
       "Structure : "
       (map chunks-with-letters chunks)
       [:br]
-      (interleave-but-last (map chunk-count pattern-letters chunks-sorted) ", ")
+      (interleave-but-last (map chunk-count alphabet chunks-sorted) ", ")
       "."
      ]))
 
@@ -110,8 +110,8 @@
      [:ol (map song-toc songs)]]))
 
 (defn count-pattern-maker [n txt]
-  (let [alphabet (clojure.string/join (repeat 4 "123456789ABCDEFG"))
-        characters (take n alphabet)]
+  (let [pool (clojure.string/join (repeat 4 "123456789ABCDEFG"))
+        characters (take n pool)]
     (clojure.string/join (flatten (map vector characters (repeat txt))))))
 
 (defn positions-char [character coll]

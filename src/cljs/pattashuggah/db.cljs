@@ -1310,11 +1310,72 @@
            47.5 "4'34\")"
            95   "5'28\" or before if you want"
            47.5 "5'49\")"]}]
+
       ["The Hurt That Finds You First"
        {:youtube "edw4qyZg9-E"
         :BPM
           [250 "intro"
-            63 "2'24\""]}]
+            63 "2'24\""]
+        :comments [:div
+                   [:p "There are tempo changes but patterns are written "
+                       "with 63 beats per minute in mind."]
+                   [:p "Also, these patterns are only singles. "
+                       "Drummers working on their hands could take this "
+                       "opportunity to work their singles leaded by their "
+                       "weak hand or use " [:code "++--X-"] " instead of "
+                       [:code "+-+-X-"] "."]]
+        :patterns
+        ["intro of the intro"
+         {:comments "Two beats of building singles starting with a fla."
+          :pattern "+-+-+-+- +-+-+-+-"}
+         "intro"
+         (str-join ""
+                   [2 (str (str-join "" [3 "+-+-X- "] "+-+-X-X-X- ")
+                           (str-join "" [3 "+-+-X- "] "+-+-X-X-X-X- "))]
+                   "+-+-X- +-+-X-")
+         "verse 1"
+         {:comments [:p "We have note changes half lines wise and a twist "
+                        "on the last two beats."]
+          :pattern
+          (str-join ""
+                    [6 (str (str-join "" [2 "+-+-X- "] "+-+-X-X- ")
+                            (str-join "" [2 "+-+-X- "] "+-+-X-X-X- "))]
+                    "+-+-")}
+         "post verse 1"
+         "same as intro"
+         "verse 2"
+         "same as verse 1"
+         "post verse 2"
+         "same as post verse 1"
+         "pre bridge"
+         {:comments [:p "There are melodic patterns in the guitar riff but I "
+                        "didn't have the strength to get them."]
+          :pattern (str-repeat 64 "+O")}
+         "bridge (×4)"
+         (str "X--X--X- +-+-+-+- X--X--X--X--X--X--X--X-- "
+              "X-+-+-+- X-+-+-+- +-+-+-+-")
+         "verse 3"
+         "same as verse 1"
+         "breakdown intro"
+         (str "+-+-+-X- +-+-X-X- +-+-X- +-+-+-X-X-X- "
+              "+-+-+-X- +-+-X-X- +-+-X- +-+-+-X-X-X-X- "
+              "+-+-+-X- +-+-X-X- +-+-X- +-+-+-X-X-X- "
+              "+-+-+-X- +-+-X-X- +-+-X- +- ")
+         "breakdown (×3)"
+         {:comments [:p "Once with snare singles between hits, "
+                        "once without but a strong hit on the first beat, "
+                        "and the last quieter still (guitar ostinato)."]
+          :pattern
+            (str-join ""
+                      [3 (str "+-+-+-X- +-+-X-X- +-+-X- +-+-+-X-X-X- "
+                              "+-+-+-X- +-+-X-X- +-+-X- +-+-+-X-X-X-X- ")]
+                      (str "+-+-+-X- +-+-X-X- +-+-X- +-+-+-X-X-X- "
+                           "+-+-+-X- +-+-"))}
+         "ostinato solo"
+         (str-repeat 64 "+-")
+         "breakdown outro"
+         "same as breakdown, in the fade out"]}]
+
       ["Marrow"
        {:youtube "7CH-AjajRCg"
         :BPM 150}]

@@ -1033,6 +1033,7 @@
           "Additional guitars appear at the third repetition."
           :pattern
           (str-join "" [2 "X-X-XOX-+-+- X-X-X-XOX-+-+- "] "X-X-XOX-+-+- ")}]}]
+
       ["Pineal Gland Optics"
        {:youtube "rCBuNEfADuo"
         :BPM
@@ -1047,6 +1048,35 @@
          (str-join "" [10 "XO+O+O+OX- XO+O+OX- X-+OX- "] "XO+O+O+OX- XO+O+O")
          "intro (alternate version with doubles)"
          (str-join "" [10 "XX-X-X-XX- XX-X-XX- X--XX- "] "XX-X-X-XX- XX-X-X")
+         "verse 1"
+         (str "X- X-+OX- "                     ; junction with intro
+              "XO+O+O+OX- XO+O+O+- XO+O+O+- "  ; with 2 things
+              "XO+O+OX- X-+OX- "
+              "XO+O+O+OX- XO+O+O+- "           ; with only 1 thing
+              "XO+O+OX- X-+OX- "
+              "XO+O+O+OX- XO+O+O+- XO+O+O+- "  ; back with 2 things
+              "XO+O+OX- X-+OX- "
+              "XO+O+O+O ")
+         "post-verse 1"
+         "TODO"
+         "verse 2"
+         {:comments [:p "Half an intro."]
+          :pattern
+          (str-join "" [5 "XO+O+O+OX- XO+O+OX- X-+OX- "] "XO+O+O+O")}
+         "post-verse 2"
+         "TODO"
+         "bridge"
+         (str-join "" [10 "XO+O+O+OX- XO+O+OX- X-+-+- "] "XO+O+O+OX- XO+O+O")
+         "guitar solo 1"
+         {:comments [:p "Same as the intro but with other notes."]
+          :pattern
+          (str-join "" [5 "XO+O+O+OX- XO+O+OX- X-+OX- "] "XO+O+O+O")}
+         "verse 3"
+         "TODO"
+         "guitar solo 2"
+         "TODO"
+         "verse 4"
+         "TODO"
          "outro"
          {:comments [:p [:code "D"] " is a double with your strong hand and "
                         [:code "^"] " is a brutal hit on the snare. " [:br]
@@ -1056,7 +1086,9 @@
           :pattern
           (str-join "X- DO^OX- DO^O^OX- "
                     [6 "DO^OX- DO^O^O^OX- DO^OX- DO^OX- DO^O^OX- "]
-                       "DO^OX- DO^O^O^OX- DO^OX- ..")}]}]
+                       "DO^OX- DO^O^O^OX- DO^OX- ..")}
+         ]}]
+
       ["Pravus"
       {:youtube "bsvbtqGn7z8"
        :BPM 66.5

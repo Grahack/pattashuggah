@@ -45,6 +45,9 @@
 (def GHSIM_ (str GHSIM_pattern " "))
 (def GHSIM (siempre-factory GHSIM_))
 
+(def K_pattern "X-XO+-XO+OX-+O+OX-XO+-")
+(def K (siempre-factory K_pattern))
+
 (def default-db
   {:disco
    [["Contradictions Collapse" "1991"
@@ -1806,11 +1809,38 @@
       {:BPM
        [79 "drums in"
         40 "longer riff (5'45\")"]}]
+
      ["Kaleidoscope"
       {:BPM
        [74 "intro"
         37 "bridge towards the end (3'08\")"
-        74 "final riff (3'36\")"]}]
+        74 "final riff (3'36\")"]
+       :patterns
+       ["breakdown (introduction)"
+        {:comments [:div
+            [:p "From there until the end (except the first 3 hits) "
+                "we have the same pattern:"]
+            [:code K_pattern]
+            [:p "These singles are quite easy you could double the non "
+                "accented notes."]
+            [:p "Two measures to introduce the breakdown:"]]
+         :notes-per-beat 4
+         :pattern
+         (str "X-OX-+" (K 0 1 4))}
+        "breakdown (instrumental)"
+        {:notes-per-beat 4
+         :comments [:p "Then eight with full drums:"]
+         :pattern (K 17 5 0)}
+        "breakdown"
+        {:comments
+         [:p "Here everything is aligned! And to add to this they "
+             "go half time."]
+         :pattern (K 0 5 18)}
+        "outro"
+        {:notes-per-beat 4
+         :pattern (K 3 5 14)}
+        ]}]
+
      "Black Cathedral"
      ["I Am That Thirst"
       {:BPM 70}]

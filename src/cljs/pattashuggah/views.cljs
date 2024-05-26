@@ -142,7 +142,7 @@
                             notes-per-beat-song-level)
         size (pattern-size pattern)
         spaces (positions-char " " pattern)
-        rulers {2 " "
+        rulers {2 "'"
                 3 " '"
                 4 " ^ "
                 6 " '^ '"

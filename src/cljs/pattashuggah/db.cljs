@@ -1218,8 +1218,8 @@
          (str
            (str-join "X--+- X-+-X-+-X- "
                      [5 "X-+-X-+-X-+-X- "]
-                     "X-+-X-+-X-+")
-           (str-join "-X-+-X-+-X-+-X- "
+                     "X-+-X-+-X-+- ")
+           (str-join "X-+-X-+-X-+-X- "
                      [5 "X-+-X-+-X-+-X- "]
                      "X-+-X-+-X-+"))
          "transition (two beats)"

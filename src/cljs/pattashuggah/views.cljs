@@ -231,6 +231,16 @@
              [:pre (subs pattern     e-position)]
              [:pre count-ruler-tweaked]])
 
+         ; 2 lines of 16
+         (and (= notes-per-beat 2) (= size 64))
+         (let [one-pos (positions-char "1" count-ruler)
+               split-1 (second one-pos)]
+           [:div
+             [:pre (subs pattern     0       split-1)]
+             [:pre (subs count-ruler 0       split-1)]
+             [:pre (subs pattern     split-1)]
+             [:pre (subs count-ruler split-1)]])
+
          ; 4 lines of 8
          (or (and (not (= notes-per-beat 4)) (= size 256))
              (and (= notes-per-beat 4) (= size 128))
@@ -316,7 +326,8 @@
          ; 8 lines
          (or (= size 512)
              (and (= notes-per-beat 4) (= size 256))
-             (and (= notes-per-beat 3) (= size 192)))
+             (and (= notes-per-beat 3) (= size 192))
+             (and (= notes-per-beat 2) (= size 128)))
          (let [one-pos (positions-char "1" count-ruler)
                split-2 (second one-pos)
                split-4 (nth one-pos 2)

@@ -843,7 +843,13 @@
        ]}]
       ["Spasm"
        {:youtube "vnoufA9ZaGY"
-        :BPM 70}]
+        :BPM 70
+        :patterns
+        ["intro (×2)"
+         (str-join "" [4 "X-+-X-+-+--X--+-+-X-+- X--X-- "]
+                   "X-+-X-+-+--X--+-")
+         ]}]
+
       ["Nebulous"
        {:BPM 49.5}]
       "Obsidian"]]

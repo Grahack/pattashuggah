@@ -1413,7 +1413,124 @@
 
       ["Marrow"
        {:youtube "7CH-AjajRCg"
-        :BPM 150}]
+        :BPM 150
+        :notes-per-beat 2
+        :comments
+          [:div
+            [:p "Special thanks to "
+                [:a {:target "_blank"
+                     :href "https://www.youtube.com/watch?v=o2hwNVGtu_Q"}
+                    "Yogev"] ". "]
+            [:p "This song is written with a resolution of 2 notes per beat "
+                "to ease reading and memorizing. But you may want to hit 4 "
+                "notes per beat."]]
+       :patterns
+       ["intro"
+        {:comments [:p "The second guitar arrives in the middle of the intro."]
+         :pattern
+           (str-join ""
+                     [2 (str "X-X-X-XO+O+O+O "
+                             "X-X-X-X-+ O+OX-X- ")]
+                     "X- X- ")}
+        "full blast"
+        (str-join ""
+                     [4 (str "X-X-X-XO+O+O+O "
+                             "X-X-X-X-+ O+OX-X- ")]
+                     "X- X- X- X- ")
+        "verses 1 and 2"
+        {:comments [:p "YG's numbering! Those four lines are verse 1 and 2."]
+         :pattern
+         (let [answer_1 "X-+O+-+O+-X-+- "
+               answer_2 "X-+O+O+O+-X-X- "]
+           (str (str-repeat 5 "X-X-- ") answer_1
+                (str-repeat 5 "X-X-- ") answer_1
+                (str-repeat 3 "X-X-- ") "X-- X-X-- " answer_2
+                "X-X-- X-X-- X--"))}
+        "verse 3"
+        {:comments [:p "Same pattern but cut earlier."]
+         :pattern
+         (let [answer_1 "X-+O+-+O+-X-+- "]
+           (str (str-repeat 5 "X-X-- ") answer_1
+                (str-repeat 5 "X-X-- ")))}
+        "verses 4 and 5"
+        "same as verses 1 and 2"
+        "B part"
+        {:comments [:p "Notes change every four bar."]
+         :pattern
+         (str-join ""
+              [3 (str (str-repeat 3 "X--") "X-X- "
+                      (str-repeat 2 "X--") "X-X-- "
+                      (str-repeat 2 "X--") "X-X- ")]
+              "X--X--X--X-X- X--X--X-X-- X-")}
+        "pre guitar solo"
+        "same as full blast"
+        "guitar solo #1"
+        {:comments [:p [:code "§"] " is a strong accent. We can see the "
+                       "palindromes in the lengths of the blocks, firstly "
+                       "before the 10 (772427 and a 7 in the 10), twice, "
+                       "and then 4343-3434 and 77477."]
+         :pattern
+         (str (str-repeat 2 "§-+-X-- X-+-X-- X- §-+- §- X--X-+- X--")
+              "§-+- "
+              "X-+- X-- X-+- §-- §-- §-+- X-- X-+- "
+              "§--§-+- X-+-X-- X-+- §--§-+- X-+-X--")}
+        "guitar solo #1 (again)"
+        {:comments [:div
+          [:p "The same guitar solo but with no accent and no group, to show "
+              "the palindromes as Yogev does."]
+          [:pre [:code "43432 4 23434\n"
+                       "43432 4 23434\n"
+                       "4343 3434\n"
+                       "3443 4 3443"]]]
+         :pattern
+         (let [A "X-+- " B "X-- " C "X- "]
+           (str (str-repeat 2 (str A B A B C   A   C B A B ))
+                A
+                A B A B   B A B A
+                B A A B   A   B A A B))}
+        "post guitar solo #1 (×2)"
+        (let [A "XX-- " B "XX- "]
+          (str A B A B  B A B A     A B B A   A A B B A A))
+        "guitar solo #2"
+        (let [A "X-+- " B "X-- "]
+          (str A B A B   B A B A   A B B A    A   ; mirror thing around this
+               A B B A   A B A B   B A B A        ; last A on these two lines
+               A A B B   A A B B   A A A))
+        "post guitar solo #2"
+        {:comments
+         [:p "Is it me or is it the same pattern than above? (I checked, "
+             "it's not me.) "]
+         :pattern
+         (let [A "XX-- " B "XX- "]
+           (str A B A B   B A B A   A B B A    A   ; same than above!!!
+                A B B A   A B A B   B A B A
+                A A B B   A A B B   A A A))}
+        "full blast again"
+        "same as full blast"
+        "outro (fade)"
+        {:comments
+         [:p [:code "§"] " is a strong accent."]
+         :pattern
+         (str "§-+- §-- §-+- X-- X-+- §-- §-+- X-+- X-- "
+              "§-+- X-- §-+- X-+- §-- §-+- X-- X-- X-+- "
+              "X-- §-+- X-- X-+- §-+- §-- §-+- X-- X-+- "
+              "§-+- §-- §-+- X-- X-+- X-- §-+- X-- X-+-")}
+           ;   A B A B A B A A B
+           ;   A B A A B A B B A
+           ;   B A B A A B A B A
+           ;   A B A B A B A B A
+        "outro again (fade)"
+        {:comments
+         [:p "The same outro but with no accent and no group."]
+         :pattern
+         (let [A "X-+- " B "X-- "]
+           (str A B A B   A B A A
+                B A B A   A B A B
+                B A B A   B A A B
+                A B A A   B A B A
+                B A B A))}
+        ]}]
+
       ["Break Those Bones Whose Sinews Gave It Motion"
        {:youtube "m9LpMZuBEMk"
         :BPM 68.5}]

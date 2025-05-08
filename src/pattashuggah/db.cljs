@@ -1928,7 +1928,8 @@
       {:comments
         [:div
           [:p "We have the same 46 32nds pattern throughout the song "
-              "(the A pattern of the intro). I personaly would have started "
+              "(the A pattern of the intro). It repeats approximately 63 "
+              "times. I personaly would have started "
               "it on the third X but let's make it simple."]
           [:p "I decided to encode it as singles for clarity "
               "but you could play it like this: "

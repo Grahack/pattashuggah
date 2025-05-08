@@ -41,6 +41,13 @@
 (def DNLD2_ (str DNLD2_pattern " "))
 (def DNLD2 (siempre-factory DNLD2_))
 
+(def Ph1_pattern "1--+2--X--+4--X--X--X--+3--X--X--+")
+(def Ph1_ (str Ph1_pattern " "))
+(def Ph2_pattern "1--+2--X--+7--X--X--X--X--X--X--+4--X--X--X--+3--X--X--+")
+(def Ph2_ (str Ph2_pattern " "))
+(def Ph_pattern (str Ph1_ Ph1_ Ph1_ Ph2_ Ph1_))
+(def Ph (siempre-factory Ph_pattern))
+
 (def GHSIM_pattern "X-+-X-X-+O+-X-+O+-X-+O+-X-+-X-X-+-X-X-+O+-X-X-")
 (def GHSIM_ (str GHSIM_pattern " "))
 (def GHSIM (siempre-factory GHSIM_))
@@ -1854,13 +1861,62 @@
       {:BPM
        [ 54 "intro"
         108 "outro riff (2'52\")"]
-       :notes-per-beat 4
+       :notes-per-beat 8
+       :comments
+        [:div
+          [:p "Deciphering made easy thanks to "
+             [:a {:href "https://www.youtube.com/watch?v=WN4Uo9NUG_I"} "Yogev"]
+             ". I couldn't alone but noted some interesting facts that I "
+             "find in his video, see below in the comments sections. "
+             "Also I didn't use his naming scheme."]
+          [:p "So we have the same gigantic pattern throughout the first part "
+              "of the song which goes 3×(1243) 12743 1243. It only repeats "
+              "six times and a half during the whole song! These "
+              "34+34+34+56+34=192 32nd notes represent 6 measures so the "
+              "riff somehow aligns regularly to parts of the song: every two "
+              "measures you will one of the three possible starts "
+              "beginning of the pattern, end of a 3, last two of a 7)."]
+          [:p "Among the observations we can make on this song we have the"
+              "stunning fact that, except for the intro and the outro, the "
+              "gigantic pattern restarts exactly in the middle of every "
+              "section."]
+          [:p [:code "1234"] " are used instead of " [:code "X"] "s for the "
+              "strokes of your strong hand to help navigating between the "
+              "12347 groups of notes."]]
        :patterns
-       ["pre-outro"
+       ["intro"
+        {:comments [:p "What is interesting to me here is that the second "
+                       "line starts on the last of a 3, "
+                       "the third line on the last two of a 7 and "
+                       "the fourth line on the very beginning of the gigantic "
+                       "pattern. These are the only three possibilities for "
+                       "starting a block of two measures: since the pattern "
+                       "is six measures long it restarts on the fourth line."]
+         :pattern (Ph 0 1 65)}
+        "verse 1"
+        {:comments [:p "Verses all start on the last of a 3, their second "
+                       "line on the last two of a 7, the third on the "
+                       "beginning of the pattern and the fourth at the end of "
+                       "a 3." ]
+         :pattern (Ph 131 0 131)}
+        "pre verse"
+        {:comments [:p "Having four measures only in the pre verse realigns "
+                       "the pattern for the next verse, since the pattern is "
+                       "six measures long (see it ends like the intro)." ]
+         :pattern (Ph 65 0 65)}
+        "verse 2"
+        "same as verse 1"
+        "pre bridge"
+        "same as pre verse"
+        "bridge"
+        "same as verse 1"
+        "pre-outro"
         (str-join "" [2 "X-+O+-+-+O+-+O+-+-+O+-+O+-X-+- "] "+-+-")
         "outro (three times)"
         {:comments
-         "The pre-outro pattern starts on the second beat! And also line 3."
+         [:p "If we consider that the pattern starts like it starts on the "
+             "pre-outro we see that in the outro this pattern starts on the "
+             "second beat! And it also starts at the beginning of line 2."]
          :pattern (str-join "X-+- "
                             [8 "X-+O+-+-+O+-+O+-+-+O+-+O+-X-+- "]
                                "X-+O+-+-+O+-")}

@@ -1867,7 +1867,7 @@
           [:p "Deciphering made easy thanks to "
              [:a {:href "https://www.youtube.com/watch?v=WN4Uo9NUG_I"} "Yogev"]
              ". I couldn't alone but noted some interesting facts that I "
-             "find in his video, see below in the comments sections. "
+             "could not find in his video, see below in the comments sections. "
              "Also I didn't use his naming scheme."]
           [:p "So we have the same gigantic pattern throughout the first part "
               "of the song which goes 3×(1243) 12743 1243. It only repeats "

@@ -1874,9 +1874,10 @@
               "six times and a half during the whole song! These "
               "34+34+34+56+34=192 32nd notes represent 6 measures so the "
               "riff somehow aligns regularly to parts of the song: every two "
-              "measures you will one of the three possible starts "
-              "beginning of the pattern, end of a 3, last two of a 7)."]
-          [:p "Among the observations we can make on this song we have the"
+              "measures we will find one of the three possible starts: "
+              "the beginning of the pattern on the 'one', the last note of a "
+              "'three', and the last two of a 'seven'."]
+          [:p "Among the observations we can make on this song we have the "
               "stunning fact that, except for the intro and the outro, the "
               "gigantic pattern restarts exactly in the middle of every "
               "section."]

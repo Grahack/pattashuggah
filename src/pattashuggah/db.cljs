@@ -1886,31 +1886,73 @@
               "12347 groups of notes."]]
        :patterns
        ["intro"
-        {:comments [:p "What is interesting to me here is that the second "
-                       "line starts on the last of a 3, "
-                       "the third line on the last two of a 7 and "
-                       "the fourth line on the very beginning of the gigantic "
-                       "pattern. These are the only three possibilities for "
-                       "starting a block of two measures: since the pattern "
-                       "is six measures long it restarts on the fourth line."]
+        {:comments
+          [:div
+            [:p "What is interesting to me here is that the second "
+                "line starts on the last of a 3, "
+                "the third line on the last two of a 7 and "
+                "the fourth line on the very beginning of the gigantic "
+                "pattern. These are the only three possibilities for "
+                "starting a block of two measures: since the pattern "
+                "is six measures long it restarts on the fourth line."]
+            [:p "Now about the notes used («G» is a G sharp, «/» marks the "
+                "end of the gigantic pattern):"]
+            [:pre [:code
+                "G AB GABG ABG A BG ABGA BG  \n"
+                "A B GA BGAB GAB G AB GABGA  \n"
+                "BG ABGA BGA B GA BGAB GAB / \n"
+                "G AB GABG ABG A BG ABGA BG"]]]
          :pattern (Ph 0 1 65)}
         "verse 1"
-        {:comments [:p "Verses all start on the last of a 3, their second "
-                       "line on the last two of a 7, the third on the "
-                       "beginning of the pattern and the fourth at the end of "
-                       "a 3." ]
+        {:comments
+          [:div
+            [:p "Verses all start on the last of a 3, their second "
+                "line on the last two of a 7, the third on the "
+                "beginning of the pattern and the fourth at the end of "
+                "a 3." ]
+            [:pre [:code
+                "A B GA BGAB GAB G AB GABGA  \n"
+                "BG ABGA BGA B GA BGAB GAB / \n"
+                "G AB GABG ABG A BG ABGA BG  \n"
+                "A B GA BGAB GAB G AB GABGA"]]]
          :pattern (Ph 131 0 131)}
         "pre verse"
-        {:comments [:p "Having four measures only in the pre verse realigns "
-                       "the pattern for the next verse, since the pattern is "
-                       "six measures long (see it ends like the intro)." ]
+        {:comments
+          [:div
+            [:p "Having four measures only in the pre verse realigns "
+                "the pattern for the next verse, since the pattern is "
+                "six measures long (see it ends like the intro)."]
+            [:pre [:code
+                "BG ABGA BGA B GA BGAB GAB / \n"
+                "G AB GABG ABG A BG ABGA BG  \n"
+               ]]]
          :pattern (Ph 65 0 65)}
         "verse 2"
-        "same as verse 1"
+        {:comments
+          [:div
+            [:p "Same as verse 1 but with a cycle of 4 notes."]
+            [:pre [:code
+                "A B CG ABCG ABC G AB CGABC  \n"
+                "GA BCGA BCG A BC GABC GAB / \n"
+                "C GA BCGA BCG A BC GABC GA  \n"
+                "B C GA BCGA BCG A BC GABCG" ;ACGABCGAB  \n"
+               ]]]
+         :pattern
+         "same as verse 1 but with other notes (cycle of 4)"}
         "pre bridge"
-        "same as pre verse"
+        {:comments
+          [:div
+            [:p "Having four measures only in the pre verse realigns "
+                "the pattern for the next verse, since the pattern is "
+                "six measures long (see it ends like the intro)."]
+            [:pre [:code
+                "AB GABG ABG A BG ABGA BGA / \n"
+                "B GA BGAB GAB G AB GABG AB  \n"
+               ]]]
+         :pattern
+         "same as pre verse (but different starting note: A)"}
         "bridge"
-        "same as verse 1"
+        "same as verse 1 but with other notes"
         "pre-outro"
         (str-join "" [2 "X-+O+-+-+O+-+O+-+-+O+-+O+-X-+- "] "+-+-")
         "outro (three times)"

@@ -2073,4 +2073,49 @@
       {:BPM 66}]
      "Past Tense"
      ]]
+
+    ["Digadot" "a friend of a friend"
+     [["Nine strokes"
+       {:genius ""
+        :comments
+        [:div
+         [:p [:a {:href "https://www.youtube.com/@digadot"} "Digadot"]
+           " provided us with a nice concept. More details "
+           [:a {:href "http://ici.profgra.org/Digadot"} "here"] ". "]
+         [:p "The pattern is 243. Since the number of strokes is odd you will "
+             "invert if you play it with singles, which may help you stay "
+             "on the right track. "
+             "You can play them with a diddle if you don't want to invert."]
+         [:p "I tweaked the end of the cycles to restart on the one. The "
+             "most basic Meshuggah trick!"]]
+        :notes-per-beat 4
+        :patterns
+        ["64 strokes"
+         (str-join "" [3 "X-X-+-X-+ O+O+-+O+- "] "X-X-+-X-+-")
+         "128 strokes"
+         (str-join "" [6 "X-X-+-X-+ O+O+-+O+- "] "X-X-+-X-+ O+O+O+-+O+-")
+         "256 strokes"
+         (str-join "" [14 "X-X-+-X-+ O+O+-+O+- "] "X-X-")]}]
+      ["Eleven strokes"
+       {:genius ""
+        :comments
+        [:div
+          [:p "I took it a bit further with an eleven strokes pattern: 2243. "
+              "It's useful in ternary contexts for it not to restart at the "
+              "same place in the pulse. Of course you can also play it "
+              "in a binary context!"]
+          [:p "I saw the two other letters of Digadot's alphabet but I found "
+              "them to be quite long and too different from the first one for "
+              "me now (42223 and 42423). See "
+              [:a {:href "http://ici.profgra.org/Digadot"} "here"] " for "
+              "links to his videos. "]]
+        :notes-per-beat 3
+        :patterns
+        ["48 strokes"
+         (str-join "" [2 "X-X-X-+-X-+ O+O+O+-+O+- "] "X-+-")
+         "96 strokes"
+         (str-join "" [4 "X-X-X-+-X-+ O+O+O+-+O+- "] "X-X-X-+-")
+         "192 strokes"
+         (str-join "" [8 "X-X-X-+-X-+ O+O+O+-+O+- "] "X-X-X-+-X-+ O+O+-")]}]
+      ]]
      ]})

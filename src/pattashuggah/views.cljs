@@ -192,7 +192,8 @@
             ])
 
          ; 2 lines of 8
-         (or (and (= notes-per-beat 4) (= size 64))
+         (or (and (= notes-per-beat 3) (= size 48))
+             (and (= notes-per-beat 4) (= size 64))
              (and (= notes-per-beat 6) (= size 96))
              (and (not (= notes-per-beat 4)) (= size 128)))
          (let [A-pos (clojure.string/index-of count-ruler "A")]
@@ -243,6 +244,7 @@
 
          ; 4 lines of 8
          (or (and (not (= notes-per-beat 4)) (= size 256))
+             (and (= notes-per-beat 3) (= size 96))
              (and (= notes-per-beat 4) (= size 128))
              (and (= notes-per-beat 6) (= size 192))
              (and (= notes-per-beat 9) (= size 288)))
